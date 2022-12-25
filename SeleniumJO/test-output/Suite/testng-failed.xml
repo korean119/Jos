@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="tests" name="Device2(failed)">
+    <parameter name="appActivity" value="com.hanwha.lifeplus.presentation.ui.HomeActivity"/>
+    <parameter name="platformVersion" value="11"/>
+    <parameter name="apppackage" value="com.hanwha.lifeplus.tribes.app.qa"/>
+    <parameter name="appiumServer" value="http://0.0.0.0:4721/wd/hub"/>
+    <parameter name="platformName" value="Android"/>
+    <parameter name="device" value="ce0617163a36ce2401"/>
+    <parameter name="systemPort" value="8209"/>
+    <classes>
+      <class name="Hanwhatribes_automation._0_Automation_Main">
+        <methods>
+          <include name="fetchMostRecentTestResult"/>
+          <include name="Deviceinfo"/>
+          <include name="main"/>
+        </methods>
+      </class> <!-- Hanwhatribes_automation._0_Automation_Main -->
+    </classes>
+  </test> <!-- Device2(failed) -->
+</suite> <!-- Failed suite [Suite] -->
