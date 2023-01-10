@@ -2,49 +2,104 @@ package PAS_automation;
 
 
 
+import org.aspectj.bridge.AbortException;
+import org.json.JSONObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.Keys;
+
+import java.io.IOException;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
-import java.net.MalformedURLException;
-import java.net.URL;
 
 public class PAS {
 
 	  private WebDriver driver;
-	  
+	  private String URL = "https://admin.stg.p3.ent-bc.com/login";
 	  private Map<String, Object> vars;
+	  
+	  String PROJECT_ID = "11";
+	  String TEST_RUN_ID = "422";
+	  String testCaseId= "111966";
+	  String TESTRAIL_MILESTONEID = "23";
+			  
+	  public static final int TEST_CASE_PASSED_STATUS = 1;
+	    public static final int TEST_CASE_FAILED_STATUS = 5;
+	  
+	  
+	  
+	  APIClient client = null;
+	  
 	  JavascriptExecutor js;
 	  
 	  @BeforeClass
 	  public void setUp() {
-		System.setProperty("webdriver.chrome.driver", "c:/selenium/chromedriver_win321/chromedriver.exe"); 
 	    driver = new ChromeDriver();
-	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-	    
 	    js = (JavascriptExecutor) driver;
 	    vars = new HashMap<String, Object>();
+	    
+	    
+	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	  
 	  }
+	  
+	  @BeforeSuite
+	  public void createSuite(ITestContext ctx) throws IOException, AbortException, APIException {
+		  client = new APIClient("https://entbc.testrail.io");
+		  client.setUser("joshin@ent-bc.com");
+		  client.setPassword("Qood1234!");
+		  
+		  String testRunId = TEST_RUN_ID;
+		  
+		  Map data = new HashMap();
+		  data.put("include_all",true);
+		  data.put("name","신준오"+System.currentTimeMillis());
+		  
+		  
+	        data.put("status_id", 1);
+	        data.put("status_id", 5);
+	        data.put("comment", "Test Executed - Status updated automatically from Selenium test automation.");
+	        client.sendPost("add_result_for_case/"+testRunId+"/"+testCaseId+"",data );
+
+	    }
+
+	
+			/*
+			 * JSONObject c = null; c = (JSONObject)client.sendPost("add_run/"+
+			 * PROJECT_ID,data);
+			 */
+		  
+		  
+		  
+	  
+	  
+	  
 	  @AfterClass
 	  public void tearDown() {
 	    driver.quit();
+	    
 	  }
 	  
 	  
+	  @BeforeTest
+	  public void lauchweb() { 
+		  System.setProperty("webdriver.chrome.driver", "c:/selenium/chromedriver_win321/chromedriver.exe"); 
+	         
+	  }
+	  
+	  @TestRails(id="T4874918")
 	  @Test
 	  public void HI() {
 	    driver.get("https://admin.stg.p3.ent-bc.com/login");
@@ -135,7 +190,12 @@ public class PAS {
 	    driver.findElement(By.cssSelector(".UserThumbnailstyled__StyledThumbnail-sc-32whse-0")).click();
 	    driver.findElement(By.cssSelector(".ProfileDropdownstyled__StyledProfileMenuItem-sc-1qogqiz-2:nth-child(4)")).click();
 	    driver.findElement(By.cssSelector(".Modalstyled__StyledModalBottom-sc-qrf4of-6 > .Buttonstyled__StyledButton-sc-8yo8rr-0")).click();
+	    
+	    Assert.assertTrue(true);
 	  }
+}
+	  
+	/*  }
 	  
 	  @Test
 	  public void HI1() {
@@ -942,3 +1002,4 @@ public class PAS {
 	}
 
 
+*/
