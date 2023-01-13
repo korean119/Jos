@@ -5,11 +5,13 @@
     <classes>
       <class name="PAS_automation.PAS">
         <methods>
-          <include name="HI"/>
+          <include name="qwdqwd1"/>
           <include name="createSuite"/>
           <include name="tearDown"/>
           <include name="lauchweb"/>
+          <include name="beforeTest"/>
           <include name="setUp"/>
+          <include name="afterTest"/>
         </methods>
       </class> <!-- PAS_automation.PAS -->
     </classes>
