@@ -57,8 +57,8 @@ public class PAS {
 	  @BeforeSuite
 	  public void createSuite(ITestContext ctx) throws IOException, AbortException, APIException {
 		  client = new APIClient("https://entbc.testrail.io");
-		  client.setUser("joshin@ent-bc.com");
-		  client.setPassword("Qood1234!");
+		  client.setUser("dgham@ent-bc.com");
+		  client.setPassword("dghamqood");
 		  
 		  Map data = new HashMap();
 		  data.put("include_all",true);
@@ -89,7 +89,7 @@ public class PAS {
 		
 		  @BeforeTest
 		  public void lauchweb() { 
-			  System.setProperty("webdriver.chrome.driver", "c:/selenium/chromedriver_win321/chromedriver.exe"); 
+			  System.setProperty("webdriver.chrome.driver", "D:/Users/chromedriver/chromedriver.exe"); 
 		        
 		  }
 		  
