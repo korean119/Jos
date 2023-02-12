@@ -1,4 +1,4 @@
-package PAS_automation;
+package Modusign_automation;
 
 /**
  * TestRail API binding for Java (API v2, available since TestRail 3.0)
