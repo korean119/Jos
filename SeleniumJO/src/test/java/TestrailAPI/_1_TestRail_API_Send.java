@@ -1,4 +1,4 @@
-package Test;
+package TestrailAPI;
 
 import java.io.IOException;
 import java.lang.reflect.Method;
@@ -14,11 +14,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
-import TestrailAPI.APIClient;
-import TestrailAPI.APIException;
-import TestrailAPI.TestRails;
+import Script._1_modusign;
 
-public class Testrail extends _1_modusign {
+public class _1_TestRail_API_Send extends _1_modusign {
 	
 	APIClient client = null;
 	String PROJECT_ID = "13";
