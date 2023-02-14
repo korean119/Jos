@@ -14,9 +14,9 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
-import Script._1_modusign;
+import Script._1_Login;
 
-public class _1_TestRail_API_Send extends _1_modusign {
+public class _1_TestRail_API_Send{
 	
 	APIClient client = null;
 	String PROJECT_ID = "13";
@@ -45,7 +45,7 @@ public class _1_TestRail_API_Send extends _1_modusign {
 
 	@BeforeMethod
 	public void beforeTest(ITestContext ctx, Method method) throws NoSuchMethodException {
-		Method m = _1_modusign.class.getMethod(method.getName());
+		Method m = _1_Login.class.getMethod(method.getName());
 
 		if (m.isAnnotationPresent(TestRails.class)) {
 			TestRails ta = m.getAnnotation(TestRails.class);

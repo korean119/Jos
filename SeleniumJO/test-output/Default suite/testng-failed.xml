@@ -3,14 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Test._1_modusign2">
+      <class name="Script._2_MainScreen">
         <methods>
-          <include name="lauchweb"/>
-          <include name="setUp"/>
+          <include name="ContreactSetupStart"/>
+          <include name="initializeWebDriver"/>
           <include name="tearDown"/>
-          <include name="login"/>
         </methods>
-      </class> <!-- Test._1_modusign2 -->
+      </class> <!-- Script._2_MainScreen -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

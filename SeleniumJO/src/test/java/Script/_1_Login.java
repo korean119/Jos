@@ -15,14 +15,15 @@ import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import PagesObject.HomePage;
-import PagesObject.SingInPage;
+import PagesObject._1_LoginPage;
+import PagesObject._2_MainPage;
 import TestrailAPI.APIClient;
 import TestrailAPI.APIException;
 import TestrailAPI.TestRails;
@@ -35,46 +36,19 @@ import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-public class _1_modusign_POM {
+public class _1_Login extends _0_Base  {
+	
 
-	protected WebDriver driver;
-
-	HomePage objHomePage;
-	SingInPage objSingInPage; 
-
-	@BeforeClass
-	public void setUp() {
-		driver = new ChromeDriver();
-		// 이전에는 여기다 선언 했었음 driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	_1_LoginPage objLoginPage; 
+	_2_MainPage objMainPage;
+	
+	
+	@Test(priority = 1)
+	public void login() throws InterruptedException {
+		
+		objLoginPage = new _1_LoginPage(driver);
+		objLoginPage.Login("joshin1@getnada.com", "tlswnsdh2@@");
 		
 	}
-
-	@BeforeTest
-	public void lauchdriver() {
-		// System.setProperty("webdriver.chrome.driver",
-		// "/Users/johnny/Downloads/chromedriver_mac64/chromedriver");
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\tncls\\Downloads\\chromedriver_win32 (1)/chromedriver.exe");
-
-	}
-	@AfterClass
-	public void tearDown() {
-		//driver.close();
-		//driver.quit();
-
-	}
-
-	@Test(priority = 1) // 홈페이지 접속 
-	public void Homepage() {
-		driver.get("https://stage-app.modusign.co.kr");
-		driver.manage().window().setSize(new Dimension(1920, 1080));
-
-	}
 	
-	@Test(priority = 2) // 홈페이지 접속 
-	public void login() {
-		objSingInPage = new SingInPage(driver);
-		objSingInPage.login("joshin1@getnada.com", "tlswnsdh2@@");
-	
-	}
 }
