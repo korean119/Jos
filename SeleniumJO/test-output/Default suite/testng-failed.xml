@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Script._2_MainScreen">
+      <class name="Script._3_ContractSetupStartModalPopup">
         <methods>
-          <include name="ContreactSetupStart"/>
-          <include name="initializeWebDriver"/>
-          <include name="tearDown"/>
+          <include name="rdr3"/>
         </methods>
-      </class> <!-- Script._2_MainScreen -->
+      </class> <!-- Script._3_ContractSetupStartModalPopup -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

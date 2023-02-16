@@ -15,6 +15,7 @@ import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
@@ -24,6 +25,7 @@ import org.testng.annotations.Test;
 
 import PagesObject._1_LoginPage;
 import PagesObject._2_MainPage;
+import PagesObject._3_ContractSetupStartModalPopup;
 import TestrailAPI.APIClient;
 import TestrailAPI.APIException;
 import TestrailAPI.TestRails;
@@ -36,14 +38,14 @@ import java.lang.reflect.Method;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-public class _1_Login extends _0_Base  {
+public class _1_Login extends _0_BaseTest    {
 	
-
 	_1_LoginPage objLoginPage; 
 	_2_MainPage objMainPage;
+	_3_ContractSetupStartModalPopup objContractSetupStartModalPopup;
 	
-	@TestRails (id = "7929")
-	@Test(priority = 1)
+
+	@Test
 	public void login() throws InterruptedException {
 		
 		objLoginPage = new _1_LoginPage(driver);

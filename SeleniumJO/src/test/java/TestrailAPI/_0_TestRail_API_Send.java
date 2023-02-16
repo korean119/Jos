@@ -10,13 +10,15 @@ import org.json.simple.JSONObject;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
-import Script._1_Login;
+import Script._3_Contract;
 
-public class _1_TestRail_API_Send{
+public class _0_TestRail_API_Send {
 	
 	APIClient client = null;
 	String PROJECT_ID = "13";
@@ -24,7 +26,7 @@ public class _1_TestRail_API_Send{
 	public static final int TEST_CASE_PASSED_STATUS = 1;
 	public static final int TEST_CASE_FAILED_STATUS = 5;
 	
-	@BeforeSuite
+	@BeforeClass
 	public void createSuite(ITestContext ctx) throws IOException, AbortException, APIException {
 		client = new APIClient("https://modusign.testrail.io");
 		client.setUser("jo.shin@modusign.co.kr");
@@ -40,23 +42,27 @@ public class _1_TestRail_API_Send{
 
 		Long suite_id = (Long) c.get("id");
 		ctx.setAttribute("suiteId", suite_id);
+		
+		System.out.print("되냐?");
 
 	}
 
 	@BeforeMethod
 	public void beforeTest(ITestContext ctx, Method method) throws NoSuchMethodException {
-		Method m = _1_Login.class.getMethod(method.getName());
+		Method m = _3_Contract.class.getMethod(method.getName());
 
 		if (m.isAnnotationPresent(TestRails.class)) {
 			TestRails ta = m.getAnnotation(TestRails.class);
 			System.out.println(ta.id());
 			ctx.setAttribute("caseId", ta.id());
+			
+			System.out.print("되냐?");
 
 		}
 	}
 
 
-	@AfterMethod
+	@AfterTest
 	public void afterTest(ITestResult result, ITestContext ctx) throws IOException, APIException {
 
 		Map data = new HashMap();
@@ -81,6 +87,8 @@ public class _1_TestRail_API_Send{
 		//System.out.println("스투이트 아이디" + suiteId + "케이스 아이디" + caseId);
 
 		client.sendPost("add_result_for_case/" + suiteId + "/" + caseId, data);
+		
+		System.out.print("되냐?");
 	}
 }
 
