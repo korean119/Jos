@@ -42,7 +42,7 @@ public class _1_Login extends _0_Base  {
 	_1_LoginPage objLoginPage; 
 	_2_MainPage objMainPage;
 	
-	
+	@TestRails (id = "7929")
 	@Test(priority = 1)
 	public void login() throws InterruptedException {
 		
