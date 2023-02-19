@@ -20,6 +20,7 @@ public class _3_Contract extends _0_BaseTest {
 		objContractSetupStartModalPopup.Modal();
 		objContractSetup_Step1page.ContractSetup_Step1page_Setup();
 		objContractSetup_Step2page.ContractSetup_Step2page_Setup();
+		objContractSetup_Step3page.ContractSetup_Step3page_Setup();
 		
 	}
 }

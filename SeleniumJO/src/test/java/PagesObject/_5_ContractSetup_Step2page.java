@@ -27,7 +27,7 @@ public class _5_ContractSetup_Step2page {
 	@FindBy(css = (".FieldLocator:nth-child(3) .css-skfhhz"))
 	WebElement CheckboxField_btn;
 
-	@FindBy(css = ("button[aria-label='다음 단계로']"))
+	@FindBy(css = (".Btn--primary"))
 	WebElement Next_btn;
 
 	public _5_ContractSetup_Step2page(WebDriver driver) {

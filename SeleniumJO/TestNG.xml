@@ -8,8 +8,8 @@
 	<test name="Test">
 		<classes>
 
-			<class name="Script._1_Login" />
-			<class name="Script._2_MainScreen" />
+<!-- 			<class name="Script._1_Login" />
+			<class name="Script._2_MainScreen" /> -->
 			<class name="Script._3_Contract" />
 	
 

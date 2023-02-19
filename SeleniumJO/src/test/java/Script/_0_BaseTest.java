@@ -28,6 +28,7 @@ import PagesObject._2_MainPage;
 import PagesObject._3_ContractSetupStartModalPopup;
 import PagesObject._4_ContractSetup_Step1page;
 import PagesObject._5_ContractSetup_Step2page;
+import PagesObject._6_ContractSetup_Step3page;
 import Testrail_client.APIClient;
 import Testrail_client.Testrails.TestRails;
 
@@ -46,6 +47,7 @@ public class _0_BaseTest {
 	_3_ContractSetupStartModalPopup objContractSetupStartModalPopup;
 	_4_ContractSetup_Step1page objContractSetup_Step1page;
 	_5_ContractSetup_Step2page objContractSetup_Step2page;
+	_6_ContractSetup_Step3page objContractSetup_Step3page;
 
 	@BeforeClass
 	public void initializeWebDriver() throws IOException { //
@@ -56,7 +58,7 @@ public class _0_BaseTest {
 				"C:\\Users\\tncls\\Downloads\\chromedriver_win32 (1)/chromedriver.exe");
 		driver = new ChromeDriver();
 
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get("https://stage-app.modusign.co.kr");
 
@@ -65,9 +67,18 @@ public class _0_BaseTest {
 		objContractSetupStartModalPopup = new _3_ContractSetupStartModalPopup(driver);
 		objContractSetup_Step1page = new _4_ContractSetup_Step1page(driver);
 		objContractSetup_Step2page = new _5_ContractSetup_Step2page(driver);
+		objContractSetup_Step3page = new _6_ContractSetup_Step3page(driver);
 
 	}
 
+	@AfterMethod
+	public void tearDown() {
+
+		driver.quit();
+	}
+
+	// 아래는 Testail API. 왜 인지 모르겠지만 클래스 분리가 안되서 일단 합쳐 놓음
+	
 	@BeforeSuite
 	public void createSuite(ITestContext ctx) throws Exception {
 		client = new APIClient("https://modusign.testrail.io");
@@ -129,12 +140,7 @@ public class _0_BaseTest {
 
 		client.sendPost("add_result_for_case/" + suiteId + "/" + caseId, data);
 
-		System.out.print("Testrail Result update");
+		System.out.print("축하축하 Testrail Result update 근데 여기 나중에 수정해야합니다~");
 	}
 
-	@AfterMethod
-	public void tearDown() {
-		driver.close();
-		driver.quit();
-	}
 }

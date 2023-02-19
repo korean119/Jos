@@ -3,16 +3,16 @@
 <suite name="Failed suite [jdohnnyjangjang]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Script._1_Login">
+      <class name="Script._3_Contract">
         <methods>
-          <include name="afterTest"/>
           <include name="createSuite"/>
           <include name="tearDown"/>
           <include name="beforeTest"/>
-          <include name="login"/>
+          <include name="afterMethod"/>
+          <include name="Contract"/>
           <include name="initializeWebDriver"/>
         </methods>
-      </class> <!-- Script._1_Login -->
+      </class> <!-- Script._3_Contract -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [jdohnnyjangjang] -->

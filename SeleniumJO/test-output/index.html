@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-jdohnnyjangjang" class="navigator-link">
-              <span class="suite-name border-passed">jdohnnyjangjang</span>
+              <span class="suite-name border-failed">jdohnnyjangjang</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,31 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-jdohnnyjangjang" class="hide-methods passed suite-jdohnnyjangjang"> (hide)</a> <!-- hide-methods passed suite-jdohnnyjangjang -->
-                      <a href="#" panel-name="suite-jdohnnyjangjang" class="show-methods passed suite-jdohnnyjangjang"> (show)</a> <!-- show-methods passed suite-jdohnnyjangjang -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-jdohnnyjangjang" class="hide-methods failed suite-jdohnnyjangjang"> (hide)</a> <!-- hide-methods failed suite-jdohnnyjangjang -->
+                      <a href="#" panel-name="suite-jdohnnyjangjang" class="show-methods failed suite-jdohnnyjangjang"> (show)</a> <!-- show-methods failed suite-jdohnnyjangjang -->
                     </span>
-                    <div class="method-list-content passed suite-jdohnnyjangjang">
+                    <div class="method-list-content failed suite-jdohnnyjangjang">
                       <span>
-                        <img src="passed.png" width="3%"/>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-jdohnnyjangjang" title="Script._3_Contract" class="method navigator-link" hash-for-method="Contract">Contract</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-jdohnnyjangjang" title="Script._2_MainScreen" class="method navigator-link" hash-for-method="EnterContractSetupStart">EnterContractSetupStart</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-jdohnnyjangjang" title="Script._1_Login" class="method navigator-link" hash-for-method="login">login</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-jdohnnyjangjang -->
+                    </div> <!-- method-list-content failed suite-jdohnnyjangjang -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -129,24 +119,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-jdohnnyjangjang" class="panel jdohnnyjangjang">
-          <div class="suite-jdohnnyjangjang-class-passed">
+          <div class="suite-jdohnnyjangjang-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">Script._1_Login</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="login">
-                  </a> <!-- login -->
-                  <span class="method-name">login</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-jdohnnyjangjang-class-passed -->
-          <div class="suite-jdohnnyjangjang-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">Script._3_Contract</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -155,25 +130,32 @@
                   <a name="Contract">
                   </a> <!-- Contract -->
                   <span class="method-name">Contract</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;Btn Btn--bold Btn--lg Btn--white css-14es3vg&quot; display=&quot;none,block&quot; style=&quot;position: absolute; right: 18px;&quot;&gt;...&lt;/button&gt; is not clickable at point (1808, 855). Other element would receive the click: &lt;div class=&quot;Overlay Overlay--high-z-index Overlay--active&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=110.0.5481.77)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-F3B2TKP&apos;, ip: &apos;112.148.26.220&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.4.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.77, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: C:\Users\tncls\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53703}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: dcc52f5bb1a8d37519ed19d28ef06e35
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+	at PagesObject._6_ContractSetup_Step3page.ContractSetup_Step3page_Setup(_6_ContractSetup_Step3page.java:60)
+	at Script._3_Contract.Contract(_3_Contract.java:23)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 35 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-jdohnnyjangjang-class-passed -->
-          <div class="suite-jdohnnyjangjang-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">Script._2_MainScreen</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="EnterContractSetupStart">
-                  </a> <!-- EnterContractSetupStart -->
-                  <span class="method-name">EnterContractSetupStart</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-jdohnnyjangjang-class-passed -->
+          </div> <!-- suite-jdohnnyjangjang-class-failed -->
         </div> <!-- panel jdohnnyjangjang -->
         <div panel-name="test-xml-jdohnnyjangjang" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -186,8 +168,6 @@
 &lt;suite name=&quot;jdohnnyjangjang&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Script._1_Login&quot;/&gt;
-      &lt;class name=&quot;Script._2_MainScreen&quot;/&gt;
       &lt;class name=&quot;Script._3_Contract&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
@@ -202,7 +182,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (3 classes)</span>
+                <span class="test-name">Test (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -228,24 +208,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'Contract')
 data.setCell(0, 2, 'Script._3_Contract')
-data.setCell(0, 3, 8476);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'EnterContractSetupStart')
-data.setCell(1, 2, 'Script._2_MainScreen')
-data.setCell(1, 3, 1363);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'login')
-data.setCell(2, 2, 'Script._1_Login')
-data.setCell(2, 3, 421);
+data.setCell(0, 3, 9915);
 window.suiteTableData['jdohnnyjangjang']= { tableData: data, tableDiv: 'times-div-jdohnnyjangjang'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 10 seconds</span>
+              <span class="suite-total-time">Total running time: 9 seconds</span>
               <div id="times-div-jdohnnyjangjang">
               </div> <!-- times-div-jdohnnyjangjang -->
             </div> <!-- times-div -->
@@ -260,23 +232,9 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-jdohnnyjangjang" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">2 ignored methods</span>
+            <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">Script._3_Contract</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">createSuite</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">Script._2_MainScreen</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">createSuite</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-jdohnnyjangjang" class="panel">
@@ -285,76 +243,32 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Script._1_Login</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Script._3_Contract</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">createSuite(org.testng.TestRunner@2babf189)</span>
+                <span class="method-name">createSuite(org.testng.TestRunner@16073fa8)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">initializeWebDriver</span>
-                <span class="method-start">1330 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeTest([TestResult name={null} status=CREATED method=_1_Login.login()[pri:0, instance:Script._1_Login@7133d...)</span>
-                <span class="method-start">4088 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">login</span>
-                <span class="method-start">4089 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=login status=SUCCESS method=_1_Login.login()[pri:0, instance:Script._1_Login@7133da...)</span>
-                <span class="method-start">4512 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">4999 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Script._2_MainScreen</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">initializeWebDriver</span>
-                <span class="method-start">5169 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeTest([TestResult name={null} status=CREATED method=_2_MainScreen.EnterContractSetupStart()[pri:0, instanc...)</span>
-                <span class="method-start">7986 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">EnterContractSetupStart</span>
-                <span class="method-start">7987 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=EnterContractSetupStart status=SUCCESS method=_2_MainScreen.EnterContractSetupStart...)</span>
-                <span class="method-start">9351 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">9899 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">Script._3_Contract</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">initializeWebDriver</span>
-                <span class="method-start">10052 ms</span>
+                <span class="method-start">1316 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">beforeTest([TestResult name={null} status=CREATED method=_3_Contract.Contract()[pri:0, instance:Script._3_Contr...)</span>
-                <span class="method-start">13251 ms</span>
+                <span class="method-start">4265 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">Contract</span>
-                <span class="method-start">13251 ms</span>
+                <span class="method-start">4267 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=Contract status=SUCCESS method=_3_Contract.Contract()[pri:0, instance:Script._3_Con...)</span>
-                <span class="method-start">21727 ms</span>
+                <span class="method-name">afterMethod([TestResult name=Contract status=FAILURE method=_3_Contract.Contract()[pri:0, instance:Script._3_Con...)</span>
+                <span class="method-start">14185 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">22818 ms</span>
+                <span class="method-start">15493 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
