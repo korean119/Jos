@@ -2,64 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-17T03:13:31 KST" name="User acceptance TestSuite" finished-at="2023-02-17T03:13:44 KST" duration-ms="12166">
+  <suite started-at="2023-02-19T21:47:43 KST" name="jdohnnyjangjang" finished-at="2023-02-19T21:47:47 KST" duration-ms="3774">
     <groups>
     </groups>
-    <test started-at="2023-02-17T03:13:31 KST" name="Expense Tracker Validattion" finished-at="2023-02-17T03:13:44 KST" duration-ms="12166">
-      <class name="TestrailAPI._0_TestRail_API_Send">
-        <test-method is-config="true" signature="afterTest(org.testng.ITestResult,org.testng.ITestContext)[pri:0, instance:TestrailAPI._0_TestRail_API_Send@505fc5a4]" started-at="2023-02-17T03:13:44 KST" name="afterTest" finished-at="1970-01-01T09:00:00 KST" duration-ms="-1676571224128" status="FAIL">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Can inject only one of <ITestContext, XmlTest> into a @AfterTest annotated afterTest.
-For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Can inject only one of <ITestContext, XmlTest> into a @AfterTest annotated afterTest.
-For more information on native dependency injection please refer to https://testng.org/doc/documentation-main.html#native-dependency-injection
-at org.testng.internal.Parameters.checkParameterTypes(Parameters.java:439)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:353)
-at org.testng.internal.Parameters.createParameters(Parameters.java:708)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:168)
-at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:302)
-at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:637)
-at org.testng.TestRunner.afterRun(TestRunner.java:877)
-at org.testng.TestRunner.run(TestRunner.java:599)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- TestrailAPI._0_TestRail_API_Send -->
-      <class name="Script._3_Contract">
-        <test-method is-config="true" signature="initializeWebDriver()[pri:0, instance:Script._3_Contract@32ee6fee]" started-at="2023-02-17T03:13:31 KST" name="initializeWebDriver" finished-at="2023-02-17T03:13:35 KST" duration-ms="3359" status="PASS">
+    <test started-at="2023-02-19T21:47:43 KST" name="Test" finished-at="2023-02-19T21:47:47 KST" duration-ms="3774">
+      <class name="Script._1_Login">
+        <test-method is-config="true" signature="initializeWebDriver()[pri:0, instance:Script._1_Login@67c33749]" started-at="2023-02-19T21:47:43 KST" name="initializeWebDriver" finished-at="2023-02-19T21:47:46 KST" duration-ms="3123" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeWebDriver -->
-        <test-method signature="Contract()[pri:0, instance:Script._3_Contract@32ee6fee]" started-at="2023-02-17T03:13:35 KST" name="Contract" finished-at="2023-02-17T03:13:43 KST" duration-ms="8572" status="PASS">
+        <test-method signature="login()[pri:0, instance:Script._1_Login@67c33749]" started-at="2023-02-19T21:47:46 KST" name="login" finished-at="2023-02-19T21:47:46 KST" duration-ms="430" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Contract -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Script._3_Contract@32ee6fee]" started-at="2023-02-17T03:13:43 KST" name="tearDown" finished-at="2023-02-17T03:13:44 KST" duration-ms="214" status="PASS">
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Script._1_Login@67c33749]" started-at="2023-02-19T21:47:46 KST" name="tearDown" finished-at="2023-02-19T21:47:47 KST" duration-ms="199" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Script._3_Contract -->
-    </test> <!-- Expense Tracker Validattion -->
-  </suite> <!-- User acceptance TestSuite -->
+      </class> <!-- Script._1_Login -->
+    </test> <!-- Test -->
+  </suite> <!-- jdohnnyjangjang -->
 </testng-results>
