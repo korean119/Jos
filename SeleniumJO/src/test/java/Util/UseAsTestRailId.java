@@ -1,14 +1,13 @@
-package Testrail_listeners;
+package Util;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.METHOD) //on method level
-
-public @interface UseAsTestRailId {
-
-	int testRailId() default 0;
-	String[] tags() default "";
+@Target(ElementType.METHOD)
+public @interface UseAsTestRailId
+{
+    int testRailId() default 0;
+    String[] tags() default "";
 }

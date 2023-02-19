@@ -1,9 +1,12 @@
 package Script;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import Testrail_listeners.UseAsTestRailId;
+import Testrail_listeners.TestNgTestRailListener;
+import Util.UseAsTestRailId;
 
+@Listeners(TestNgTestRailListener.class)
 public class _1_Login extends _0_BaseTest {
 
 	@Test

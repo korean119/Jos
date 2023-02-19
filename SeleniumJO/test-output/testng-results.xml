@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-19T21:47:43 KST" name="jdohnnyjangjang" finished-at="2023-02-19T21:47:47 KST" duration-ms="3774">
+  <suite started-at="2023-02-19T22:43:30 KST" name="jdohnnyjangjang" finished-at="2023-02-19T22:43:34 KST" duration-ms="4003">
     <groups>
     </groups>
-    <test started-at="2023-02-19T21:47:43 KST" name="Test" finished-at="2023-02-19T21:47:47 KST" duration-ms="3774">
+    <test started-at="2023-02-19T22:43:30 KST" name="Test" finished-at="2023-02-19T22:43:34 KST" duration-ms="4003">
       <class name="Script._1_Login">
-        <test-method is-config="true" signature="initializeWebDriver()[pri:0, instance:Script._1_Login@67c33749]" started-at="2023-02-19T21:47:43 KST" name="initializeWebDriver" finished-at="2023-02-19T21:47:46 KST" duration-ms="3123" status="PASS">
+        <test-method is-config="true" signature="initializeWebDriver()[pri:0, instance:Script._1_Login@fa49800]" started-at="2023-02-19T22:43:30 KST" name="initializeWebDriver" finished-at="2023-02-19T22:43:33 KST" duration-ms="3261" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeWebDriver -->
-        <test-method signature="login()[pri:0, instance:Script._1_Login@67c33749]" started-at="2023-02-19T21:47:46 KST" name="login" finished-at="2023-02-19T21:47:46 KST" duration-ms="430" status="PASS">
+        <test-method signature="login()[pri:0, instance:Script._1_Login@fa49800]" started-at="2023-02-19T22:43:33 KST" name="login" finished-at="2023-02-19T22:43:34 KST" duration-ms="461" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Script._1_Login@67c33749]" started-at="2023-02-19T21:47:46 KST" name="tearDown" finished-at="2023-02-19T21:47:47 KST" duration-ms="199" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Script._1_Login@fa49800]" started-at="2023-02-19T22:43:34 KST" name="tearDown" finished-at="2023-02-19T22:43:34 KST" duration-ms="260" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
