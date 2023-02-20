@@ -1,4 +1,4 @@
-package TestrailAPI;
+package Testrail_client;
 
 /**
  * TestRail API binding for Java (API v2, available since TestRail 3.0)
