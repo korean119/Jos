@@ -9,7 +9,8 @@ import org.testng.Assert;
 
 public class _0_BasePage {
 
-    WebDriver driver;
+	public WebDriver driver;
+
     
 
 	public _0_BasePage(WebDriver driver) {
@@ -17,15 +18,16 @@ public class _0_BasePage {
 		PageFactory.initElements(driver, this);
 
 	}
+}
+
 	 
-	 }
-    	
-    
-//
-//    //Wait Wrapper Method
+// 만약에 또 객채 못 찾으면 wait 사용 할 예정 	 
+//    Wait Wrapper Method
 //    public void waitVisibility(By elementBy) {
 //        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(elementBy));
 //    }
+//    
+//
 //    //Click Method
 //    public void click (By elementBy) {
 //        waitVisibility(elementBy);

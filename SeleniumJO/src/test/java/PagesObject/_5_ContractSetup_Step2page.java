@@ -29,6 +29,11 @@ public class _5_ContractSetup_Step2page {
 
 	@FindBy(css = (".Btn--primary"))
 	WebElement Next_btn;
+	
+	// 서명 없는 팝업 컨펌 
+	@FindBy(css = (".css-1r6iwme"))
+	WebElement yes_btn;
+	
 
 	public _5_ContractSetup_Step2page(WebDriver driver) {
 		this.driver = driver;
@@ -45,6 +50,7 @@ public class _5_ContractSetup_Step2page {
 		CheckboxField_btn.click();
 		PDFSreen_go_Btn.click();
 		Next_btn.click();
+		yes_btn.click();
 		Thread.sleep(3000);
 
 	}
