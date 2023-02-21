@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import Testrail_client.Testrails.TestRails;
 
-
+@Listeners(Listener.ListenerTest.class)
 
 public class ElieClass extends _0_BaseTest {
 

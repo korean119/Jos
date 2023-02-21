@@ -2,9 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="jdohnnyjangjang">
 
-<!--  	<listeners>
-		<listener class-name="Testrail_listeners.TestNgTestRailListener" />
-	</listeners>  -->
+ 	<listeners>
+		<listener class-name="Listener.ListenerTest" />
+	</listeners> 
 	<test name="Test">
 		<classes>
 <class name="Test.ElieClass" /> 
