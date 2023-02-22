@@ -2,16 +2,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="jdohnnyjangjang">
 
-<!-- 	<listeners>
-		<listener class-name="Testrail_listeners.TestNgTestRailListener" />
-	</listeners> -->
+ 	<listeners>
+		<listener class-name="Listener.ListenerTest" />
+	</listeners> 
 	<test name="Test">
 		<classes>
+<class name="Test.ElieClass" /> 
+<class name="Test.ElieClass2" />
+<class name="Test.ElieClass3" />
 
-<!-- 			<class name="Script._1_Login" />
-			<class name="Script._2_MainScreen" /> -->
-			<class name="Script._3_Contract" />
-	
+<!-- 			<class name="Test._2_MainScreen" /> 
+			
+ 			<class name="Test._3_Contract" />
+	  -->
 
 		</classes>
 	</test> <!-- Test -->

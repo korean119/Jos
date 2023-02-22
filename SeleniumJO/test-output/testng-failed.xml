@@ -3,16 +3,15 @@
 <suite name="Failed suite [jdohnnyjangjang]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Script._3_Contract">
+      <class name="Test.ElieClass3">
         <methods>
           <include name="createSuite"/>
-          <include name="tearDown"/>
+          <include name="ruru3"/>
           <include name="beforeTest"/>
-          <include name="afterMethod"/>
-          <include name="Contract"/>
+          <include name="tearDown"/>
           <include name="initializeWebDriver"/>
         </methods>
-      </class> <!-- Script._3_Contract -->
+      </class> <!-- Test.ElieClass3 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [jdohnnyjangjang] -->

@@ -12,38 +12,33 @@ public class _6_ContractSetup_Step3page {
 	@FindBy(css = (".Btn--light"))
 	WebElement LimitedTextareaselect;
 
-	
 	@FindBy(css = (".LimitedTextarea__textarea"))
 	WebElement LimitedTextarea;
 
 	@FindBy(xpath = ("//button[contains(.,'수정 완료')]"))
 	WebElement Editdone;
-	
+
 	@FindBy(css = (".Btn--primary"))
 	WebElement Settingdone;
-	
+
 	@FindBy(id = ("agreement-check1"))
 	WebElement agreementcheck1;
-	
+
 	@FindBy(id = ("agreement-check2"))
 	WebElement agreementcheck2;
-	
-	
+
 	@FindBy(css = (".css-1r6iwme"))
 	WebElement done;
-	
-	
-	@FindBy(css = (".Btn:nth-child(3)"))
-	WebElement done2;
 
-	
+	@FindBy(xpath = (".Btn:nth-child(3)"))
+	WebElement done2;
 
 	public _6_ContractSetup_Step3page(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 
 	}
-	
+
 	public void LimitedTextareaedit(String arg1) {
 		// driver.findElement(Email).sendKeys(arg1);
 		LimitedTextarea.sendKeys(arg1);
@@ -57,11 +52,23 @@ public class _6_ContractSetup_Step3page {
 		agreementcheck1.click();
 		agreementcheck2.click();
 		done.click();
-		done2.click();
-		
+	
+		Thread.sleep(5000);
 	
 
+//		String url = "https://stage-app.modusign.co.kr";
+//		driver.get(url);
+//		String main = driver.getWindowHandle();
+//
+//		for (String handle : driver.getWindowHandles()) {
+//
+//			if (!handle.equals(main)) {
+//
+//				driver.switchTo().window(handle).close();
+//			}
+//
+//			Thread.sleep(3000);
+//		
+		}
 	}
-}
 
-	
