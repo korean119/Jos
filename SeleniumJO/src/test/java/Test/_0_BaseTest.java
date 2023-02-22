@@ -51,11 +51,11 @@ public class _0_BaseTest {
 
 	@BeforeClass
 	public void initializeWebDriver() throws IOException { //
-		// System.setProperty("webdriver.chrome.driver", //
-		// "/Users/johnny/Downloads/chromedriver_mac64/chromedriver");
+		 System.setProperty("webdriver.chrome.driver", //
+		 "/Users/johnny/Downloads/chromedriver_mac64/chromedriver");
 
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\tncls\\Downloads\\chromedriver_win32 (1)/chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver",
+		//		"C:\\Users\\tncls\\Downloads\\chromedriver_win32 (1)/chromedriver.exe");
 		driver = new ChromeDriver();
 		// BasePage 에서 인스턴스 초기화 시킨 후 객체가 없을 경우 기다리게 해놨음 PageFactory.initElements(new AjaxElementLocatorFactory(driver, 10), this);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);

@@ -19,6 +19,7 @@ public class ElieClass2 extends _0_BaseTest {
 
 		objMainPage.DocumentListItem();
 		objMainPage.DropdownMenuRow();
+		Thread.sleep(2000);
 		objMainPage.ElementCapture();
 		
 	}

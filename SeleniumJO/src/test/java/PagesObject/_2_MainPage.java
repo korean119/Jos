@@ -93,8 +93,9 @@ public class _2_MainPage extends _0_BasePage {
 		Screenshot Screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000))
 				.takeScreenshot(driver, PDFLayer);
 
-		ImageIO.write(Screenshot.getImage(), "png", new File("C:\\SeleniumPractice\\logos/screenshot01.png"));
-
+		//ImageIO.write(Screenshot.getImage(), "png", new File("C:\\SeleniumPractice\\logos/screenshot01.png"));
+		ImageIO.write(Screenshot.getImage(), "png", new File("/Users/johnny/Desktop/Selenium_img/screenshot01.png"));
+		
 		System.out.println("스크린 캡쳐 성공");
 
 	}
@@ -119,11 +120,13 @@ public class _2_MainPage extends _0_BasePage {
 		Screenshot Screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000))
 				.takeScreenshot(driver, PDFLayer);
 
-		ImageIO.write(Screenshot.getImage(), "png", new File("C:\\SeleniumPractice\\logos/screenshot02.png"));
-
+		//ImageIO.write(Screenshot.getImage(), "png", new File("C:\\SeleniumPractice\\logos/screenshot02.png"));
+		ImageIO.write(Screenshot.getImage(), "png", new File("/Users/johnny/Desktop/Selenium_img/screenshot02.png"));
+		
 		System.out.println("스크린 캡쳐 성공");
 
-		BufferedImage expectedImage = ImageIO.read(new File("C:\\SeleniumPractice\\logos/screenshot01.png"));
+		//BufferedImage expectedImage = ImageIO.read(new File("C:\\SeleniumPractice\\logos/screenshot02.png"));
+		BufferedImage expectedImage = ImageIO.read(new File("/Users/johnny/Desktop/Selenium_img/screenshot01.png"));
 
 		BufferedImage actualImage = Screenshot.getImage();
 
