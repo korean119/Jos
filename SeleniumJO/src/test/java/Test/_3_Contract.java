@@ -17,11 +17,11 @@ public class _3_Contract extends _0_BaseTest {
 	public void Contract() throws InterruptedException, IOException {
 		
 		objLoginPage.Login("joshin1@getnada.com", "tlswnsdh2@@");
-		objMainPage.EnterContractSetupStart();
+		objGNB.ContractSetupStart_btn();
 		objContractSetupStartModalPopup.Modal();
 		objContractSetup_Step1page.ContractSetup_Step1page_Setup();
-		objContractSetup_Step2page.ContractSetup_Step2page_Setup();
-		objContractSetup_Step3page.ContractSetup_Step3page_Setup();
+		objContractSetup_Step2page.ContractSetup_Step2page_Setup_BaseScript();
+		objContractSetup_Step3page.ContractSetup_Step3page_Setup_Quick("자동화 테스트 입니다.");
 			
 		
 	}

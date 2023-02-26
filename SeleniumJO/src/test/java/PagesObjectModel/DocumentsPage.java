@@ -1,4 +1,4 @@
-package PagesObject;
+package PagesObjectModel;
 
 import static org.testng.Assert.assertEquals;
 
@@ -29,41 +29,99 @@ import ru.yandex.qatools.ashot.comparison.ImageDiff;
 import ru.yandex.qatools.ashot.comparison.ImageDiffer;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
-public class _2_MainPage extends _0_BasePage {
+public class DocumentsPage extends _0_BasePage {
 
-	@FindBy(css = (".tagGNBContractSetupStartBtn"))
-	WebElement ContractSetupStartBtn;
-
-	@FindBy(css = (".css-u15r74"))
-	WebElement DocumentListItem;
-
-	@FindBy(css = (".css-1eegufe"))
-	WebElement DropdownMenuRow;
-
-	@FindBy(css = (".PDFTextLayer"))
-	WebElement PDFLayer;
-
-	public _2_MainPage(WebDriver driver) {
+	public DocumentsPage(WebDriver driver) {
 		super(driver);
 
 	}
 
-	public void EnterContractSetupStart() {
-		ContractSetupStartBtn.click();
+	// 문서함 > 리스트 첫 번째(내용 확인하고 서명)
+	@FindBy(css = ("div:nth-child(1) > .DocumentListItem .css-2q6pdu"))
+	WebElement DocumentListItem1;
 
-	}
+	// 문서함 > 리스트 두 번째
+	@FindBy(css = ("div:nth-child(2) > .DocumentListItem .css-2q6pdu"))
+	WebElement DocumentListItem2;
 
-	public void DocumentListItem() {
-		DocumentListItem.click();
+	@FindBy(css = (".DropdownWrapper--opened .DropdownMenuRow:nth-child(1)"))
+	WebElement DropdownMenuRow1;
+	
+	@FindBy(css = (".DropdownWrapper--opened .DropdownMenuRow:nth-child(2)"))
+	WebElement DropdownMenuRow2;
+	
+
+	// 거절 팝업 텍스트 입력 
+	@FindBy(name = ("comment"))
+	WebElement Refusetosign_modal_text_area;
+	
+	
+	@FindBy(xpath = ("//button[contains(text(),'거절하기')]"))
+	WebElement Refusetosign_modal_refuse_btn;
+	
+	@FindBy(xpath = ("//button[contains(text(),'서명 취소하기')]"))
+	WebElement Refusetosign_modal_signcancle_btn;
+	
+	
+	
+	@FindBy(xpath = ("//button[contains(text(),'확인')]"))
+	WebElement Refusetosign_card_btn;
+	
+	
+	
+
+	
+	
+	//////////////////// 캡쳐용인데 나중에 어디다 쓸거 같은뎅 /////////////////////////
+
+	@FindBy(css = (".PDFTextLayer"))
+	WebElement PDFLayer;
+
+	//////////////////// 캡쳐용인데 나중에 어디다 쓸거 같은뎅 /////////////////////////
+
+	
+	public void DocumentListItem1() {
+		DocumentListItem1.click();
 
 	}
 
 	public void DropdownMenuRow() {
-		DropdownMenuRow.click();
+		DropdownMenuRow1.click();
 
 	}
-	
 
+	public void Doucment_Dropdown_BaseScript() throws IOException {
+		DocumentListItem1.click();
+		DropdownMenuRow1.click();
+		
+	}
+
+	public void Doucment_Dropdown_BaseScript2(String arg1) throws IOException {
+		DocumentListItem1.click();
+		DropdownMenuRow2.click();
+		Refusetosign_modal_text_area.click();
+		Refusetosign_modal_text_area.sendKeys(arg1);
+		Refusetosign_modal_refuse_btn.click();
+		Refusetosign_card_btn.click();
+		
+	}
+	
+	
+	public void Doucment_Dropdown_BaseScript3(String arg1) throws IOException {
+		DocumentListItem1.click();
+		DropdownMenuRow2.click();
+		Refusetosign_modal_text_area.click();
+		Refusetosign_modal_text_area.sendKeys(arg1);
+		Refusetosign_modal_signcancle_btn.click();
+		Refusetosign_card_btn.click();
+		
+	}
+	
+	
+	
+	
+	//////////////////// 캡쳐용인데 나중에 어디다 쓸거 같은뎅 /////////////////////////
+	
 	public void AllScreen() throws IOException, InterruptedException {
 
 		File f = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -75,7 +133,7 @@ public class _2_MainPage extends _0_BasePage {
 
 	public void ElementCapture() throws IOException, InterruptedException {
 
-		// jqury 오류 대응 코드, 이게 뭔지는 나도 잘 모름 
+		// jqury 오류 대응 코드, 이게 뭔지는 나도 잘 모름
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		if (!(Boolean) js.executeScript("return (typeof jQuery != \"undefined\")")) {
 			js.executeScript("var headID = document.getElementsByTagName('head')[0];"
@@ -88,7 +146,7 @@ public class _2_MainPage extends _0_BasePage {
 			waitJQ.until(jQueryAvailable);
 		}
 
-		//WebElement PDFLayers = driver.findElement(By.cssSelector(".PDFTextLayer"));
+		// WebElement PDFLayers = driver.findElement(By.cssSelector(".PDFTextLayer"));
 
 		Screenshot Screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000))
 				.takeScreenshot(driver, PDFLayer);
@@ -98,10 +156,10 @@ public class _2_MainPage extends _0_BasePage {
 		System.out.println("스크린 캡쳐 성공");
 
 	}
-	
+
 	public void ElementCapture2() throws IOException, InterruptedException {
 
-		// jqury 오류 대응 코드, 이게 뭔지는 나도 잘 모름 
+		// jqury 오류 대응 코드, 이게 뭔지는 나도 잘 모름
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		if (!(Boolean) js.executeScript("return (typeof jQuery != \"undefined\")")) {
 			js.executeScript("var headID = document.getElementsByTagName('head')[0];"
@@ -114,13 +172,12 @@ public class _2_MainPage extends _0_BasePage {
 			waitJQ.until(jQueryAvailable);
 		}
 
-		//WebElement PDFLayers = driver.findElement(By.cssSelector(".PDFTextLayer"));
+		// WebElement PDFLayers = driver.findElement(By.cssSelector(".PDFTextLayer"));
 
 		Screenshot Screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000))
 				.takeScreenshot(driver, PDFLayer);
 
 		ImageIO.write(Screenshot.getImage(), "png", new File("C:\\SeleniumPractice\\logos/screenshot02.png"));
-
 		System.out.println("스크린 캡쳐 성공");
 
 		BufferedImage expectedImage = ImageIO.read(new File("C:\\SeleniumPractice\\logos/screenshot01.png"));
@@ -136,4 +193,6 @@ public class _2_MainPage extends _0_BasePage {
 		}
 
 	}
+	
+	//////////////////// 캡쳐용인데 나중에 어디다 쓸거 같은뎅 /////////////////////////
 }

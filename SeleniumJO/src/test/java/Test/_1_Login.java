@@ -21,9 +21,6 @@ import Testrail_client.Testrails.TestRails;
 
 
 public class _1_Login extends _0_BaseTest {
-	
-	public static final int TEST_CASE_PASSED_STATUS = 1;
-	public static final int TEST_CASE_FAILED_STATUS = 5;
 
 	@TestRails(id = "7927")
 	@Test

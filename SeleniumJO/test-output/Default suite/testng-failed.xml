@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Script._1_Login">
+      <class name="Test.BaseScript">
         <methods>
+          <include name="BaseScript2"/>
+          <include name="BaseScript3"/>
           <include name="tearDown"/>
-          <include name="login"/>
           <include name="initializeWebDriver"/>
         </methods>
-      </class> <!-- Script._1_Login -->
+      </class> <!-- Test.BaseScript -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

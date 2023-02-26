@@ -1,127 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="5" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-22T02:29:16 KST" name="jdohnnyjangjang" finished-at="2023-02-22T02:29:50 KST" duration-ms="33653">
+  <suite started-at="2023-02-27T00:33:29 KST" name="jdohnnyjangjang" finished-at="2023-02-27T00:33:49 KST" duration-ms="20140">
     <groups>
     </groups>
-    <test started-at="2023-02-22T02:29:16 KST" name="Test" finished-at="2023-02-22T02:29:50 KST" duration-ms="33653">
-      <class name="Test.ElieClass2">
-        <test-method is-config="true" signature="initializeWebDriver()[pri:0, instance:Test.ElieClass2@7e5afaa6]" started-at="2023-02-22T02:29:37 KST" name="initializeWebDriver" finished-at="2023-02-22T02:29:40 KST" duration-ms="3104" status="PASS">
+    <test started-at="2023-02-27T00:33:29 KST" name="Test" finished-at="2023-02-27T00:33:49 KST" duration-ms="20140">
+      <class name="Test.BaseScript_3_CancelSign">
+        <test-method is-config="true" signature="initializeWebDriver()[pri:0, instance:Test.BaseScript_3_CancelSign@5fd4f8f5]" started-at="2023-02-27T00:33:29 KST" name="initializeWebDriver" finished-at="2023-02-27T00:33:32 KST" duration-ms="3246" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeWebDriver -->
-        <test-method signature="ruru2()[pri:0, instance:Test.ElieClass2@7e5afaa6]" started-at="2023-02-22T02:29:40 KST" name="ruru2" finished-at="2023-02-22T02:29:44 KST" duration-ms="3868" status="PASS">
+        <test-method signature="BaseScript()[pri:1, instance:Test.BaseScript_3_CancelSign@5fd4f8f5]" started-at="2023-02-27T00:33:32 KST" name="BaseScript" finished-at="2023-02-27T00:33:49 KST" duration-ms="16800" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ruru2 -->
-        <test-method is-config="true" signature="beforeTest(org.testng.ITestResult,org.testng.ITestContext,java.lang.reflect.Method)[pri:0, instance:Test.ElieClass2@7e5afaa6]" started-at="2023-02-22T02:29:40 KST" name="beforeTest" finished-at="2023-02-22T02:29:40 KST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=ElieClass2.ruru2()[pri:0, instance:Test.ElieClass2@7e5afaa6] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[org.testng.TestRunner@6c101cc1]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[public void Test.ElieClass2.ruru2() throws java.lang.InterruptedException,java.io.IOException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test.ElieClass2@7e5afaa6]" started-at="2023-02-22T02:29:44 KST" name="tearDown" finished-at="2023-02-22T02:29:44 KST" duration-ms="110" status="PASS">
+        </test-method> <!-- BaseScript -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test.BaseScript_3_CancelSign@5fd4f8f5]" started-at="2023-02-27T00:33:49 KST" name="tearDown" finished-at="2023-02-27T00:33:49 KST" duration-ms="76" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Test.ElieClass2 -->
-      <class name="Test.ElieClass">
-        <test-method is-config="true" signature="createSuite(org.testng.ITestContext)[pri:0, instance:Test.ElieClass@73700b80]" started-at="2023-02-22T02:29:15 KST" name="createSuite" finished-at="2023-02-22T02:29:16 KST" duration-ms="1367" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@6c101cc1]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createSuite -->
-        <test-method is-config="true" signature="initializeWebDriver()[pri:0, instance:Test.ElieClass@73700b80]" started-at="2023-02-22T02:29:16 KST" name="initializeWebDriver" finished-at="2023-02-22T02:29:19 KST" duration-ms="2752" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeWebDriver -->
-        <test-method is-config="true" signature="beforeTest(org.testng.ITestResult,org.testng.ITestContext,java.lang.reflect.Method)[pri:0, instance:Test.ElieClass@73700b80]" started-at="2023-02-22T02:29:19 KST" name="beforeTest" finished-at="2023-02-22T02:29:19 KST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=ElieClass.ruru()[pri:0, instance:Test.ElieClass@73700b80] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[org.testng.TestRunner@6c101cc1]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[public void Test.ElieClass.ruru() throws java.lang.InterruptedException,java.io.IOException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method signature="ruru()[pri:0, instance:Test.ElieClass@73700b80]" started-at="2023-02-22T02:29:19 KST" name="ruru" finished-at="2023-02-22T02:29:36 KST" duration-ms="17565" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ruru -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test.ElieClass@73700b80]" started-at="2023-02-22T02:29:36 KST" name="tearDown" finished-at="2023-02-22T02:29:37 KST" duration-ms="372" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Test.ElieClass -->
-      <class name="Test.ElieClass3">
-        <test-method is-config="true" signature="initializeWebDriver()[pri:0, instance:Test.ElieClass3@63a12c68]" started-at="2023-02-22T02:29:44 KST" name="initializeWebDriver" finished-at="2023-02-22T02:29:47 KST" duration-ms="2696" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeWebDriver -->
-        <test-method signature="ruru3()[pri:0, instance:Test.ElieClass3@63a12c68]" started-at="2023-02-22T02:29:47 KST" name="ruru3" finished-at="2023-02-22T02:29:50 KST" duration-ms="3037" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ruru3 -->
-        <test-method is-config="true" signature="beforeTest(org.testng.ITestResult,org.testng.ITestContext,java.lang.reflect.Method)[pri:0, instance:Test.ElieClass3@63a12c68]" started-at="2023-02-22T02:29:47 KST" name="beforeTest" finished-at="2023-02-22T02:29:47 KST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name={null} status=CREATED method=ElieClass3.ruru3()[pri:0, instance:Test.ElieClass3@63a12c68] output={null}]]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[org.testng.TestRunner@6c101cc1]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[public void Test.ElieClass3.ruru3() throws java.lang.InterruptedException,java.io.IOException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Test.ElieClass3@63a12c68]" started-at="2023-02-22T02:29:50 KST" name="tearDown" finished-at="2023-02-22T02:29:50 KST" duration-ms="126" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Test.ElieClass3 -->
+      </class> <!-- Test.BaseScript_3_CancelSign -->
     </test> <!-- Test -->
   </suite> <!-- jdohnnyjangjang -->
 </testng-results>
