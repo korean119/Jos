@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-jdohnnyjangjang">
-              <span class="suite-name border-skipped">jdohnnyjangjang</span>
+              <span class="suite-name border-failed">jdohnnyjangjang</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,21 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,  1 skipped,  </span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title skipped">Skipped methods</span>
-                    <span class="show-or-hide-methods skipped">
-                      <a href="#" panel-name="suite-jdohnnyjangjang" class="hide-methods skipped suite-jdohnnyjangjang"> (hide)</a> <!-- hide-methods skipped suite-jdohnnyjangjang -->
-                      <a href="#" panel-name="suite-jdohnnyjangjang" class="show-methods skipped suite-jdohnnyjangjang"> (show)</a> <!-- show-methods skipped suite-jdohnnyjangjang -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-jdohnnyjangjang" class="hide-methods failed suite-jdohnnyjangjang"> (hide)</a> <!-- hide-methods failed suite-jdohnnyjangjang -->
+                      <a href="#" panel-name="suite-jdohnnyjangjang" class="show-methods failed suite-jdohnnyjangjang"> (show)</a> <!-- show-methods failed suite-jdohnnyjangjang -->
                     </span>
-                    <div class="method-list-content skipped suite-jdohnnyjangjang">
+                    <div class="method-list-content failed suite-jdohnnyjangjang">
                       <span>
-                        <img width="3%" src="skipped.png"/>
+                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-jdohnnyjangjang" title="Test.BaseScript_3_CancelSign" hash-for-method="BaseScript">BaseScript</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content skipped suite-jdohnnyjangjang -->
+                    </div> <!-- method-list-content failed suite-jdohnnyjangjang -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -119,9 +119,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-jdohnnyjangjang" class="panel jdohnnyjangjang">
-          <div class="suite-jdohnnyjangjang-class-skipped">
+          <div class="suite-jdohnnyjangjang-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
+              <img src="failed.png"/>
               <span class="class-name">Test.BaseScript_3_CancelSign</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -130,23 +130,37 @@
                   <a name="BaseScript">
                   </a> <!-- BaseScript -->
                   <span class="method-name">BaseScript</span>
-                  <div class="stack-trace">java.lang.IllegalStateException: The driver executable does not exist: /Users/johnny/git/Selenium/SeleniumJO/C:\Users\tncls\Downloads\chromedriver_win32 (1)/chromedriver.exe
-	at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
-	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
-	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
-	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
-	at Test._0_BaseTest.initializeWebDriver(_0_BaseTest.java:63)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.css-8tn0p7:nth-child(4) .css-9r9pmj&quot;}
+  (Session info: chrome=110.0.5481.100)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Johnny.local&apos;, ip: &apos;fe80:0:0:0:18e4:f449:94f3:23e4%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;1.8.0_292&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 110.0.5481.100, chrome: {chromedriverVersion: 110.0.5481.77 (65ed616c6e8e..., userDataDir: /var/folders/nb/rbk44gf1635...}, goog:chromeOptions: {debuggerAddress: localhost:50275}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fdf015fe0055a7f8ccf01ecc7df8a708
+*** Element info: {Using=css selector, value=.css-8tn0p7:nth-child(4) .css-9r9pmj}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy9.sendKeys(Unknown Source)
+	at PagesObjectModel._4_ContractSetup_Step1page.ContractSetup_Step1page_Setup_Quick(_4_ContractSetup_Step1page.java:95)
+	at Test.BaseScript_3_CancelSign.BaseScript(BaseScript_3_CancelSign.java:29)
 	at java.util.ArrayList.forEach(ArrayList.java:1259)
 ... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-jdohnnyjangjang-class-skipped -->
+          </div> <!-- suite-jdohnnyjangjang-class-failed -->
         </div> <!-- panel jdohnnyjangjang -->
         <div panel-name="test-xml-jdohnnyjangjang" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -206,12 +220,12 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'BaseScript')
 data.setCell(0, 2, 'Test.BaseScript_3_CancelSign')
-data.setCell(0, 3, 0);
+data.setCell(0, 3, 25026);
 window.suiteTableData['jdohnnyjangjang']= { tableData: data, tableDiv: 'times-div-jdohnnyjangjang'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 25 seconds</span>
               <div id="times-div-jdohnnyjangjang">
               </div> <!-- times-div-jdohnnyjangjang -->
             </div> <!-- times-div -->
@@ -239,18 +253,18 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">Test.BaseScript_3_CancelSign</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">initializeWebDriver</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">BaseScript</span>
-                <span class="method-start">41 ms</span>
+                <span class="method-start">13118 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">45 ms</span>
+                <span class="method-start">38147 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
