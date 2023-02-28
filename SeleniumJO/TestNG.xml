@@ -5,11 +5,25 @@
  	<listeners>
 		<listener class-name="Listener.ListenerTest" />
 	</listeners> 
+
 	<test name="Test">
 		<classes>
-<class name="Test.ElieClass" /> 
-<class name="Test.ElieClass2" />
-<class name="Test.ElieClass3" />
+
+<!-- <class name="Test.Testclass" /> -->
+
+<!-- <class name="Test.BaseScript_1_ComplexSign" /> -->
+<!-- <class name="Test.BaseScript_2_refuseSign" /> -->
+<class name="Test.BaseScript_3_CancelSign" />
+
+
+
+
+<!-- <class name="Test.GNB_Test" /> -->
+
+<!-- <class name="Test.ElieClass" /> -->
+<!-- <class name="Test.ElieClass2" /> -->
+
+<!-- <class name="Test.ElieClass3" /> -->
 
 <!-- 			<class name="Test._2_MainScreen" /> 
 			
@@ -19,6 +33,5 @@
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
-
 
 

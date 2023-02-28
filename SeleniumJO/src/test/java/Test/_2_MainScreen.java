@@ -6,8 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import PagesObject._1_LoginPage;
-import PagesObject._2_MainPage;
+import PagesObjectModel._1_LoginPage;
+import PagesObjectModel.DocumentsPage;
 import Testrail_client.Testrails.TestRails;
 
 
@@ -17,16 +17,15 @@ public class _2_MainScreen extends _0_BaseTest {
 	@Test 
 	public void EnterContractSetupStart() throws InterruptedException, IOException {
 		objLoginPage.Login("joshin1@getnada.com", "tlswnsdh2@@");
-		objMainPage.DocumentListItem();
-		objMainPage.DropdownMenuRow();
+		objDocumentsPage.DocumentListItem1();
+		objDocumentsPage.DropdownMenuRow();
 	
 		
 		Thread.sleep(2000);
-		objMainPage.ElementCapture();
+		objDocumentsPage.ElementCapture();
 		
 
 		
 	}
 }
 	
-

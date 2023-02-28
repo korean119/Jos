@@ -1,4 +1,4 @@
-package PagesObject;
+package PagesObjectModel;
 
 import static org.testng.Assert.assertEquals;
 
@@ -11,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -48,7 +49,8 @@ public class _1_LoginPage extends _0_BasePage  {
 	}
 
 	public void LoginbuttonClick() {
-		Loginbutton.click();
+		//Loginbutton.click();
+		 Wait.until(ExpectedConditions.visibilityOf(Loginbutton)).click();
 	
 	}
 	

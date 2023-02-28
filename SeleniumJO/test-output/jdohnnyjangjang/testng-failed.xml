@@ -6,24 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Test.ElieClass3">
+      <class name="Test.BaseScript_3_CancelSign">
         <methods>
-          <include name="createSuite"/>
-          <include name="ruru3"/>
-          <include name="beforeTest"/>
+          <include name="BaseScript"/>
           <include name="tearDown"/>
           <include name="initializeWebDriver"/>
         </methods>
-      </class> <!-- Test.ElieClass3 -->
-      <class name="Test.ElieClass2">
-        <methods>
-          <include name="createSuite"/>
-          <include name="ruru2"/>
-          <include name="beforeTest"/>
-          <include name="tearDown"/>
-          <include name="initializeWebDriver"/>
-        </methods>
-      </class> <!-- Test.ElieClass2 -->
+      </class> <!-- Test.BaseScript_3_CancelSign -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [jdohnnyjangjang] -->
