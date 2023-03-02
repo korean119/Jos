@@ -64,6 +64,12 @@ public class DomcumentUploadModal extends _0_BasePage {
 		
 	}
 	
+	public void Contract_sample_select_BulkRequest() throws InterruptedException {
+		SAMPLE_DOCUMENTS_Btn.click();
+		SAMPLE_DOCUMENTSUploadDoc_btn.click();
+		SAMPLE_DOCUMENTSUploadModal_Btn.click();
+		
+	}
 	
 	
 

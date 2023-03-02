@@ -25,6 +25,9 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
 import PagesObjectModel.GNB;
+import PagesObjectModel.TempletePage;
+import PagesObjectModel.TempletePage_Bulkrequest;
+import PagesObjectModel.TempletePage_CreatTemplete;
 import PagesObjectModel._1_LoginPage;
 import PagesObjectModel_Contract.ContractSetup_Step1page;
 import PagesObjectModel_Contract.ContractSetup_Step2page;
@@ -36,7 +39,7 @@ import Testrail_client.APIClient;
 import Testrail_client.TestrailAPI_Send;
 import Testrail_client.Testrails.TestRails;
 
-public class _0_BaseTest extends TestrailAPI_Send  {
+public class _0_BaseTest  {
 
 	public static final int TEST_CASE_PASSED_STATUS = 1;
 	public static final int TEST_CASE_FAILED_STATUS = 5;
@@ -45,16 +48,19 @@ public class _0_BaseTest extends TestrailAPI_Send  {
 
 	protected _1_LoginPage objLoginPage;
 	
-	protected DomcumentUploadModal objContractSetupStartModal;
+	protected DomcumentUploadModal objDomcumentUploadModal;
 	protected ContractSetup_Step1page objContractSetup_Step1page;
 	protected ContractSetup_Step2page objContractSetup_Step2page;
 	protected ContractSetup_Step3page objContractSetup_Step3page;
 	
-	protected DocumtetsPage_ContractPage objDocumtetsPage_ContractPage;
 	
-	protected DocumtetsPage_ContractPage objContractPage;
-	protected DocumentsPage objDocumentsPage;
 	protected GNB objGNB;
+	protected DocumtetsPage_ContractPage objDocumtetsPage_ContractPage;
+	protected DocumentsPage objDocumentsPage;
+	
+	protected TempletePage objTempletePage;
+	protected TempletePage_CreatTemplete objTempletePage_CreatTemplete;
+	protected TempletePage_Bulkrequest objTempletePage_Bulkreques;
 
 	@BeforeMethod
 	public void initializeWebDriver() throws IOException { //
@@ -74,16 +80,20 @@ public class _0_BaseTest extends TestrailAPI_Send  {
 
 		objLoginPage = new _1_LoginPage(driver);
 		
-		objContractSetupStartModal = new DomcumentUploadModal(driver);
+		objDomcumentUploadModal = new DomcumentUploadModal(driver);
 		objContractSetup_Step1page = new ContractSetup_Step1page(driver);
 		objContractSetup_Step2page = new ContractSetup_Step2page(driver);
 		objContractSetup_Step3page = new ContractSetup_Step3page(driver);
 		
 		
 		objGNB = new GNB(driver);
-		
 		objDocumentsPage = new DocumentsPage(driver);
 		objDocumtetsPage_ContractPage = new DocumtetsPage_ContractPage(driver);
+		
+		objTempletePage = new TempletePage(driver);
+		objTempletePage_CreatTemplete = new TempletePage_CreatTemplete(driver);
+		objTempletePage_Bulkreques = new TempletePage_Bulkrequest(driver);
+	
 
 
 		

@@ -110,7 +110,7 @@ public class GNB extends _0_BasePage {
 	}
 
 	public void Templates_btn() {
-		Templates_btn.click();
+		Wait.until(ExpectedConditions.visibilityOf(Templates_btn)).click();
 	}
 
 	public void Archived_documents_btn() {
