@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Script._1_Login">
+      <class name="Test_Regression_TC_Contract.NomarlAccount_NormalSign_Off_Case">
         <methods>
+          <include name="NomarlAccount_NormalSign_Off_Case"/>
           <include name="tearDown"/>
-          <include name="login"/>
           <include name="initializeWebDriver"/>
         </methods>
-      </class> <!-- Script._1_Login -->
+      </class> <!-- Test_Regression_TC_Contract.NomarlAccount_NormalSign_Off_Case -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

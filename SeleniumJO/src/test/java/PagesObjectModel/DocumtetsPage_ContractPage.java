@@ -22,12 +22,32 @@ import ru.yandex.qatools.ashot.comparison.ImageDiff;
 import ru.yandex.qatools.ashot.comparison.ImageDiffer;
 
 
-public class Documtets_ContractPage extends _0_BasePage {
+public class DocumtetsPage_ContractPage extends _0_BasePage {
 	
-	public Documtets_ContractPage(WebDriver driver) {
+	public DocumtetsPage_ContractPage(WebDriver driver) {
 		super(driver);
 
 	}
+
+	////////////////////// 접근 암호 있을 경우 /////////////////////
+	
+	@FindBy(xpath = ("//input[@placeholder='접근 암호를 입력해주세요.']"))
+	WebElement password_input;
+
+	@FindBy(xpath = ("//button[contains(text(),'암호 확인')]"))
+	WebElement password_OK_btn;
+	
+	
+	
+	////////////////////// 첨부 파일 있을 경우  /////////////////////
+
+	
+	///////////////////////////////////////////////////
+
+
+	
+	
+	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	// 2. 입력 화면 - [서명 시작하기] 버튼 
 	@FindBy(xpath = ("//button[contains(.,'서명 시작하기')]"))
@@ -77,7 +97,7 @@ public class Documtets_ContractPage extends _0_BasePage {
 
 
 	
-///////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////
 	
 	
 	// PDF 뷰어 캡쳐용
@@ -85,62 +105,27 @@ public class Documtets_ContractPage extends _0_BasePage {
 	WebElement PDFViewer;
 	
 
-///////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////
 	
 	
-	public void SignatureStart_btn() {
-		SignatureStart_btn.click();
-
-	}
-
-	public void SignatureMarker_btn() {
-		SignatureMarker_btn.click();
-
-	}
-
-	public void Signaturesub_menu_btn() {
-		Signaturesub_menu_btn.click();
+	//////////////////////접근 암호 있을 경우 /////////////////////
+	
+	public void password_input(String ar1) {
+		password_input.click();
+		password_input.sendKeys(ar1);
 
 	}
 	
-	public void Mysign_image_1_btn() {
-		Mysign_image_1_btn.click();
+	///////////////////////////////////////////////////
 
-	}
-	
-	public void Image_confirmOK_btn() {
-		Image_confirmOK_btn.click();
-		
-	}
-
-	public void WritableTextFieldCore_btn() {
-	WritableTextFieldCore_btn.click();
-	
-	}
 	
 	public void TextFieldTextarea(String arg1) {
 		//TextFieldTextarea.sendKeys(arg1);
 		Wait.until(ExpectedConditions.visibilityOf(TextFieldTextarea)).sendKeys(arg1);
 		
 	}
-	
-	public void InputDone_btn() {
-		InputDone_btn.click();
-		
-	}
-	
-	public void CheckDone_btn() {
-		CheckDone_btn.click();
-		
-	}
-	
 
-	public void AgreeandSign_btn() {
-		AgreeandSign_btn.click();
-	
-	}
 
-	
 	public void Contract_BaseScript(String arg1) throws InterruptedException { 
 		SignatureStart_btn.click();
 		//SignatureMarker_btn.click();
@@ -156,6 +141,47 @@ public class Documtets_ContractPage extends _0_BasePage {
 	}
 	
 	
+	public void NomarlAccount_NormalSign_Off_Case(String arg1) throws InterruptedException { 
+
+		SignatureStart_btn.click();
+		//SignatureMarker_btn.click();
+		Signaturesub_menu_btn.click();
+		Mysign_image_1_btn.click();
+		Image_confirmOK_btn.click();
+		
+		WritableTextFieldCore_btn.click();
+		Wait.until(ExpectedConditions.visibilityOf(TextFieldTextarea)).sendKeys(arg1);
+		
+		InputDone_btn.click();
+		AgreeandSign_btn.click();
+		Home_btn.click();
+		Thread.sleep(2000);
+	}
+	
+	public void NomarlAccount_NormalSign_On_Case(String arg1, String arg2) throws InterruptedException { 
+		password_input(arg1);
+		password_OK_btn.click();
+		
+		SignatureStart_btn.click();
+		//SignatureMarker_btn.click();
+		Signaturesub_menu_btn.click();
+		Mysign_image_1_btn.click();
+		Image_confirmOK_btn.click();
+		
+		WritableTextFieldCore_btn.click();
+		Wait.until(ExpectedConditions.visibilityOf(TextFieldTextarea)).sendKeys(arg1);
+		
+		InputDone_btn.click();
+		AgreeandSign_btn.click();
+		Home_btn.click();
+		Thread.sleep(2000);
+	}
+	
+	
+	
+	///////////////////////////////////////////////////////////////////////////
+
+
 
 	public void AllScreen() throws IOException, InterruptedException {
 
