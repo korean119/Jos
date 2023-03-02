@@ -1,4 +1,4 @@
-package Test;
+package Test_Contract_6Status;
 
 import static org.testng.Assert.assertTrue;
 
@@ -7,6 +7,7 @@ import java.io.IOException;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
+import Test._0_BaseTest;
 import Testrail_client.Testrails.TestRails;
 import junit.framework.Assert;
 

@@ -1,7 +1,8 @@
-package Test;
+package Test_Regression_TC;
 
 import org.testng.annotations.Test;
 
+import Test._0_BaseTest;
 import Testrail_client.Testrails.TestRails;
 import junit.framework.Assert;
 

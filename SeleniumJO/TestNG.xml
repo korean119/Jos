@@ -13,7 +13,7 @@
 
 <!-- <class name="Test.BaseScript_1_ComplexSign" /> -->
 <!-- <class name="Test.BaseScript_2_refuseSign" /> -->
-<class name="Test.BaseScript_3_CancelSign" />
+<class name="Test_Signstatus.BaseScript_3_CancelSign" />
 
 
 

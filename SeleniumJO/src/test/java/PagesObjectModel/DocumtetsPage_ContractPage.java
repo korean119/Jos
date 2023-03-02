@@ -22,9 +22,9 @@ import ru.yandex.qatools.ashot.comparison.ImageDiff;
 import ru.yandex.qatools.ashot.comparison.ImageDiffer;
 
 
-public class ContractPage extends _0_BasePage {
+public class Documtets_ContractPage extends _0_BasePage {
 	
-	public ContractPage(WebDriver driver) {
+	public Documtets_ContractPage(WebDriver driver) {
 		super(driver);
 
 	}

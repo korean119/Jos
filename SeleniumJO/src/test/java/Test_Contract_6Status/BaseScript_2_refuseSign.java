@@ -1,4 +1,4 @@
-package Test;
+package Test_Contract_6Status;
 
 import static org.testng.Assert.assertTrue;
 
@@ -7,10 +7,11 @@ import java.io.IOException;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
+import Test._0_BaseTest;
 import Testrail_client.Testrails.TestRails;
 import junit.framework.Assert;
 
-public class BaseScript_1_ComplexSign extends _0_BaseTest {
+public class BaseScript_2_refuseSign extends _0_BaseTest {
 	
 	// 서명자(본인), 서명 요청자 에게 서명 요청 
 	@Test (priority = 1)
@@ -37,27 +38,27 @@ public class BaseScript_1_ComplexSign extends _0_BaseTest {
 	
 	}
 	
-	// 서명자 서명
+	 //서명자 서명
 	@Test(priority = 2)
 	public void BaseScript2() throws InterruptedException, IOException {
 
 		objLoginPage.Login("joshin4@getnada.com", "tlswnsdh2@@");
 
-		objDocumentsPage.Doucment_Dropdown_BaseScript();
+		objDocumentsPage.Doucment_Dropdown_BaseScript2("자동화 거절");
 
-		objContractPage.Contract_BaseScript("BaseScript");
 
-	}
-
-	// 서명 요청자 서명
-	@Test(priority = 3)
-	public void BaseScript3() throws InterruptedException, IOException {
-
-		objLoginPage.Login("joshin5@getnada.com", "tlswnsdh2@@");
-
-		objDocumentsPage.Doucment_Dropdown_BaseScript();
-
-		objContractPage.Contract_BaseScript("BaseScript");
 
 	}
+//
+//	// 서명 요청자 서명
+//	@Test(priority = 3)
+//	public void BaseScript3() throws InterruptedException, IOException {
+//
+//		objLoginPage.Login("joshin5@getnada.com", "tlswnsdh2@@");
+//
+//		objDocumentsPage.Doucment_Dropdown_BaseScript();
+//
+//		objContractPage.Contract_BaseScript("BaseScript");
+//
+//	}
 }
