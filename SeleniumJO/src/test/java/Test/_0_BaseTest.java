@@ -30,12 +30,13 @@ import PagesObjectModel_Contract.ContractSetup_Step1page;
 import PagesObjectModel_Contract.ContractSetup_Step2page;
 import PagesObjectModel_Contract.ContractSetup_Step3page;
 import PagesObjectModel_DocumentUploadModal.DomcumentUploadModal;
-import PagesObjectModel.Documtets_ContractPage;
+import PagesObjectModel.DocumtetsPage_ContractPage;
 import PagesObjectModel.DocumentsPage;
 import Testrail_client.APIClient;
+import Testrail_client.TestrailAPI_Send;
 import Testrail_client.Testrails.TestRails;
 
-public class _0_BaseTest  {
+public class _0_BaseTest extends TestrailAPI_Send  {
 
 	public static final int TEST_CASE_PASSED_STATUS = 1;
 	public static final int TEST_CASE_FAILED_STATUS = 5;
@@ -44,12 +45,14 @@ public class _0_BaseTest  {
 
 	protected _1_LoginPage objLoginPage;
 	
-	protected DomcumentUploadModal objContractSetupStartModalPopup;
+	protected DomcumentUploadModal objContractSetupStartModal;
 	protected ContractSetup_Step1page objContractSetup_Step1page;
 	protected ContractSetup_Step2page objContractSetup_Step2page;
 	protected ContractSetup_Step3page objContractSetup_Step3page;
 	
-	protected Documtets_ContractPage objContractPage;
+	protected DocumtetsPage_ContractPage objDocumtetsPage_ContractPage;
+	
+	protected DocumtetsPage_ContractPage objContractPage;
 	protected DocumentsPage objDocumentsPage;
 	protected GNB objGNB;
 
@@ -71,20 +74,24 @@ public class _0_BaseTest  {
 
 		objLoginPage = new _1_LoginPage(driver);
 		
-		objContractSetupStartModalPopup = new DomcumentUploadModal(driver);
+		objContractSetupStartModal = new DomcumentUploadModal(driver);
 		objContractSetup_Step1page = new ContractSetup_Step1page(driver);
 		objContractSetup_Step2page = new ContractSetup_Step2page(driver);
 		objContractSetup_Step3page = new ContractSetup_Step3page(driver);
 		
-		objContractPage = new Documtets_ContractPage(driver);
+		
 		objGNB = new GNB(driver);
+		
 		objDocumentsPage = new DocumentsPage(driver);
+		objDocumtetsPage_ContractPage = new DocumtetsPage_ContractPage(driver);
+
+
 		
 	}
 
 	@AfterMethod
 	public void tearDown() {
 
-		driver.quit();
+		//driver.quit();
 	}
 }

@@ -39,13 +39,34 @@ public class DomcumentUploadModal extends _0_BasePage {
 	@FindBy(css = (".UpLoadModalSampleDocuments__title:nth-child(2) > .UpLoadModalSampleDocuments__button"))
 	WebElement SAMPLE_DOCUMENTSUploadDoc_btn;
 
+	// [업로드] 버튼
 	@FindBy(css = (".css-1uzrp8i"))
 	WebElement SAMPLE_DOCUMENTSUploadModal_Btn;
+	
+	
+	////////////////////// General  /////////////////////
 
+	// 서명 요청 시작하기 모달 > [확인하고 시작하기] 버튼 
 	@FindBy(css = (".css-elq43k"))
 	WebElement CheckandStart_Btn;
 
+	///////////////////////////////////////////////////
 	
+
+	
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	public void Contract_sample_select() throws InterruptedException {
+		SAMPLE_DOCUMENTS_Btn.click();
+		SAMPLE_DOCUMENTSUploadDoc_btn.click();
+		SAMPLE_DOCUMENTSUploadModal_Btn.click();
+		CheckandStart_Btn.click();
+		
+	}
+	
+	
+	
+
 	public void Modal() throws InterruptedException {
 		CLOUD_DRIVE_Btn.click();
 		Thread.sleep(1000);

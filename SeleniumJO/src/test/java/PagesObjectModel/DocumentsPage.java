@@ -118,6 +118,14 @@ public class DocumentsPage extends _0_BasePage {
 	}
 	
 	
+	public void NomarlAccount_NormalSign_OnandOff_Case_Singatory() throws IOException {
+		DocumentListItem1.click();
+		DropdownMenuRow1.click();
+		
+	}
+
+	
+	
 	
 	
 	//////////////////// 캡쳐용인데 나중에 어디다 쓸거 같은뎅 /////////////////////////

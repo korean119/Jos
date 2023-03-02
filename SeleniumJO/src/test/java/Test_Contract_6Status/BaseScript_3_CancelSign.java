@@ -23,7 +23,7 @@ public class BaseScript_3_CancelSign extends _0_BaseTest {
 
 		objGNB.ContractSetupStart_btn();
 		
-		objContractSetupStartModalPopup.Modal_BascScript();
+		objContractSetupStartModal.Modal_BascScript();
 		
 		
 		// 서명자1 이메일, 서명자2 이름 , 서명자2 이메일
