@@ -5,14 +5,21 @@
     <listener class-name="Listener.ListenerTest"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
+    <parameter name="Signatory_1_email" value="joshin3@getnada.com"/>
+    <parameter name="Signatory_2_name" value="조니6번"/>
+    <parameter name="Signatory_2_email" value="joshin6@getnada.com"/>
     <classes>
-      <class name="Test.BaseScript_3_CancelSign">
+      <class name="Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case">
         <methods>
-          <include name="BaseScript"/>
+          <include name="beforeTest"/>
+          <include name="createSuite"/>
           <include name="tearDown"/>
+          <include name="afterMethod"/>
           <include name="initializeWebDriver"/>
+          <include name="NomarlAccount_NormalSign_On_Case_Singatory_1_" invocation-numbers="0"/>
+          <include name="NomarlAccount_NormalSign_On_Case_Singatory_2_"/>
         </methods>
-      </class> <!-- Test.BaseScript_3_CancelSign -->
+      </class> <!-- Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [jdohnnyjangjang] -->
