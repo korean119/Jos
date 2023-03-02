@@ -1,4 +1,4 @@
-package PagesObjectModel;
+package PagesObjectModel_DocumentUploadModal;
 
 import static org.testng.Assert.assertEquals;
 
@@ -11,10 +11,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import PagesObjectModel._0_BasePage;
 
-public class _3_ContractSetupStartModalPopup extends _0_BasePage {
 
-	public _3_ContractSetupStartModalPopup(WebDriver driver) {
+public class DomcumentUploadModal extends _0_BasePage {
+
+	public DomcumentUploadModal(WebDriver driver) {
 		super(driver);
 
 	}

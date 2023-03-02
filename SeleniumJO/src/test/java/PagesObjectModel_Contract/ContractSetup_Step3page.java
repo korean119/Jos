@@ -1,4 +1,4 @@
-package PagesObjectModel;
+package PagesObjectModel_Contract;
 
 import static org.testng.Assert.assertTrue;
 
@@ -8,9 +8,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
-public class _6_ContractSetup_Step3page extends _0_BasePage  {
+import PagesObjectModel._0_BasePage;
 
-	public _6_ContractSetup_Step3page (WebDriver driver) {
+public class ContractSetup_Step3page extends _0_BasePage  {
+
+	public ContractSetup_Step3page (WebDriver driver) {
         super(driver);
     }
 
