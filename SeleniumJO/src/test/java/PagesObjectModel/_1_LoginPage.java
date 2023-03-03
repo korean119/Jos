@@ -20,6 +20,9 @@ import ru.yandex.qatools.ashot.Screenshot;
 
 public class _1_LoginPage extends _0_BasePage  {
 
+	public _1_LoginPage (WebDriver driver) {
+        super(driver);
+    }
 
 	@FindBy(name = ("email"))
 	WebElement Email;
@@ -33,9 +36,6 @@ public class _1_LoginPage extends _0_BasePage  {
 	@FindBy(css = ("div[class='css-19p29i2'] span[class='css-1kr9snj']"))
 	WebElement MainPageOK;
 
-	public _1_LoginPage (WebDriver driver) {
-        super(driver);
-    }
 
 	public void EntermyEmail(String arg1) {
 		// driver.findElement(Email).sendKeys(arg1);

@@ -16,33 +16,39 @@ public class ContractSetup_Step3page extends _0_BasePage {
 		super(driver);
 	}
 
-	@FindBy(xpath = ("//button[contains(.,'문서 이름 수정')]"))
+	@FindBy(css = (".fa-pen-to-square")) // 요
 	WebElement DocumentModification_filename_edit_btn;
 	// @FindBy(css = (".Btn--light"))
 	// WebElement LimitedTextareaselect_btn;
 
 	// @FindBy(css = ("textarea[placeholder='1자 이상 100자 이내']"))
-	@FindBy(css = (".css-1d0l9wb"))
+	@FindBy(xpath = ("//textarea[@placeholder='1자 이상 100자 이내']")) // 요 
 	WebElement DocumentModification_filename_textarea_Select;
 	// 이게 갑자기 없어졌다?? 2월 26일
 	// @FindBy(css = (".LimitedTextarea__textarea"))
 	// WebElement LimitedTextarea;
 
-	@FindBy(xpath = ("//button[contains(.,'수정 완료')]"))
+	@FindBy(xpath = ("//button[contains(text(),'적용')]")) // 요 
 	WebElement DocumentModification_filename_editdone_btn;
 
+	// 서명 유효기간 
 	@FindBy(css = (".DocumentModification__expiration-date-title"))
 	WebElement DocumentModification_expiration_date_title_btn;
-
+	
 	@FindBy(css = (".CheckBox__custom-checkbox"))
 	WebElement Encryption_CheckBox_btn;
 
 	@FindBy(xpath = ("//input[@placeholder='8자 ~ 32자 이내 영문, 숫자, 특수문자']"))
 	WebElement Encryption_Input;
+	
+	///////////////////// 첨부파일  /////////////////////
+	
+	///////////////////////////////////////////////////	
+	
 
 	////////////////////// 참조자 cc /////////////////////
 
-	@FindBy(css = (".css-1mmu0eb"))
+	@FindBy(xpath = ("//button[@class='css-1mmu0eb']")) // 
 	WebElement cc_btn;
 
 	@FindBy(xpath = ("//div[@class='css-o537dh']//input[@placeholder='이메일 또는 휴대폰 번호']"))

@@ -72,9 +72,11 @@ public class _0_BaseTest  {
 		driver = new ChromeDriver();
 
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.get("https://stage-app.modusign.co.kr");
+		//driver.get("https://stage-app.modusign.co.kr");
+		driver.get("https://deploy-preview-8118--modusign-app.netlify.app/");
+		
 		// 브라우저 위치/크기 
-		driver.manage().window().setPosition(new Point(2000, 1)); 
+		//driver.manage().window().setPosition(new Point(2000, 1)); 
 		driver.manage().window().maximize();
 		
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [jdohnnyjangjang]" guice-stage="DEVELOPMENT">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [jdohnnyjangjang]">
   <listeners>
     <listener class-name="Listener.ListenerTest"/>
   </listeners>
@@ -9,17 +9,13 @@
     <parameter name="Signatory_2_name" value="조니6번"/>
     <parameter name="Signatory_2_email" value="joshin6@getnada.com"/>
     <classes>
-      <class name="Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case">
+      <class name="Test._2_MainScreen">
         <methods>
-          <include name="beforeTest"/>
-          <include name="createSuite"/>
+          <include name="EnterContractSetupStart"/>
           <include name="tearDown"/>
-          <include name="afterMethod"/>
           <include name="initializeWebDriver"/>
-          <include name="NomarlAccount_NormalSign_On_Case_Singatory_1_" invocation-numbers="0"/>
-          <include name="NomarlAccount_NormalSign_On_Case_Singatory_2_"/>
         </methods>
-      </class> <!-- Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case -->
+      </class> <!-- Test._2_MainScreen -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [jdohnnyjangjang] -->

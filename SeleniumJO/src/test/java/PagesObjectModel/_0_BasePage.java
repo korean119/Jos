@@ -48,3 +48,4 @@ public class _0_BasePage extends LoadableComponent<_0_BasePage> {
 		
 	}
 }
+

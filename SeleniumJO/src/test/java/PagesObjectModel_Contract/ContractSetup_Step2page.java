@@ -21,7 +21,6 @@ public class ContractSetup_Step2page extends _0_BasePage  {
 	
 	////////////////////// 추가 내용 입력하기 /////////////////////
 
-	
 	///////////////////////////////////////////////////
 	
 	
@@ -133,6 +132,8 @@ public class ContractSetup_Step2page extends _0_BasePage  {
 		PDFSreen_go_Btn.click();
 		
 		Next_btn.click();
+		
+
 
 	}
 
