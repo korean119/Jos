@@ -64,11 +64,11 @@ public class _0_BaseTest  {
 
 	@BeforeMethod
 	public void initializeWebDriver() throws IOException { //
-		 //System.setProperty("webdriver.chrome.driver", //
-		 //"/Users/johnny/Downloads/chromedriver_mac64/chromedriver");
+		 System.setProperty("webdriver.chrome.driver", //
+		 "/Users/johnny/Downloads/chromedriver_mac64/chromedriver");
 
-		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\tncls\\Downloads\\chromedriver_win32 (1)/chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver",
+		//		"C:\\Users\\tncls\\Downloads\\chromedriver_win32 (1)/chromedriver.exe");
 		driver = new ChromeDriver();
 
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -102,6 +102,6 @@ public class _0_BaseTest  {
 	@AfterMethod
 	public void tearDown() {
 
-		//driver.quit();
+		driver.quit();
 	}
 }

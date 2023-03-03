@@ -13,7 +13,7 @@ public class NomarlAccount_BulkRequest_Off_Case extends _0_BaseTest {
 	
 	public void NomarlAccount_NormalSign_Off_Case() throws InterruptedException {
 
-		objLoginPage.Login("joshin2@getnada.com", "tlswnsdh2@@");
+		objLoginPage.Login("joshin7@getnada.com", "tlswnsdh2@@");
 
 		objGNB.get();
 		

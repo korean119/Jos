@@ -52,57 +52,54 @@ public class ContractSetup_Step3page extends _0_BasePage {
 	WebElement ccOK_btn;
 
 	///////////////////////////////////////////////////
-	
+
 	////////////////////// 남길 말 입력 /////////////////////
-	
+
 	@FindBy(xpath = ("//button[contains(text(),'남길 말 입력')]"))
 	WebElement LeaveMessage_btn;
-	
+
 	@FindBy(css = (".css-16rnad"))
 	WebElement LeaveMessage_input;
-	
+
 	///////////////////////////////////////////////////
-	
+
 	////////////////////// 서명자인증 수단 추가 /////////////////////
 
 	// 서명자1 인증 수단 추가 버튼
 	@FindBy(css = (".css-dsdku4"))
 	WebElement AuthenticationSelection_1_;
-	
+
 	@FindBy(css = (".Card:nth-child(2) .css-dsdku4"))
 	WebElement AuthenticationSelection_2_;
-	
-	
+
 	// 인증수단 패스워드 선택
 	@FindBy(css = (".css-1x5icao > .css-1pv319a"))
 	WebElement AuthenticationSelection_Password_btn;
-	
+
 	@FindBy(xpath = ("//input[@id='ViewablePasswordInput__password']"))
 	WebElement View_Password_input;
 
 	@FindBy(xpath = ("//input[@id='ViewablePasswordInput__password-hint']"))
 	WebElement View_Password_hint_input;
-	
+
 	@FindBy(xpath = ("//button[contains(text(),'설정하기')]"))
 	WebElement View_Password_Ok_btn;
-	
+
 	///////////////////////////////////////////////////
-	
-	////////////////////// 완료 문서 잠금 설정 모달  /////////////////////
-	
+
+	////////////////////// 완료 문서 잠금 설정 모달 /////////////////////
+
 	@FindBy(xpath = ("//input[@id='file-open-password-modal-PDF_PASSWORD_IS_SET']"))
 	WebElement modal_PDF_PASSWORD_IS_SET_checkbox;
-	
+
 	@FindBy(xpath = ("//input[@id='file-open-password-modal-NEED_TO_MEMO']"))
 	WebElement modal_NEED_TO_MEMO_checkbox;
-	
+
 	@FindBy(xpath = ("//input[@id='file-open-password-modal-CANNOT_EXPORT_INPUT_VALUES']"))
 	WebElement modal_CANNOT_EXPORT_INPUT_VALUES_checkbox;
-	
+
 	@FindBy(xpath = ("//button[contains(text(),'확인')]"))
 	WebElement ContentReactModalOk_btn;
-	
-
 
 	@FindBy(css = (".Btn--primary"))
 	WebElement Settingdone_Btn;
@@ -126,8 +123,7 @@ public class ContractSetup_Step3page extends _0_BasePage {
 	WebElement Assert;
 
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
-	
-	
+
 	public void DocumentModification_filename_Textarea_Clearandinput(String arg1) {
 		DocumentModification_filename_textarea_Select.clear();
 		DocumentModification_filename_textarea_Select.sendKeys(arg1);
@@ -145,43 +141,39 @@ public class ContractSetup_Step3page extends _0_BasePage {
 		cc_input.sendKeys(arg1);
 
 	}
-	
-	
+
 	public void LeaveMessage_input(String arg1) {
 		LeaveMessage_input.click();
 		LeaveMessage_input.sendKeys(arg1);
 	}
-	
+
 	public void View_Password_input(String arg1) {
 		View_Password_input.click();
 		View_Password_input.sendKeys(arg1);
 	}
-	
-	
+
 	public void View_Password_hint_input(String arg1) {
 		View_Password_hint_input.click();
 		View_Password_hint_input.sendKeys(arg1);
 	}
-	
-	
+
 	public void modal_checkbox() {
-			modal_PDF_PASSWORD_IS_SET_checkbox.click();
-			modal_NEED_TO_MEMO_checkbox.click();
-			modal_CANNOT_EXPORT_INPUT_VALUES_checkbox.click();
-			ContentReactModalOk_btn.click();
-			
-}
+		modal_PDF_PASSWORD_IS_SET_checkbox.click();
+		modal_NEED_TO_MEMO_checkbox.click();
+		modal_CANNOT_EXPORT_INPUT_VALUES_checkbox.click();
+		ContentReactModalOk_btn.click();
+
+	}
 
 // OnCase 전용
 	public void ContractDone() {
-		//Settingdone_Btn.click();
+		// Settingdone_Btn.click();
 		Agreementcheck1_checkbox.click();
 		Agreementcheck2_checkbox.click();
 		Requestsignature_btn.click();
 
-
 	}
-	
+
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	public void ContractSetup_Step3page_Setup_Quick(String arg1) throws InterruptedException {
@@ -197,7 +189,7 @@ public class ContractSetup_Step3page extends _0_BasePage {
 
 		Thread.sleep(3000);
 	}
-	
+
 	public void NomarlAccount_NormalSign_Off_Case() throws InterruptedException {
 		Settingdone_Btn.click();
 		Agreementcheck1_checkbox.click();
@@ -207,39 +199,39 @@ public class ContractSetup_Step3page extends _0_BasePage {
 		Thread.sleep(3000);
 	}
 
-
-	public void NomarlAccount_NormalSign_On_Case(String arg1, String arg2, String arg3, String arg4, String arg5) throws InterruptedException {
+	public void NomarlAccount_NormalSign_On_Case(String arg1, String arg2, String arg3, String arg4, String arg5)
+			throws InterruptedException {
 		DocumentModification_filename_edit_btn.click();
 		DocumentModification_filename_Textarea_Clearandinput(arg1);
 		DocumentModification_filename_editdone_btn.click();
-		
+
 		Encryption_CheckBox_btn.click();
 		Encryption_input(arg2);
-		
+
 		cc_btn.click();
 		cc_input(arg3);
 		ccOK_btn.click();
-		
+
 		LeaveMessage_btn.click();
 		LeaveMessage_input(arg4);
-		
+
 		AuthenticationSelection_1_.click();
 		AuthenticationSelection_Password_btn.click();
 		View_Password_input("1234");
 		View_Password_hint_input("1234");
 		View_Password_Ok_btn.click();
-		
+
 		AuthenticationSelection_2_.click();
 		AuthenticationSelection_Password_btn.click();
 		View_Password_input("1234");
 		View_Password_hint_input("1234");
 		View_Password_Ok_btn.click();
-		
+
 		Settingdone_Btn.click();
-		
+
 		modal_checkbox();
 		ContractDone();
-		
+
 		Thread.sleep(3000);
 	}
 }
