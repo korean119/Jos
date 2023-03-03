@@ -25,9 +25,12 @@
 			<!-- <class name="Test.BaseScript_2_refuseSign" /> -->
 			<!-- <class name="Test_Contract_6Status.BaseScript_3_CancelSign" /> -->
 
-	<class name="Test_Regression_TC_Contract.NomarlAccount_NormalSign_Off_Case" />
+<!-- 	<class name="Test_Regression_TC_Contract.NomarlAccount_NormalSign_Off_Case" />
 	<class name="Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case" /> 
-	<class name="Test_Regression_TC.GNB" />
+	 -->
+	<class name="Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case" /> 
+	
+	<!-- <class name="Test_Regression_TC.GNB" /> -->
 
 
 

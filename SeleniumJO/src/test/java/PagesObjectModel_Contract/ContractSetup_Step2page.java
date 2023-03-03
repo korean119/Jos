@@ -30,17 +30,16 @@ public class ContractSetup_Step2page extends _0_BasePage  {
 	@FindBy(css = (".css-w07yg0 .css-1dgk6ra"))
 	WebElement SignatureField_1_btn;
 	
-	@FindBy(css = (".css-h6sr04 .css-1dgk6ra"))
-	WebElement SignatureField_2_btn;
-
 	@FindBy(css = (".css-skfhhz"))
 	WebElement TextField_1_btn;
+	
+	@FindBy(css = (".css-w07yg0 .FieldLocator:nth-child(3) > .css-skfhhz"))
+	WebElement CheckboxField_1_btn;
 	
 	@FindBy(css = (".css-w07yg0 .AddAttachFileRequestButton__button-container"))
 	WebElement AddAttachFileRequest_1_btn;
 	
-	
-	
+
 	// 서명자 2도 같이 씀
 	@FindBy(xpath = ("//input[@id='AttachmentRequestCard-0-attachment-type']"))
 	WebElement AddAttachFiletype_input;
@@ -49,16 +48,13 @@ public class ContractSetup_Step2page extends _0_BasePage  {
 	WebElement SetupOk_btn;
 
 	
-	///////////////////////////////////////////////////
-
-	
 	////////////////////// 서명자 2 /////////////////////
+	
+	@FindBy(css = (".css-h6sr04 .css-1dgk6ra"))
+	WebElement SignatureField_2_btn;
 
 	@FindBy(css = (".css-h6sr04 .FieldLocator:nth-child(2) > .css-skfhhz"))
 	WebElement TextField_2_btn;
-	
-	@FindBy(css = (".css-w07yg0 .FieldLocator:nth-child(3) > .css-skfhhz"))
-	WebElement CheckboxField_1_btn;
 	
 	@FindBy(css = (".css-h6sr04 .FieldLocator:nth-child(3) > .css-skfhhz"))
 	WebElement CheckboxField_2_btn;

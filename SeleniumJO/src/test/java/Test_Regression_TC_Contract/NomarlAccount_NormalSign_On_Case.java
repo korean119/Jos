@@ -24,7 +24,7 @@ public class NomarlAccount_NormalSign_On_Case extends _0_BaseTest {
 
 		objGNB.ContractSetupStart_btn();
 		
-		objContractSetupStartModal.Contract_sample_select();
+		objDomcumentUploadModal.Contract_sample_select();
 		
 		objContractSetup_Step1page.NomarlAccount_NormalSign_OnandOff_Case(Signatory_1_email, Signatory_2_name, Signatory_2_email);
 		

@@ -21,7 +21,7 @@ public class BaseScript_1_ComplexSign extends _0_BaseTest {
 
 		objGNB.ContractSetupStart_btn();
 		
-		objContractSetupStartModal.Modal_BascScript();
+		objDomcumentUploadModal.Modal_BascScript();
 		
 		
 		// 서명자1 이메일, 서명자2 이름 , 서명자2 이메일
@@ -46,7 +46,7 @@ public class BaseScript_1_ComplexSign extends _0_BaseTest {
 
 		objDocumentsPage.Doucment_Dropdown_BaseScript();
 
-		objContractPage.Contract_BaseScript("BaseScript");
+		objDocumtetsPage_ContractPage.Contract_BaseScript("BaseScript");
 
 	}
 
@@ -58,7 +58,7 @@ public class BaseScript_1_ComplexSign extends _0_BaseTest {
 
 		objDocumentsPage.Doucment_Dropdown_BaseScript();
 
-		objContractPage.Contract_BaseScript("BaseScript");
+		objDocumtetsPage_ContractPage.Contract_BaseScript("BaseScript");
 
 	}
 }

@@ -21,7 +21,7 @@ public class BaseScript_2_refuseSign extends _0_BaseTest {
 
 		objGNB.ContractSetupStart_btn();
 		
-		objContractSetupStartModal.Modal_BascScript();
+		objDomcumentUploadModal.Modal_BascScript();
 		
 		
 		// 서명자1 이메일, 서명자2 이름 , 서명자2 이메일
