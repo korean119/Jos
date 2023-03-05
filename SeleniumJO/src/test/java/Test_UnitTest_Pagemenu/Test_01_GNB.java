@@ -1,12 +1,12 @@
-package Test_Regression_TC;
+package Test_UnitTest_Pagemenu;
 
 import org.testng.annotations.Test;
 
-import Test._0_BaseTest;
+import Test.BaseTest;
 import Testrail_client.Testrails.TestRails;
 import junit.framework.Assert;
 
-public class DocumentsPage extends _0_BaseTest {
+public class Test_01_GNB extends BaseTest {
 	
 	
 	
@@ -15,6 +15,8 @@ public class DocumentsPage extends _0_BaseTest {
 
 		objLoginPage.Login("joshin1@getnada.com", "tlswnsdh2@@");
 
+		objGNB.get();
+		
 		objGNB.Externaldocuments_btn();
 		
 		objGNB.Templates_btn();
@@ -44,3 +46,4 @@ public class DocumentsPage extends _0_BaseTest {
 	}
 }
 	
+

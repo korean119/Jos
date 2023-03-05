@@ -1,4 +1,4 @@
-package PagesObjectModel;
+package POM_01_DocumentsPage;
 
 import static org.testng.Assert.assertEquals;
 
@@ -18,11 +18,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import POM_00_BasePage.BasePage;
 import ru.yandex.qatools.ashot.comparison.ImageDiff;
 import ru.yandex.qatools.ashot.comparison.ImageDiffer;
 
 
-public class DocumtetsPage_ContractPage extends _0_BasePage {
+public class DocumtetsPage_ContractPage extends BasePage {
 	
 	public DocumtetsPage_ContractPage(WebDriver driver) {
 		super(driver);
@@ -179,7 +180,7 @@ public class DocumtetsPage_ContractPage extends _0_BasePage {
 	
 	
 	
-	///////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////
 
 
 

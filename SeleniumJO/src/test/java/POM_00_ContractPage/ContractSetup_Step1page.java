@@ -1,13 +1,13 @@
-package PagesObjectModel_Contract;
+package POM_00_ContractPage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-import PagesObjectModel._0_BasePage;
+import POM_00_BasePage.BasePage;
 
-public class ContractSetup_Step1page extends _0_BasePage {
+public class ContractSetup_Step1page extends BasePage {
 
 	public ContractSetup_Step1page(WebDriver driver) {
 		super(driver);

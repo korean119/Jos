@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="jdohnnyjangjang">
+
+<suite name="jdohnnyjangjang" thread-count="2" parallel="methods"> 
 
 	<listeners>
 		<listener class-name="Listener.ListenerTest" />
 	</listeners>
 
+	<test name="ChromeTest">
 
-	<test name="Test">
-	
-	
-	<parameter name="Signatory_1_email"  value="joshin3@getnada.com" />
-	<parameter name="Signatory_2_name" value="조니6번" />
-	<parameter name="Signatory_2_email" value="joshin6@getnada.com" />
+		<parameter name="browser" value="Chrome" />
+		<parameter name="Signatory_1_email"
+			value="joshin3@getnada.com" />
+		<parameter name="Signatory_2_name" value="조니6번" />
+		<parameter name="Signatory_2_email"
+			value="joshin6@getnada.com" />
 
-	
 		<classes>
-		
-
 
 			<!-- <class name="Test.Testclass" /> -->
 
@@ -25,12 +24,14 @@
 			<!-- <class name="Test.BaseScript_2_refuseSign" /> -->
 			<!-- <class name="Test_Contract_6Status.BaseScript_3_CancelSign" /> -->
 
-<!-- 	<class name="Test_Regression_TC_Contract.NomarlAccount_NormalSign_Off_Case" />
-	<class name="Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case" /> 
-	 -->
-	<class name="Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case" /> 
-	
-	<!-- <class name="Test_Regression_TC.GNB" /> -->
+<!-- 			<class name="Test_Regression_TC_Contract.NomarlAccount_NormalSign_Off_Case" /> 
+			<class name="Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case" />
+			<class name="Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case" />
+
+			<class name="Test_UnitTest_Pagemenu.Test_00_LoginPage" />
+			 -->
+			 
+			<class name="Test_UnitTest_Pagemenu.Test_09_SettingsPage" />
 
 
 
@@ -40,10 +41,28 @@
 
 			<!-- <class name="Test.ElieClass3" /> -->
 
-			<!-- <class name="Test._2_MainScreen" /> <class name="Test._3_Contract" /> -->
+			<!-- <class name="Test._2_MainScreen" /> <class name="Test._3_Contract" 
+				/> -->
 
 		</classes>
 	</test> <!-- Test -->
+
+
+	<test name="EdgeTest">
+
+		<parameter name="browser" value="Edge" />
+
+		<parameter name="Signatory_1_email"
+			value="joshin3@getnada.com" />
+		<parameter name="Signatory_2_name" value="조니6번" />
+		<parameter name="Signatory_2_email"
+			value="joshin6@getnada.com" />
+
+		<classes>
+
+
+		</classes>
+	</test>
 </suite> <!-- Suite -->
 
 

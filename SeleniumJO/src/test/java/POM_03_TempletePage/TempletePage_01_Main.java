@@ -1,12 +1,14 @@
-package PagesObjectModel;
+package POM_03_TempletePage;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class TempletePage extends _0_BasePage {
+import POM_00_BasePage.BasePage;
 
-	public TempletePage(WebDriver driver) {
+public class TempletePage_01_Main extends BasePage {
+
+	public TempletePage_01_Main(WebDriver driver) {
 		super(driver);
 
 	}

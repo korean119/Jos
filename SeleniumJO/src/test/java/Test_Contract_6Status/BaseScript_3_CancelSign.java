@@ -7,11 +7,11 @@ import java.io.IOException;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-import Test._0_BaseTest;
+import Test.BaseTest;
 import Testrail_client.Testrails.TestRails;
 import junit.framework.Assert;
 
-public class BaseScript_3_CancelSign extends _0_BaseTest {
+public class BaseScript_3_CancelSign extends BaseTest {
 	
 	// 서명자(본인), 서명 요청자 에게 서명 요청 
 	@Test (priority = 1)

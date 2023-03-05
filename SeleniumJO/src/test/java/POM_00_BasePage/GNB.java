@@ -1,4 +1,4 @@
-package PagesObjectModel;
+package POM_00_BasePage;
 
 import static org.testng.Assert.assertTrue;
 
@@ -26,7 +26,7 @@ import ru.yandex.qatools.ashot.comparison.ImageDiff;
 import ru.yandex.qatools.ashot.comparison.ImageDiffer;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
-public class GNB extends _0_BasePage {
+public class GNB extends BasePage {
 
 	public GNB(WebDriver driver) {
 		super(driver);
@@ -38,15 +38,13 @@ public class GNB extends _0_BasePage {
 	@Override
 	protected void load() {
 		this.driver.get(url);
-		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	protected void isLoaded() throws Error {
 		assertTrue(driver.getTitle().equals(title));
-		// TODO Auto-generated method stub
-		
+
 	}
 
 
@@ -152,7 +150,7 @@ public class GNB extends _0_BasePage {
 	}
 
 	public void Settings_btn() {
-		Settings_btn.click();
+		Wait.until(ExpectedConditions.visibilityOf(Settings_btn)).click();
 
 	}
 }

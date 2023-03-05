@@ -2,11 +2,11 @@ package Test_Regression_TC_Contract;
 
 import org.testng.annotations.Test;
 
-import Test._0_BaseTest;
+import Test.BaseTest;
 import Testrail_client.Testrails.TestRails;
 
 
-public class NomarlAccount_BulkRequest_Off_Case extends _0_BaseTest {
+public class NomarlAccount_BulkRequest_Off_Case extends BaseTest {
 	
 	@TestRails (id = "")
 	@Test (priority = 1)

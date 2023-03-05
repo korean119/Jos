@@ -11,7 +11,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
-import Test._0_BaseTest;
+import Test.BaseTest;
 import Testrail_client.Testrails.TestRails;
 
 public class TestrailAPI_Send {

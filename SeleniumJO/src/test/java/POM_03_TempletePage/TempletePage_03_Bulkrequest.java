@@ -1,4 +1,4 @@
-package PagesObjectModel;
+package POM_03_TempletePage;
 
 import static org.testng.Assert.assertEquals;
 
@@ -23,15 +23,16 @@ import org.testng.annotations.Test;
 
 import com.google.common.base.Function;
 
+import POM_00_BasePage.BasePage;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.comparison.ImageDiff;
 import ru.yandex.qatools.ashot.comparison.ImageDiffer;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
-public class TempletePage_Bulkrequest extends _0_BasePage {
+public class TempletePage_03_Bulkrequest extends BasePage {
 
-	public TempletePage_Bulkrequest(WebDriver driver) {
+	public TempletePage_03_Bulkrequest(WebDriver driver) {
 		super(driver);
 
 	}
@@ -82,7 +83,7 @@ public class TempletePage_Bulkrequest extends _0_BasePage {
 	
 
 
-	///////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 	
 	public void BulkRequest_ExcelUpload_btn_m() throws InterruptedException { 
 		WebElement filepath = driver.findElement(By.cssSelector("input[type='file']"));

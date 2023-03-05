@@ -56,7 +56,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-jdohnnyjangjang" class="navigator-link ">
-                    <span class="test-stats">1 test</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content passed suite-jdohnnyjangjang">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-jdohnnyjangjang" title="Test_Regression_TC.GNB" class="method navigator-link" hash-for-method="GNB">GNB</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-jdohnnyjangjang" title="Test_UnitTest_Pagemenu.Test_09_SettingsPage" class="method navigator-link" hash-for-method="UnitTest_SettingsPage">UnitTest_SettingsPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-jdohnnyjangjang -->
@@ -122,14 +122,14 @@
           <div class="suite-jdohnnyjangjang-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">Test_Regression_TC.GNB</span>
+              <span class="class-name">Test_UnitTest_Pagemenu.Test_09_SettingsPage</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="GNB">
-                  </a> <!-- GNB -->
-                  <span class="method-name">GNB</span>
+                  <a name="UnitTest_SettingsPage">
+                  </a> <!-- UnitTest_SettingsPage -->
+                  <span class="method-name">UnitTest_SettingsPage</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -143,18 +143,25 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;jdohnnyjangjang&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; parallel=&quot;methods&quot; name=&quot;jdohnnyjangjang&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;Listener.ListenerTest&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+  &lt;test thread-count=&quot;2&quot; parallel=&quot;methods&quot; name=&quot;ChromeTest&quot;&gt;
     &lt;parameter name=&quot;Signatory_1_email&quot; value=&quot;joshin3@getnada.com&quot;/&gt;
     &lt;parameter name=&quot;Signatory_2_name&quot; value=&quot;조니6번&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
     &lt;parameter name=&quot;Signatory_2_email&quot; value=&quot;joshin6@getnada.com&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Test_Regression_TC.GNB&quot;/&gt;
+      &lt;class name=&quot;Test_UnitTest_Pagemenu.Test_09_SettingsPage&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
+  &lt;/test&gt; &lt;!-- ChromeTest --&gt;
+  &lt;test thread-count=&quot;2&quot; parallel=&quot;methods&quot; name=&quot;EdgeTest&quot;&gt;
+    &lt;parameter name=&quot;Signatory_1_email&quot; value=&quot;joshin3@getnada.com&quot;/&gt;
+    &lt;parameter name=&quot;Signatory_2_name&quot; value=&quot;조니6번&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;Edge&quot;/&gt;
+    &lt;parameter name=&quot;Signatory_2_email&quot; value=&quot;joshin6@getnada.com&quot;/&gt;
+  &lt;/test&gt; &lt;!-- EdgeTest --&gt;
 &lt;/suite&gt; &lt;!-- jdohnnyjangjang --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -166,7 +173,10 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">ChromeTest (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">EdgeTest (0 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -194,14 +204,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'GNB')
-data.setCell(0, 2, 'Test_Regression_TC.GNB')
-data.setCell(0, 3, 8585);
+data.setCell(0, 1, 'UnitTest_SettingsPage')
+data.setCell(0, 2, 'Test_UnitTest_Pagemenu.Test_09_SettingsPage')
+data.setCell(0, 3, 1566);
 window.suiteTableData['jdohnnyjangjang']= { tableData: data, tableDiv: 'times-div-jdohnnyjangjang'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <span class="suite-total-time">Total running time: 1 seconds</span>
               <div id="times-div-jdohnnyjangjang">
               </div> <!-- times-div-jdohnnyjangjang -->
             </div> <!-- times-div -->
@@ -227,32 +237,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Test_Regression_TC.GNB</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
-                <span class="method-name">createSuite(org.testng.TestRunner@3a4ba480)</span>
+              <div class="chronological-class-name">Test_UnitTest_Pagemenu.Test_09_SettingsPage</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeWebDriver(Chrome)</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-suite before -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeTest([TestResult name={null} status=CREATED method=GNB.GNB()[pri:0, instance:Test_Regression_TC.GNB@49c7b...)</span>
-                <span class="method-start">1523 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="configuration-method before">
-                <span class="method-name">initializeWebDriver</span>
-                <span class="method-start">1524 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">GNB</span>
-                <span class="method-start">4470 ms</span>
+                <span class="method-name">UnitTest_SettingsPage</span>
+                <span class="method-start">2315 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">13056 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">afterMethod([TestResult name=GNB status=SUCCESS method=GNB.GNB()[pri:0, instance:Test_Regression_TC.GNB@49c7b90e...)</span>
-                <span class="method-start">13056 ms</span>
+                <span class="method-start">3883 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -6,11 +6,11 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import Test._0_BaseTest;
+import Test.BaseTest;
 import Testrail_client.Testrails.TestRails;
 import junit.framework.Assert;
 
-public class NomarlAccount_NormalSign_Off_Case extends _0_BaseTest {
+public class NomarlAccount_NormalSign_Off_Case extends BaseTest {
 	
 	
 
