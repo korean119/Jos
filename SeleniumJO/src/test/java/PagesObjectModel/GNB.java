@@ -20,13 +20,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.google.common.base.Function;
 
+import POM_00_BasePage.BasePage;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.comparison.ImageDiff;
 import ru.yandex.qatools.ashot.comparison.ImageDiffer;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
-public class GNB extends _0_BasePage {
+public class GNB extends BasePage {
 
 	public GNB(WebDriver driver) {
 		super(driver);
@@ -44,13 +45,14 @@ public class GNB extends _0_BasePage {
 
 	@Override
 	protected void isLoaded() throws Error {
+		
 		assertTrue(driver.getTitle().equals(title));
 		// TODO Auto-generated method stub
 		
 	}
-
-
-
+	 //public final void reload() {
+	 //       this.load();
+	  //  }
 
 	// 서명 요청 버튼
 	@FindBy(css = (".tagGNBContractSetupStartBtn.css-5p265p"))

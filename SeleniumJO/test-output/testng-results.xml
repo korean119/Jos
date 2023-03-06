@@ -1,218 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="jdohnnyjangjang" duration-ms="178935" started-at="2023-03-03T16:43:53 KST" finished-at="2023-03-03T16:46:52 KST">
+  <suite name="jdohnnyjangjang" duration-ms="17768" started-at="2023-03-06T13:21:34 KST" finished-at="2023-03-06T13:21:51 KST">
     <groups>
     </groups>
-    <test name="Test" duration-ms="178935" started-at="2023-03-03T16:43:53 KST" finished-at="2023-03-03T16:46:52 KST">
-      <class name="Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case">
-        <test-method status="PASS" signature="initializeWebDriver()[pri:0, instance:Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case@23d2a7e8]" name="initializeWebDriver" is-config="true" duration-ms="7965" started-at="2023-03-03T16:44:53 KST" finished-at="2023-03-03T16:45:01 KST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeWebDriver -->
-        <test-method status="PASS" signature="NomarlAccount_NormalSign_On_Case(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case@23d2a7e8]" name="NomarlAccount_NormalSign_On_Case" duration-ms="16110" started-at="2023-03-03T16:45:01 KST" finished-at="2023-03-03T16:45:17 KST">
+    <test name="ChromeTest" duration-ms="17752" started-at="2023-03-06T13:21:34 KST" finished-at="2023-03-06T13:21:51 KST">
+      <class name="Test_Regression_TC.GNB">
+        <test-method status="PASS" signature="initializeWebDriver(java.lang.String)[pri:0, instance:Test_Regression_TC.GNB@7a1ebcd8]" name="initializeWebDriver" is-config="true" duration-ms="8770" started-at="2023-03-06T13:21:34 KST" finished-at="2023-03-06T13:21:42 KST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[joshin3@getnada.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[조니6번]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[joshin6@getnada.com]]>
+                <![CDATA[Chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NomarlAccount_NormalSign_On_Case -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case@23d2a7e8]" name="tearDown" is-config="true" duration-ms="129" started-at="2023-03-03T16:45:17 KST" finished-at="2023-03-03T16:45:17 KST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="initializeWebDriver()[pri:0, instance:Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case@23d2a7e8]" name="initializeWebDriver" is-config="true" duration-ms="5162" started-at="2023-03-03T16:45:17 KST" finished-at="2023-03-03T16:45:22 KST">
-          <reporter-output>
-          </reporter-output>
         </test-method> <!-- initializeWebDriver -->
-        <test-method status="PASS" signature="NomarlAccount_NormalSign_On_Case_Singatory_1_(java.lang.String)[pri:2, instance:Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case@23d2a7e8]" name="NomarlAccount_NormalSign_On_Case_Singatory_1_" duration-ms="16021" started-at="2023-03-03T16:45:22 KST" finished-at="2023-03-03T16:45:38 KST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[joshin3@getnada.com]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="GNB()[pri:0, instance:Test_Regression_TC.GNB@7a1ebcd8]" name="GNB" duration-ms="8820" started-at="2023-03-06T13:21:42 KST" finished-at="2023-03-06T13:21:51 KST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NomarlAccount_NormalSign_On_Case_Singatory_1_ -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case@23d2a7e8]" name="tearDown" is-config="true" duration-ms="131" started-at="2023-03-03T16:45:38 KST" finished-at="2023-03-03T16:45:38 KST">
+        </test-method> <!-- GNB -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Regression_TC.GNB@7a1ebcd8]" name="tearDown" is-config="true" duration-ms="134" started-at="2023-03-06T13:21:51 KST" finished-at="2023-03-06T13:21:51 KST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="initializeWebDriver()[pri:0, instance:Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case@23d2a7e8]" name="initializeWebDriver" is-config="true" duration-ms="5206" started-at="2023-03-03T16:45:38 KST" finished-at="2023-03-03T16:45:44 KST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeWebDriver -->
-        <test-method status="PASS" signature="NomarlAccount_NormalSign_On_Case_Singatory_2_(java.lang.String)[pri:3, instance:Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case@23d2a7e8]" name="NomarlAccount_NormalSign_On_Case_Singatory_2_" duration-ms="12201" started-at="2023-03-03T16:45:44 KST" finished-at="2023-03-03T16:45:56 KST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[joshin6@getnada.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NomarlAccount_NormalSign_On_Case_Singatory_2_ -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case@23d2a7e8]" name="tearDown" is-config="true" duration-ms="129" started-at="2023-03-03T16:45:56 KST" finished-at="2023-03-03T16:45:56 KST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case -->
-      <class name="Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case2">
-        <test-method status="PASS" signature="initializeWebDriver()[pri:0, instance:Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case2@26a7b76d]" name="initializeWebDriver" is-config="true" duration-ms="4829" started-at="2023-03-03T16:45:56 KST" finished-at="2023-03-03T16:46:01 KST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeWebDriver -->
-        <test-method status="PASS" signature="NomarlAccount_NormalSign_On_Case(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case2@26a7b76d]" name="NomarlAccount_NormalSign_On_Case" duration-ms="15115" started-at="2023-03-03T16:46:01 KST" finished-at="2023-03-03T16:46:16 KST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[joshin3@getnada.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[조니6번]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[joshin6@getnada.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NomarlAccount_NormalSign_On_Case -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case2@26a7b76d]" name="tearDown" is-config="true" duration-ms="129" started-at="2023-03-03T16:46:16 KST" finished-at="2023-03-03T16:46:16 KST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="initializeWebDriver()[pri:0, instance:Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case2@26a7b76d]" name="initializeWebDriver" is-config="true" duration-ms="5400" started-at="2023-03-03T16:46:16 KST" finished-at="2023-03-03T16:46:21 KST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeWebDriver -->
-        <test-method status="PASS" signature="NomarlAccount_NormalSign_On_Case_Singatory_1_(java.lang.String)[pri:2, instance:Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case2@26a7b76d]" name="NomarlAccount_NormalSign_On_Case_Singatory_1_" duration-ms="12527" started-at="2023-03-03T16:46:21 KST" finished-at="2023-03-03T16:46:34 KST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[joshin3@getnada.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NomarlAccount_NormalSign_On_Case_Singatory_1_ -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case2@26a7b76d]" name="tearDown" is-config="true" duration-ms="171" started-at="2023-03-03T16:46:34 KST" finished-at="2023-03-03T16:46:34 KST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="initializeWebDriver()[pri:0, instance:Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case2@26a7b76d]" name="initializeWebDriver" is-config="true" duration-ms="5720" started-at="2023-03-03T16:46:34 KST" finished-at="2023-03-03T16:46:40 KST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeWebDriver -->
-        <test-method status="PASS" signature="NomarlAccount_NormalSign_On_Case_Singatory_2_(java.lang.String)[pri:3, instance:Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case2@26a7b76d]" name="NomarlAccount_NormalSign_On_Case_Singatory_2_" duration-ms="12017" started-at="2023-03-03T16:46:40 KST" finished-at="2023-03-03T16:46:52 KST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[joshin6@getnada.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NomarlAccount_NormalSign_On_Case_Singatory_2_ -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case2@26a7b76d]" name="tearDown" is-config="true" duration-ms="127" started-at="2023-03-03T16:46:52 KST" finished-at="2023-03-03T16:46:52 KST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case2 -->
-      <class name="Test_Regression_TC_Contract.NomarlAccount_NormalSign_Off_Case">
-        <test-method status="PASS" signature="initializeWebDriver()[pri:0, instance:Test_Regression_TC_Contract.NomarlAccount_NormalSign_Off_Case@33c7e1bb]" name="initializeWebDriver" is-config="true" duration-ms="6767" started-at="2023-03-03T16:43:53 KST" finished-at="2023-03-03T16:44:00 KST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeWebDriver -->
-        <test-method status="PASS" signature="NomarlAccount_NormalSign_Off_Case(java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:Test_Regression_TC_Contract.NomarlAccount_NormalSign_Off_Case@33c7e1bb]" name="NomarlAccount_NormalSign_Off_Case" duration-ms="13194" started-at="2023-03-03T16:44:00 KST" finished-at="2023-03-03T16:44:13 KST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[joshin3@getnada.com]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[조니6번]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[joshin6@getnada.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NomarlAccount_NormalSign_Off_Case -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Regression_TC_Contract.NomarlAccount_NormalSign_Off_Case@33c7e1bb]" name="tearDown" is-config="true" duration-ms="134" started-at="2023-03-03T16:44:13 KST" finished-at="2023-03-03T16:44:13 KST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="initializeWebDriver()[pri:0, instance:Test_Regression_TC_Contract.NomarlAccount_NormalSign_Off_Case@33c7e1bb]" name="initializeWebDriver" is-config="true" duration-ms="6541" started-at="2023-03-03T16:44:13 KST" finished-at="2023-03-03T16:44:20 KST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeWebDriver -->
-        <test-method status="PASS" signature="NomarlAccount_NormalSign_On_Case_Signatory_1_(java.lang.String)[pri:2, instance:Test_Regression_TC_Contract.NomarlAccount_NormalSign_Off_Case@33c7e1bb]" name="NomarlAccount_NormalSign_On_Case_Signatory_1_" duration-ms="13752" started-at="2023-03-03T16:44:20 KST" finished-at="2023-03-03T16:44:33 KST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[joshin3@getnada.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NomarlAccount_NormalSign_On_Case_Signatory_1_ -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Regression_TC_Contract.NomarlAccount_NormalSign_Off_Case@33c7e1bb]" name="tearDown" is-config="true" duration-ms="141" started-at="2023-03-03T16:44:33 KST" finished-at="2023-03-03T16:44:34 KST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="initializeWebDriver()[pri:0, instance:Test_Regression_TC_Contract.NomarlAccount_NormalSign_Off_Case@33c7e1bb]" name="initializeWebDriver" is-config="true" duration-ms="5800" started-at="2023-03-03T16:44:34 KST" finished-at="2023-03-03T16:44:39 KST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializeWebDriver -->
-        <test-method status="PASS" signature="NomarlAccount_NormalSign_On_Case_Singatory_2_(java.lang.String)[pri:3, instance:Test_Regression_TC_Contract.NomarlAccount_NormalSign_Off_Case@33c7e1bb]" name="NomarlAccount_NormalSign_On_Case_Singatory_2_" duration-ms="13337" started-at="2023-03-03T16:44:39 KST" finished-at="2023-03-03T16:44:53 KST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[joshin6@getnada.com]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NomarlAccount_NormalSign_On_Case_Singatory_2_ -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Regression_TC_Contract.NomarlAccount_NormalSign_Off_Case@33c7e1bb]" name="tearDown" is-config="true" duration-ms="130" started-at="2023-03-03T16:44:53 KST" finished-at="2023-03-03T16:44:53 KST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- Test_Regression_TC_Contract.NomarlAccount_NormalSign_Off_Case -->
-    </test> <!-- Test -->
+      </class> <!-- Test_Regression_TC.GNB -->
+    </test> <!-- ChromeTest -->
+    <test name="EdgeTest" duration-ms="0" started-at="2023-03-06T13:21:51 KST" finished-at="2023-03-06T13:21:51 KST">
+    </test> <!-- EdgeTest -->
+    <test name="SafariTest" duration-ms="1" started-at="2023-03-06T13:21:51 KST" finished-at="2023-03-06T13:21:51 KST">
+    </test> <!-- SafariTest -->
   </suite> <!-- jdohnnyjangjang -->
 </testng-results>

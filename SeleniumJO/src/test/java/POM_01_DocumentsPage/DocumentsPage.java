@@ -1,4 +1,4 @@
-package PagesObjectModel;
+package POM_01_DocumentsPage;
 
 import static org.testng.Assert.assertEquals;
 
@@ -23,13 +23,14 @@ import org.testng.annotations.Test;
 
 import com.google.common.base.Function;
 
+import POM_00_BasePage.BasePage;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.comparison.ImageDiff;
 import ru.yandex.qatools.ashot.comparison.ImageDiffer;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
-public class DocumentsPage extends _0_BasePage {
+public class DocumentsPage extends BasePage {
 
 	public DocumentsPage(WebDriver driver) {
 		super(driver);

@@ -1,4 +1,4 @@
-package PagesObjectModel;
+package POM_00_BasePage;
 
 import static org.testng.Assert.assertEquals;
 
@@ -18,9 +18,9 @@ import org.testng.Assert;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 
-public class _1_LoginPage extends _0_BasePage  {
+public class LoginPage extends BasePage  {
 
-	public _1_LoginPage (WebDriver driver) {
+	public LoginPage (WebDriver driver) {
         super(driver);
     }
 

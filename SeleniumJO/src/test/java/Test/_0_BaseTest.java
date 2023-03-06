@@ -11,6 +11,8 @@ import org.junit.AfterClass;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.testng.ITestContext;
@@ -23,18 +25,19 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
+import POM_00_BasePage.LoginPage;
+import POM_00_ContractPage.ContractSetup_Step1page;
+import POM_00_ContractPage.ContractSetup_Step2page;
+import POM_00_ContractPage.ContractSetup_Step3page;
+import POM_00_DocumentUploadModal.DomcumentUploadModal;
+import POM_01_DocumentsPage.DocumentsPage;
+import POM_01_DocumentsPage.DocumtetsPage_ContractPage;
+import POM_03_TempletePge.TempletePage;
+import POM_03_TempletePge.TempletePage_Bulkrequest;
+import POM_03_TempletePge.TempletePage_CreatTemplete;
 import PagesObjectModel.GNB;
-import PagesObjectModel.TempletePage;
-import PagesObjectModel.TempletePage_Bulkrequest;
-import PagesObjectModel.TempletePage_CreatTemplete;
-import PagesObjectModel._1_LoginPage;
-import PagesObjectModel_Contract.ContractSetup_Step1page;
-import PagesObjectModel_Contract.ContractSetup_Step2page;
-import PagesObjectModel_Contract.ContractSetup_Step3page;
-import PagesObjectModel_DocumentUploadModal.DomcumentUploadModal;
-import PagesObjectModel.DocumtetsPage_ContractPage;
-import PagesObjectModel.DocumentsPage;
 import Testrail_client.APIClient;
 import Testrail_client.TestrailAPI_Send;
 import Testrail_client.Testrails.TestRails;
@@ -44,9 +47,9 @@ public class _0_BaseTest  {
 	public static final int TEST_CASE_PASSED_STATUS = 1;
 	public static final int TEST_CASE_FAILED_STATUS = 5;
 
-	public static WebDriver driver;
+	public WebDriver driver;
 
-	protected _1_LoginPage objLoginPage;
+	protected LoginPage objLoginPage;
 	
 	protected DomcumentUploadModal objDomcumentUploadModal;
 	protected ContractSetup_Step1page objContractSetup_Step1page;
@@ -63,13 +66,31 @@ public class _0_BaseTest  {
 	protected TempletePage_Bulkrequest objTempletePage_Bulkreques;
 
 	@BeforeMethod
-	public void initializeWebDriver() throws IOException { //
-		 System.setProperty("webdriver.chrome.driver", //
-		 "/Users/johnny/Downloads/chromedriver_mac64/chromedriver");
+	@Parameters("browser")
+	public void initializeWebDriver(String browser) throws IOException { //
 
-		//System.setProperty("webdriver.chrome.driver",
-		//		"C:\\Users\\tncls\\Downloads\\chromedriver_win32 (1)/chromedriver.exe");
-		driver = new ChromeDriver();
+		
+		 if(browser.equalsIgnoreCase("Chrome")){
+				//System.setProperty("webdriver.chrome.driver", "C:\\Automation_Driver\\chromedriver_win32 (1)/chromedriver.exe");
+				//driver = new ChromeDriver();
+				
+				System.setProperty("webdriver.chrome.driver", "/Users/johnny/Downloads/chromedriver_mac64/chromedriver");
+				driver = new ChromeDriver();
+				
+	
+				}
+		 
+				//else if(browser.equalsIgnoreCase("Edge")){
+				//System.setProperty("webdriver.edge.driver", "C:\\Automation_Driver\\edgedriver_win64/msedgedriver.exe");
+				//driver = new EdgeDriver();
+	//}
+				
+				else if(browser.equalsIgnoreCase("Safari")){
+				driver = new SafariDriver();
+
+		
+				}
+			
 
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		//driver.get("https://stage-app.modusign.co.kr");
@@ -80,7 +101,7 @@ public class _0_BaseTest  {
 		driver.manage().window().maximize();
 		
 
-		objLoginPage = new _1_LoginPage(driver);
+		objLoginPage = new LoginPage(driver);
 		
 		objDomcumentUploadModal = new DomcumentUploadModal(driver);
 		objContractSetup_Step1page = new ContractSetup_Step1page(driver);

@@ -1,4 +1,4 @@
-package PagesObjectModel;
+package POM_03_TempletePge;
 
 import static org.testng.Assert.assertEquals;
 
@@ -23,13 +23,14 @@ import org.testng.annotations.Test;
 
 import com.google.common.base.Function;
 
+import POM_00_BasePage.BasePage;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.comparison.ImageDiff;
 import ru.yandex.qatools.ashot.comparison.ImageDiffer;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
-public class TempletePage_Bulkrequest extends _0_BasePage {
+public class TempletePage_Bulkrequest extends BasePage {
 
 	public TempletePage_Bulkrequest(WebDriver driver) {
 		super(driver);

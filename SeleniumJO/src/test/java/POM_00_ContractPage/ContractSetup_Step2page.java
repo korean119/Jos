@@ -1,4 +1,4 @@
-package PagesObjectModel_Contract;
+package POM_00_ContractPage;
 
 import static org.testng.Assert.assertEquals;
 
@@ -11,9 +11,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-import PagesObjectModel._0_BasePage;
+import POM_00_BasePage.BasePage;
 
-public class ContractSetup_Step2page extends _0_BasePage  {
+public class ContractSetup_Step2page extends BasePage  {
 
 	public ContractSetup_Step2page (WebDriver driver) {
         super(driver);
