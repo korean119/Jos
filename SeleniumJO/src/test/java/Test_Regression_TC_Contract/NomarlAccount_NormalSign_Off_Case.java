@@ -48,7 +48,7 @@ public class NomarlAccount_NormalSign_Off_Case extends _0_BaseTest {
 		
 		objDocumentsPage.NomarlAccount_NormalSign_OnandOff_Case_Singatory();
 		
-		objDocumtetsPage_ContractPage.NomarlAccount_NormalSign_Off_Case("텍스트 입력 필드");
+		objDocumentsPage_ContractPage.NomarlAccount_NormalSign_Off_Case("텍스트 입력 필드");
 		
 		Thread.sleep(2000);
 	}
@@ -65,7 +65,7 @@ public class NomarlAccount_NormalSign_Off_Case extends _0_BaseTest {
 		
 		objDocumentsPage.NomarlAccount_NormalSign_OnandOff_Case_Singatory();
 		
-		objDocumtetsPage_ContractPage.NomarlAccount_NormalSign_Off_Case("텍스트 입력 필드");
+		objDocumentsPage_ContractPage.NomarlAccount_NormalSign_Off_Case("텍스트 입력 필드");
 		
 		Thread.sleep(2000);
 	}

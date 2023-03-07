@@ -2,12 +2,14 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="jdohnnyjangjang" duration-ms="17768" started-at="2023-03-06T13:21:34 KST" finished-at="2023-03-06T13:21:51 KST">
+  <suite name="jdohnnyjangjang" duration-ms="7946" started-at="2023-03-07T18:36:51 KST" finished-at="2023-03-07T18:36:59 KST">
     <groups>
     </groups>
-    <test name="ChromeTest" duration-ms="17752" started-at="2023-03-06T13:21:34 KST" finished-at="2023-03-06T13:21:51 KST">
-      <class name="Test_Regression_TC.GNB">
-        <test-method status="PASS" signature="initializeWebDriver(java.lang.String)[pri:0, instance:Test_Regression_TC.GNB@7a1ebcd8]" name="initializeWebDriver" is-config="true" duration-ms="8770" started-at="2023-03-06T13:21:34 KST" finished-at="2023-03-06T13:21:42 KST">
+    <test name="SafariTest" duration-ms="7" started-at="2023-03-07T18:36:51 KST" finished-at="2023-03-07T18:36:51 KST">
+    </test> <!-- SafariTest -->
+    <test name="ChromeTest" duration-ms="7946" started-at="2023-03-07T18:36:51 KST" finished-at="2023-03-07T18:36:59 KST">
+      <class name="Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case">
+        <test-method status="PASS" signature="initializeWebDriver(java.lang.String)[pri:0, instance:Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case@7a1ebcd8]" name="initializeWebDriver" is-config="true" duration-ms="5081" started-at="2023-03-07T18:36:51 KST" finished-at="2023-03-07T18:36:56 KST">
           <params>
             <param index="0">
               <value>
@@ -18,19 +20,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeWebDriver -->
-        <test-method status="PASS" signature="GNB()[pri:0, instance:Test_Regression_TC.GNB@7a1ebcd8]" name="GNB" duration-ms="8820" started-at="2023-03-06T13:21:42 KST" finished-at="2023-03-06T13:21:51 KST">
+        <test-method status="PASS" signature="NomarlAccount_NormalSign_Off_Case2()[pri:0, instance:Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case@7a1ebcd8]" name="NomarlAccount_NormalSign_Off_Case2" duration-ms="2837" started-at="2023-03-07T18:36:56 KST" finished-at="2023-03-07T18:36:59 KST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- GNB -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Regression_TC.GNB@7a1ebcd8]" name="tearDown" is-config="true" duration-ms="134" started-at="2023-03-06T13:21:51 KST" finished-at="2023-03-06T13:21:51 KST">
+        </test-method> <!-- NomarlAccount_NormalSign_Off_Case2 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case@7a1ebcd8]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-03-07T18:36:59 KST" finished-at="2023-03-07T18:36:59 KST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Test_Regression_TC.GNB -->
+      </class> <!-- Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case -->
     </test> <!-- ChromeTest -->
-    <test name="EdgeTest" duration-ms="0" started-at="2023-03-06T13:21:51 KST" finished-at="2023-03-06T13:21:51 KST">
-    </test> <!-- EdgeTest -->
-    <test name="SafariTest" duration-ms="1" started-at="2023-03-06T13:21:51 KST" finished-at="2023-03-06T13:21:51 KST">
-    </test> <!-- SafariTest -->
   </suite> <!-- jdohnnyjangjang -->
 </testng-results>

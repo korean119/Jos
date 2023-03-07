@@ -112,7 +112,7 @@ public class ContractSetup_Step3page extends BasePage {
 
 	@FindBy(id = ("agreement-check1"))
 	WebElement Agreementcheck1_checkbox;
-
+	
 	@FindBy(id = ("agreement-check2"))
 	WebElement Agreementcheck2_checkbox;
 

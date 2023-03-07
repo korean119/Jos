@@ -46,7 +46,7 @@ public class BaseScript_1_ComplexSign extends _0_BaseTest {
 
 		objDocumentsPage.Doucment_Dropdown_BaseScript();
 
-		objDocumtetsPage_ContractPage.Contract_BaseScript("BaseScript");
+		objDocumentsPage_ContractPage.Contract_BaseScript("BaseScript");
 
 	}
 
@@ -58,7 +58,7 @@ public class BaseScript_1_ComplexSign extends _0_BaseTest {
 
 		objDocumentsPage.Doucment_Dropdown_BaseScript();
 
-		objDocumtetsPage_ContractPage.Contract_BaseScript("BaseScript");
+		objDocumentsPage_ContractPage.Contract_BaseScript("BaseScript");
 
 	}
 }

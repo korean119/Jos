@@ -48,7 +48,7 @@ public class NomarlAccount_NormalSign_On_Case extends _0_BaseTest {
 
 		objDocumentsPage.NomarlAccount_NormalSign_OnandOff_Case_Singatory();
 		
-		objDocumtetsPage_ContractPage.NomarlAccount_NormalSign_On_Case("1234", "텍스트필드 입력");
+		objDocumentsPage_ContractPage.NomarlAccount_NormalSign_On_Case("1234", "텍스트필드 입력");
 		
 		Thread.sleep(2000);
 		
@@ -65,7 +65,7 @@ public class NomarlAccount_NormalSign_On_Case extends _0_BaseTest {
 
 		objDocumentsPage.NomarlAccount_NormalSign_OnandOff_Case_Singatory();
 		
-		objDocumtetsPage_ContractPage.NomarlAccount_NormalSign_On_Case("1234", "텍스트필드 입력");
+		objDocumentsPage_ContractPage.NomarlAccount_NormalSign_On_Case("1234", "텍스트필드 입력");
 		
 		Thread.sleep(2000);
 	}

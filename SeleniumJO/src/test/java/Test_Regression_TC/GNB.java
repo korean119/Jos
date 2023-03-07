@@ -15,7 +15,10 @@ public class GNB extends _0_BaseTest {
 	public void GNB() throws InterruptedException {
 
 		objLoginPage.Login("joshin1@getnada.com", "tlswnsdh2@@");
-
+		
+		objGNB.get();
+		
+		Thread.sleep(2000);
 		
 
 		objGNB.Externaldocuments_btn();
@@ -42,7 +45,7 @@ public class GNB extends _0_BaseTest {
 		
 		objGNB.Documents_btn();
 		
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		
 	}
 }

@@ -88,7 +88,7 @@ public class TempletePage_Bulkrequest extends BasePage {
 	public void BulkRequest_ExcelUpload_btn_m() throws InterruptedException { 
 		WebElement filepath = driver.findElement(By.cssSelector("input[type='file']"));
 		//filepath.sendKeys("C:\\SeleniumPractice/sheet.xlsx");
-		filepath.sendKeys("/Users/johnny/Desktop/Selenium_img/bulkrequest.xlsx");
+		filepath.sendKeys("/Users/johnny/Desktop/Selenium_img/BulkRequset/bulkrequest.previous.xlsx");
 
 	
 	}

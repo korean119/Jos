@@ -91,7 +91,7 @@ public class DocumentsPage extends BasePage {
 
 	}
 
-	public void Doucment_Dropdown_BaseScript() throws IOException {
+	public void Doucment_Dropdown_BaseScript() {
 		DocumentListItem1.click();
 		DropdownMenuRow1.click();
 		

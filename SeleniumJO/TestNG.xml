@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="jdohnnyjangjang" thread-count="2" parallel="methods"> 
+<suite name="jdohnnyjangjang" thread-count="2" parallel="tests">
 
 	<listeners>
 		<listener class-name="Listener.ListenerTest" />
@@ -10,40 +10,35 @@
 	<test name="ChromeTest">
 
 		<parameter name="browser" value="Chrome" />
-		<parameter name="Signatory_1_email"
-			value="joshin3@getnada.com" />
+		<parameter name="Signatory_1_email" value="joshin3@getnada.com" />
 		<parameter name="Signatory_2_name" value="조니6번" />
-		<parameter name="Signatory_2_email"
-			value="joshin6@getnada.com" />
+		<parameter name="Signatory_2_email" value="joshin6@getnada.com" />
 
 		<classes>
 
-<!-- 			<class name="Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case2" />
- -->						<class name="Test_Regression_TC.GNB" />
+			<class name="Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case" /> 
+			<!-- <class name="Test_Regression_TC.GNB" /> -->
+			
 		</classes>
-		
-	</test> 
 
+ 	</test>
 
-	<test name="EdgeTest">
-
+<!--  	<test name="EdgeTest">
 		<parameter name="browser" value="Edge" />
-
 		<parameter name="Signatory_1_email"
 			value="joshin3@getnada.com" />
 		<parameter name="Signatory_2_name" value="조니6번" />
 		<parameter name="Signatory_2_email"
 			value="joshin6@getnada.com" />
-
 		<classes>
-
-<!-- 			<class name="Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case2" />
-						<class name="Test_Regression_TC.GNB" />  -->	
- 
-		</classes>
-	</test>
+			<class name="Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case2" />
+				
+			<class name="Test_Regression_TC.GNB" /> 
+			
+		</classes> 
+	</test>  -->
 	
-		<test name="SafariTest">
+	<test name="SafariTest">
 
 		<parameter name="browser" value="Safari" />
 
@@ -55,11 +50,31 @@
 
 		<classes>
 
-<!-- 			<class name="Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case2" />
-						<class name="Test_Regression_TC.GNB" />  -->
+	<!-- 	<class name="Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case" />  -->
+			<!-- <class name="Test_Regression_TC.GNB" /> -->
 			
 		</classes>
 	</test>
-	
-	
-</suite> <!-- Suite -->
+
+
+<!-- 	<test name="Firefox">
+
+		<parameter name="browser" value="Firefox" />
+
+		<parameter name="Signatory_1_email" value="joshin3@getnada.com" />
+		<parameter name="Signatory_2_name" value="조니6번" />
+		<parameter name="Signatory_2_email" value="joshin6@getnada.com" />
+
+		<classes>
+
+			<class name="Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case" />
+			<class name="Test_Regression_TC.GNB" />
+
+
+		</classes>
+	</test>
+ -->
+
+
+
+</suite>

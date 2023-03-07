@@ -6,14 +6,6 @@ import org.testng.ITestResult;
 
 public class ListenerTest implements ITestListener {
 	
-	
-	// Singatory 서명 요청자 : On/Off Case 2개씩  필요 
-	
-	// Document - Document sign on/off 각 2개씩 
-	
-	// Documet validation 하나 필요 
-	
-	// 총 5개 필요 
 
 	@Override
 	public void onFinish(ITestContext Result) {

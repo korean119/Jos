@@ -56,7 +56,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-jdohnnyjangjang">
-                    <span class="test-stats">3 tests</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -104,7 +104,7 @@
                     <div class="method-list-content passed suite-jdohnnyjangjang">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-jdohnnyjangjang" title="Test_Regression_TC.GNB" hash-for-method="GNB">GNB</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-jdohnnyjangjang" title="Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case" hash-for-method="NomarlAccount_NormalSign_Off_Case2">NomarlAccount_NormalSign_Off_Case2</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-jdohnnyjangjang -->
@@ -122,14 +122,14 @@
           <div class="suite-jdohnnyjangjang-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">Test_Regression_TC.GNB</span>
+              <span class="class-name">Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="GNB">
-                  </a> <!-- GNB -->
-                  <span class="method-name">GNB</span>
+                  <a name="NomarlAccount_NormalSign_Off_Case2">
+                  </a> <!-- NomarlAccount_NormalSign_Off_Case2 -->
+                  <span class="method-name">NomarlAccount_NormalSign_Off_Case2</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -143,26 +143,20 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;2&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;jdohnnyjangjang&quot; parallel=&quot;methods&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;jdohnnyjangjang&quot; parallel=&quot;tests&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;Listener.ListenerTest&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;2&quot; name=&quot;ChromeTest&quot; parallel=&quot;methods&quot;&gt;
+  &lt;test thread-count=&quot;2&quot; name=&quot;ChromeTest&quot; parallel=&quot;tests&quot;&gt;
     &lt;parameter name=&quot;Signatory_1_email&quot; value=&quot;joshin3@getnada.com&quot;/&gt;
     &lt;parameter name=&quot;Signatory_2_name&quot; value=&quot;조니6번&quot;/&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
     &lt;parameter name=&quot;Signatory_2_email&quot; value=&quot;joshin6@getnada.com&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Test_Regression_TC.GNB&quot;/&gt;
+      &lt;class name=&quot;Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- ChromeTest --&gt;
-  &lt;test thread-count=&quot;2&quot; name=&quot;EdgeTest&quot; parallel=&quot;methods&quot;&gt;
-    &lt;parameter name=&quot;Signatory_1_email&quot; value=&quot;joshin3@getnada.com&quot;/&gt;
-    &lt;parameter name=&quot;Signatory_2_name&quot; value=&quot;조니6번&quot;/&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;Edge&quot;/&gt;
-    &lt;parameter name=&quot;Signatory_2_email&quot; value=&quot;joshin6@getnada.com&quot;/&gt;
-  &lt;/test&gt; &lt;!-- EdgeTest --&gt;
-  &lt;test thread-count=&quot;2&quot; name=&quot;SafariTest&quot; parallel=&quot;methods&quot;&gt;
+  &lt;test thread-count=&quot;2&quot; name=&quot;SafariTest&quot; parallel=&quot;tests&quot;&gt;
     &lt;parameter name=&quot;Signatory_1_email&quot; value=&quot;joshin3@getnada.com&quot;/&gt;
     &lt;parameter name=&quot;Signatory_2_name&quot; value=&quot;조니6번&quot;/&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;Safari&quot;/&gt;
@@ -180,9 +174,6 @@
             <ul>
               <li>
                 <span class="test-name">ChromeTest (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">EdgeTest (0 classes)</span>
               </li>
               <li>
                 <span class="test-name">SafariTest (0 classes)</span>
@@ -213,14 +204,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'GNB')
-data.setCell(0, 2, 'Test_Regression_TC.GNB')
-data.setCell(0, 3, 8820);
+data.setCell(0, 1, 'NomarlAccount_NormalSign_Off_Case2')
+data.setCell(0, 2, 'Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case')
+data.setCell(0, 3, 2837);
 window.suiteTableData['jdohnnyjangjang']= { tableData: data, tableDiv: 'times-div-jdohnnyjangjang'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-jdohnnyjangjang">
               </div> <!-- times-div-jdohnnyjangjang -->
             </div> <!-- times-div -->
@@ -246,18 +237,18 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Test_Regression_TC.GNB</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initializeWebDriver(Chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">GNB</span>
-                <span class="method-start">8771 ms</span>
+                <span class="method-name">NomarlAccount_NormalSign_Off_Case2</span>
+                <span class="method-start">5082 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">17594 ms</span>
+                <span class="method-start">7921 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

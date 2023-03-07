@@ -12,6 +12,7 @@ import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
@@ -27,17 +28,17 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
+import POM_00_BasePage.GNB;
 import POM_00_BasePage.LoginPage;
 import POM_00_ContractPage.ContractSetup_Step1page;
 import POM_00_ContractPage.ContractSetup_Step2page;
 import POM_00_ContractPage.ContractSetup_Step3page;
 import POM_00_DocumentUploadModal.DomcumentUploadModal;
 import POM_01_DocumentsPage.DocumentsPage;
-import POM_01_DocumentsPage.DocumtetsPage_ContractPage;
+import POM_01_DocumentsPage.DocumentsPage_ContractPage;
 import POM_03_TempletePge.TempletePage;
 import POM_03_TempletePge.TempletePage_Bulkrequest;
 import POM_03_TempletePge.TempletePage_CreatTemplete;
-import PagesObjectModel.GNB;
 import Testrail_client.APIClient;
 import Testrail_client.TestrailAPI_Send;
 import Testrail_client.Testrails.TestRails;
@@ -58,7 +59,7 @@ public class _0_BaseTest  {
 	
 	
 	protected GNB objGNB;
-	protected DocumtetsPage_ContractPage objDocumtetsPage_ContractPage;
+	protected DocumentsPage_ContractPage objDocumentsPage_ContractPage;
 	protected DocumentsPage objDocumentsPage;
 	
 	protected TempletePage objTempletePage;
@@ -67,17 +68,17 @@ public class _0_BaseTest  {
 
 	@BeforeMethod
 	@Parameters("browser")
-	public void initializeWebDriver(String browser) throws IOException { //
+	public void initializeWebDriver(String browser) throws IOException { 
 
 		
 		 if(browser.equalsIgnoreCase("Chrome")){
 				//System.setProperty("webdriver.chrome.driver", "C:\\Automation_Driver\\chromedriver_win32 (1)/chromedriver.exe");
 				//driver = new ChromeDriver();
 				
-				System.setProperty("webdriver.chrome.driver", "/Users/johnny/Downloads/chromedriver_mac64/chromedriver");
+				System.setProperty("webdriver.chrome.driver", "/Users/johnny/Desktop/Selenium_img/driver/chromedriver_mac64/chromedriver");
 				driver = new ChromeDriver();
 				
-	
+		
 				}
 		 
 				//else if(browser.equalsIgnoreCase("Edge")){
@@ -88,13 +89,19 @@ public class _0_BaseTest  {
 				else if(browser.equalsIgnoreCase("Safari")){
 				driver = new SafariDriver();
 
-		
 				}
 			
+		 
+				else if(browser.equalsIgnoreCase("Firefox")){
+					System.setProperty("webdriver.chrome.driver", "/Users/johnny/Desktop/Selenium_img/driver/geckodriver-v0.32.2-macos");
+
+					driver = new FirefoxDriver();
+				}
+		 
 
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		//driver.get("https://stage-app.modusign.co.kr");
-		driver.get("https://deploy-preview-8118--modusign-app.netlify.app/");
+		driver.get("https://stage-app.modusign.co.kr/");
 		
 		// 브라우저 위치/크기 
 		//driver.manage().window().setPosition(new Point(2000, 1)); 
@@ -111,7 +118,7 @@ public class _0_BaseTest  {
 		
 		objGNB = new GNB(driver);
 		objDocumentsPage = new DocumentsPage(driver);
-		objDocumtetsPage_ContractPage = new DocumtetsPage_ContractPage(driver);
+		objDocumentsPage_ContractPage = new DocumentsPage_ContractPage(driver);
 		
 		objTempletePage = new TempletePage(driver);
 		objTempletePage_CreatTemplete = new TempletePage_CreatTemplete(driver);
@@ -125,6 +132,6 @@ public class _0_BaseTest  {
 	@AfterMethod
 	public void tearDown() {
 
-		driver.quit();
+//		driver.quit();
 	}
 }

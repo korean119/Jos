@@ -1,4 +1,4 @@
-package PagesObjectModel;
+package POM_00_BasePage;
 
 import static org.testng.Assert.assertTrue;
 
@@ -20,7 +20,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.google.common.base.Function;
 
-import POM_00_BasePage.BasePage;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.comparison.ImageDiff;

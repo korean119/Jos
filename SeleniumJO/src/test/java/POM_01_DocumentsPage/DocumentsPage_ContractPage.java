@@ -23,12 +23,19 @@ import ru.yandex.qatools.ashot.comparison.ImageDiff;
 import ru.yandex.qatools.ashot.comparison.ImageDiffer;
 
 
-public class DocumtetsPage_ContractPage extends BasePage {
+public class DocumentsPage_ContractPage extends BasePage {
 	
-	public DocumtetsPage_ContractPage(WebDriver driver) {
+	public DocumentsPage_ContractPage(WebDriver driver) {
 		super(driver);
 
 	}
+	
+	
+	////////////////////// 첨부 파일 있을 경우  /////////////////////
+	@FindBy(xpath = ("//button[contains(text(),'확인')]"))
+	WebElement Namgilmal_btn;
+	
+	///////////////////////////////////////////////////
 
 	////////////////////// 접근 암호 있을 경우 /////////////////////
 	
@@ -109,17 +116,30 @@ public class DocumtetsPage_ContractPage extends BasePage {
 	///////////////////////////////////////////////////////////////////////////
 	
 	
+	
+	public void Namgilmal_btn() {
+		Namgilmal_btn.click();
+		
+	}
+	
+	
+	
+	
+	
+	
 	//////////////////////접근 암호 있을 경우 /////////////////////
 	
 	public void password_input(String ar1) {
 		password_input.click();
 		password_input.sendKeys(ar1);
+		password_OK_btn.click();
 
 	}
 	
 	///////////////////////////////////////////////////
 
 	
+	// 이건 뭐지  
 	public void TextFieldTextarea(String arg1) {
 		//TextFieldTextarea.sendKeys(arg1);
 		Wait.until(ExpectedConditions.visibilityOf(TextFieldTextarea)).sendKeys(arg1);

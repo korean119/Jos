@@ -27,7 +27,8 @@ public class ContractSetup_Step1page extends BasePage {
 	////////////////////// 서명자 2 /////////////////////
 	// 두번째 서명자 이름
 	//@FindBy(css = (".css-8tn0p7:nth-child(4) .css-9ky0ym"))  ----> 이걸로 왜 안 잡힐때가 있지?
-	@FindBy(css = (".css-1baxk43"))
+	//@FindBy(css = (".css-1baxk43")) //3월 7일 바뀜 
+	@FindBy(xpath = ("//input[@class='css-mca25k']"))
 	WebElement Signatory_2_name_btn;
 
 	// 두번째 서명자 이메일 선택
