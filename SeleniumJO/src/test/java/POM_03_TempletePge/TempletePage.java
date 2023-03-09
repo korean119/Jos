@@ -3,6 +3,7 @@ package POM_03_TempletePge;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import POM_00_BasePage.BasePage;
 
@@ -28,7 +29,7 @@ public class TempletePage extends BasePage {
 	///////////////////////////////////////////////////
 
 	public void CreatTemplete_btn() throws InterruptedException {
-		CreatTemplete_btn.click();
+		Wait.until(ExpectedConditions.visibilityOf(CreatTemplete_btn)).click();
 	}
 
 	public void NomarlAccount_BulkRequest_Off_Case() throws InterruptedException {

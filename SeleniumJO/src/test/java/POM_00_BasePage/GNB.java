@@ -54,43 +54,43 @@ public class GNB extends BasePage {
 	  //  }
 
 	// 서명 요청 버튼
-	@FindBy(css = (".tagGNBContractSetupStartBtn.css-5p265p"))
+	@FindBy(css = (".tagGNBContractSetupStartBtn"))
 	WebElement ContractSetupStart_btn;
 
-	@FindBy(xpath = ("//a[@href='/documents']//div[@class='css-1xc9aey']"))
+	@FindBy(xpath = ("//a[@href='/documents']"))
 	WebElement Documents_btn;
 
-	@FindBy(xpath = ("//a[@href='/external-documents/folders']//div[@class='css-1xc9aey']"))
+	@FindBy(xpath = ("//a[@href='/external-documents/folders']"))
 	WebElement Externaldocuments_btn;
 
-	@FindBy(xpath = ("//a[@href='/templates']//div[@class='css-1xc9aey']"))
+	@FindBy(xpath = ("//a[@href='/templates']"))
 	WebElement Templates_btn;
 
-	@FindBy(xpath = ("//a[@href='/archived-documents']//div[@class='css-1xc9aey']"))
+	@FindBy(xpath = ("//a[@href='/archived-documents']"))
 	WebElement Archived_documents_btn;
 
-	@FindBy(xpath = ("//a[@href='/bulk-requests']//div[@class='css-1xc9aey']"))
+	@FindBy(xpath = ("//a[@href='/bulk-requests']"))
 	WebElement Bulkrequests_btn;
 
-	@FindBy(xpath = ("//a[@href='/links']//div[@class='css-1xc9aey']"))
+	@FindBy(xpath = ("//a[@href='/links']"))
 	WebElement Linksignature_btn;
 
-	@FindBy(xpath = ("//a[@href='/approvals']//div[@class='css-1xc9aey']"))
+	@FindBy(xpath = ("//a[@href='/approvals']"))
 	WebElement Approvals_btn;
 
-	@FindBy(xpath = ("//a[@href='/editing-documents']//div[@class='css-1xc9aey']"))
+	@FindBy(xpath = ("//a[@href='/editing-documents']"))
 	WebElement Editing_documents_btn;
 
-	@FindBy(xpath = ("//a[@href='/signatures']//div[@class='css-1xc9aey']"))
+	@FindBy(xpath = ("//a[@href='/signatures']"))
 	WebElement Signatures_btn;
 
-	@FindBy(xpath = ("//a[@href='/drafts']//div[@class='css-1xc9aey']"))
+	@FindBy(xpath = ("//a[@href='/drafts']"))
 	WebElement Drafts_btn;
 
-	@FindBy(xpath = ("//a[@target='_blank']//div[@class='css-1xc9aey']"))
+	@FindBy(xpath = ("//a[@target='_blank']"))
 	WebElement Blank_btn;
 
-	@FindBy(xpath = ("//a[@href='/settings']//div[@class='css-1xc9aey']"))
+	@FindBy(xpath = ("//a[@href='/settings']"))
 	WebElement Settings_btn;
 
 	
@@ -103,11 +103,13 @@ public class GNB extends BasePage {
 	}
 	
 	public void Documents_btn() {
-		Documents_btn.click();
+		Wait.until(ExpectedConditions.visibilityOf(Documents_btn)).click();
+		
 	}
 
 	public void Externaldocuments_btn() {
-		Externaldocuments_btn.click();
+		Wait.until(ExpectedConditions.visibilityOf(Externaldocuments_btn)).click();
+
 	}
 
 	public void Templates_btn() {
@@ -115,45 +117,52 @@ public class GNB extends BasePage {
 	}
 
 	public void Archived_documents_btn() {
-		Archived_documents_btn.click();
+		Wait.until(ExpectedConditions.visibilityOf(Archived_documents_btn)).click();
+
 	}
 
 	public void Bulkrequests_btn() {
-		Bulkrequests_btn.click();
+		Wait.until(ExpectedConditions.visibilityOf(Bulkrequests_btn)).click();
+	
 	}
 
 	public void Linksignature_btn() {
-		Linksignature_btn.click();
+		Wait.until(ExpectedConditions.visibilityOf(Linksignature_btn)).click();
 
 	}
 
 	public void Approvals_btn() {
-		Approvals_btn.click();
+		Wait.until(ExpectedConditions.visibilityOf(Approvals_btn)).click();
+
 
 	}
 
 	public void Editing_documents_btn() {
-		Editing_documents_btn.click();
+		Wait.until(ExpectedConditions.visibilityOf(Editing_documents_btn)).click();
 
 	}
 
 	public void Signatures_btn() {
-		Signatures_btn.click();
+		Wait.until(ExpectedConditions.visibilityOf(Signatures_btn)).click();
+
 
 	}
 
 	public void Drafts_btn() {
-		Drafts_btn.click();
+		Wait.until(ExpectedConditions.visibilityOf(Drafts_btn)).click();
+
 
 	}
 
 	public void Blank_btn() {
-		Blank_btn.click();
+		Wait.until(ExpectedConditions.visibilityOf(Blank_btn)).click();
+
 
 	}
 
 	public void Settings_btn() {
-		Settings_btn.click();
+		Wait.until(ExpectedConditions.visibilityOf(Settings_btn)).click();
+
 
 	}
 }

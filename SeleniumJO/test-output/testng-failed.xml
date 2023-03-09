@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [jdohnnyjangjang]" parallel="tests">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [jdohnnyjangjang]" parallel="tests">
   <listeners>
     <listener class-name="Listener.ListenerTest"/>
   </listeners>
-  <test thread-count="2" name="ChromeTest(failed)" parallel="tests">
-    <parameter name="Signatory_1_email" value="joshin3@getnada.com"/>
-    <parameter name="Signatory_2_name" value="조니6번"/>
-    <parameter name="browser" value="Chrome"/>
-    <parameter name="Signatory_2_email" value="joshin6@getnada.com"/>
+  <test thread-count="3" name="Firefox(failed)" parallel="tests">
+    <parameter name="Signatory_1_email" value="joshinauto8@getnada.com"/>
+    <parameter name="Signatory_2_name" value="조니오토 9번"/>
+    <parameter name="browser" value="Firefox"/>
+    <parameter name="signature_requester" value="joshinauto7@getnada.com"/>
+    <parameter name="Signatory_2_email" value="joshinauto9@getnada.com"/>
+    <parameter name="Signatore_rquester_name" value="조니오토 7번"/>
+    <parameter name="Signatory_1_name" value="조니오토 8번"/>
     <classes>
-      <class name="Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case">
+      <class name="Test_Regression_TC.GNB">
         <methods>
-          <include name="NomarlAccount_NormalSign_Off_Case2"/>
           <include name="tearDown"/>
           <include name="initializeWebDriver"/>
+          <include name="GNB"/>
         </methods>
-      </class> <!-- Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case -->
+      </class> <!-- Test_Regression_TC.GNB -->
     </classes>
-  </test> <!-- ChromeTest(failed) -->
+  </test> <!-- Firefox(failed) -->
 </suite> <!-- Failed suite [jdohnnyjangjang] -->

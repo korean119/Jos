@@ -18,26 +18,32 @@ public class GNB extends _0_BaseTest {
 		
 		objGNB.get();
 		
-		Thread.sleep(2000);
-		
-
 		objGNB.Externaldocuments_btn();
+		
 		
 		objGNB.Templates_btn();
 		
-		objGNB.Archived_documents_btn();
+		//objGNB.Archived_documents_btn();
 		
-		objGNB.Bulkrequests_btn();
+		// objGNB.Bulkrequests_btn();
 		
 		objGNB.Linksignature_btn();
-
+		
+		
 		objGNB.Approvals_btn();
 		
-		objGNB.Editing_documents_btn();
 		
+		
+    	objGNB.Editing_documents_btn();
+    	
+    	
+    	
 		objGNB.Signatures_btn();
+	
+		
 		
 		objGNB.Drafts_btn();
+
 		
 		//objGNB.Blank_btn();
 		
@@ -45,7 +51,7 @@ public class GNB extends _0_BaseTest {
 		
 		objGNB.Documents_btn();
 		
-		Thread.sleep(2000);
+
 		
 	}
 }

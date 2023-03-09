@@ -106,7 +106,7 @@ public class TempletePage_Bulkrequest extends BasePage {
 	
 	public void NomarlAccount_BulkRequest_Off_Case() throws InterruptedException { 
 		BulkRequest_ExcelUpload_btn_m();
-		FolderList_btn.click();
+		Wait.until(ExpectedConditions.visibilityOf(FolderList_btn)).click();
 		FolderList_1_btn.click();
 		Thread.sleep(2000);
 		BulkRequestStatusChange_btn.click();

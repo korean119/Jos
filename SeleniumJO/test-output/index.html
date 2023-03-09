@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-jdohnnyjangjang">
-              <span class="suite-name border-passed">jdohnnyjangjang</span>
+              <span class="suite-name border-failed">jdohnnyjangjang</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -56,7 +56,7 @@
                 </li>
                 <li>
                   <a href="#" class="navigator-link " panel-name="testlist-jdohnnyjangjang">
-                    <span class="test-stats">2 tests</span>
+                    <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,21 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">1 method, 1 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-jdohnnyjangjang" class="hide-methods passed suite-jdohnnyjangjang"> (hide)</a> <!-- hide-methods passed suite-jdohnnyjangjang -->
-                      <a href="#" panel-name="suite-jdohnnyjangjang" class="show-methods passed suite-jdohnnyjangjang"> (show)</a> <!-- show-methods passed suite-jdohnnyjangjang -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-jdohnnyjangjang" class="hide-methods failed suite-jdohnnyjangjang"> (hide)</a> <!-- hide-methods failed suite-jdohnnyjangjang -->
+                      <a href="#" panel-name="suite-jdohnnyjangjang" class="show-methods failed suite-jdohnnyjangjang"> (show)</a> <!-- show-methods failed suite-jdohnnyjangjang -->
                     </span>
-                    <div class="method-list-content passed suite-jdohnnyjangjang">
+                    <div class="method-list-content failed suite-jdohnnyjangjang">
                       <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-jdohnnyjangjang" title="Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case" hash-for-method="NomarlAccount_NormalSign_Off_Case2">NomarlAccount_NormalSign_Off_Case2</a> <!-- method navigator-link -->
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-jdohnnyjangjang" title="Test_Regression_TC.GNB" hash-for-method="GNB">GNB</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-jdohnnyjangjang -->
+                    </div> <!-- method-list-content failed suite-jdohnnyjangjang -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -119,21 +119,49 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-jdohnnyjangjang" class="panel jdohnnyjangjang">
-          <div class="suite-jdohnnyjangjang-class-passed">
+          <div class="suite-jdohnnyjangjang-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case</span>
+              <img src="failed.png"/>
+              <span class="class-name">Test_Regression_TC.GNB</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="NomarlAccount_NormalSign_Off_Case2">
-                  </a> <!-- NomarlAccount_NormalSign_Off_Case2 -->
-                  <span class="method-name">NomarlAccount_NormalSign_Off_Case2</span>
+                  <a name="GNB">
+                  </a> <!-- GNB -->
+                  <span class="method-name">GNB</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: Element &lt;a href=&quot;/external-documents/folders&quot;&gt; could not be scrolled into view
+Build info: version: &apos;4.8.0&apos;, revision: &apos;267030adea&apos;
+System info: os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;1.8.0_292&apos;
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Command: [3c2a0985-a305-4c5e-9ff5-332df23d5b27, clickElement {id=96e9aa5b-872a-453b-a838-283fb79ea033}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 110.0.1, moz:accessibilityChecks: false, moz:buildID: 20230227191043, moz:debuggerAddress: 127.0.0.1:27356, moz:geckodriverVersion: 0.32.2, moz:headless: false, moz:platformVersion: 22.3.0, moz:processID: 64911, moz:profile: /var/folders/nb/rbk44gf1635..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: MAC, proxy: Proxy(), se:cdp: ws://127.0.0.1:27356/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on MAC (3c2a0985-a305-4c5e-9ff5-332df23d5b27)] -&gt; xpath: //a[@href=&apos;/external-documents/folders&apos;]]
+Session ID: 3c2a0985-a305-4c5e-9ff5-332df23d5b27
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy14.click(Unknown Source)
+	at POM_00_BasePage.GNB.Externaldocuments_btn(GNB.java:111)
+	at Test_Regression_TC.GNB.GNB(GNB.java:21)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+... Removed 26 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-jdohnnyjangjang-class-passed -->
+          </div> <!-- suite-jdohnnyjangjang-class-failed -->
         </div> <!-- panel jdohnnyjangjang -->
         <div panel-name="test-xml-jdohnnyjangjang" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -143,25 +171,22 @@
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;2&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;jdohnnyjangjang&quot; parallel=&quot;tests&quot;&gt;
+&lt;suite thread-count=&quot;3&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;jdohnnyjangjang&quot; parallel=&quot;tests&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;Listener.ListenerTest&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;2&quot; name=&quot;ChromeTest&quot; parallel=&quot;tests&quot;&gt;
-    &lt;parameter name=&quot;Signatory_1_email&quot; value=&quot;joshin3@getnada.com&quot;/&gt;
-    &lt;parameter name=&quot;Signatory_2_name&quot; value=&quot;조니6번&quot;/&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
-    &lt;parameter name=&quot;Signatory_2_email&quot; value=&quot;joshin6@getnada.com&quot;/&gt;
+  &lt;test thread-count=&quot;3&quot; name=&quot;Firefox&quot; parallel=&quot;tests&quot;&gt;
+    &lt;parameter name=&quot;Signatory_1_email&quot; value=&quot;joshinauto8@getnada.com&quot;/&gt;
+    &lt;parameter name=&quot;Signatory_2_name&quot; value=&quot;조니오토 9번&quot;/&gt;
+    &lt;parameter name=&quot;browser&quot; value=&quot;Firefox&quot;/&gt;
+    &lt;parameter name=&quot;signature_requester&quot; value=&quot;joshinauto7@getnada.com&quot;/&gt;
+    &lt;parameter name=&quot;Signatory_2_email&quot; value=&quot;joshinauto9@getnada.com&quot;/&gt;
+    &lt;parameter name=&quot;Signatore_rquester_name&quot; value=&quot;조니오토 7번&quot;/&gt;
+    &lt;parameter name=&quot;Signatory_1_name&quot; value=&quot;조니오토 8번&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case&quot;/&gt;
+      &lt;class name=&quot;Test_Regression_TC.GNB&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- ChromeTest --&gt;
-  &lt;test thread-count=&quot;2&quot; name=&quot;SafariTest&quot; parallel=&quot;tests&quot;&gt;
-    &lt;parameter name=&quot;Signatory_1_email&quot; value=&quot;joshin3@getnada.com&quot;/&gt;
-    &lt;parameter name=&quot;Signatory_2_name&quot; value=&quot;조니6번&quot;/&gt;
-    &lt;parameter name=&quot;browser&quot; value=&quot;Safari&quot;/&gt;
-    &lt;parameter name=&quot;Signatory_2_email&quot; value=&quot;joshin6@getnada.com&quot;/&gt;
-  &lt;/test&gt; &lt;!-- SafariTest --&gt;
+  &lt;/test&gt; &lt;!-- Firefox --&gt;
 &lt;/suite&gt; &lt;!-- jdohnnyjangjang --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -173,10 +198,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">ChromeTest (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">SafariTest (0 classes)</span>
+                <span class="test-name">Firefox (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -204,14 +226,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'NomarlAccount_NormalSign_Off_Case2')
-data.setCell(0, 2, 'Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case')
-data.setCell(0, 3, 2837);
+data.setCell(0, 1, 'GNB')
+data.setCell(0, 2, 'Test_Regression_TC.GNB')
+data.setCell(0, 3, 3511);
 window.suiteTableData['jdohnnyjangjang']= { tableData: data, tableDiv: 'times-div-jdohnnyjangjang'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 7 seconds</span>
+              <span class="suite-total-time">Total running time: 11 seconds</span>
               <div id="times-div-jdohnnyjangjang">
               </div> <!-- times-div-jdohnnyjangjang -->
             </div> <!-- times-div -->
@@ -237,18 +259,20 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Test_Regression_TC.GNB</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">initializeWebDriver(Chrome)</span>
+                <span class="method-name">initializeWebDriver(Firefox)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">NomarlAccount_NormalSign_Off_Case2</span>
-                <span class="method-start">5082 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">GNB</span>
+                <span class="method-start">7143 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">7921 ms</span>
+                <span class="method-start">10658 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

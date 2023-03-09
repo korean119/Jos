@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-
-<suite name="jdohnnyjangjang" thread-count="2" parallel="tests">
-
+<suite name="jdohnnyjangjang" thread-count="3" parallel="tests">
+ 
 	<listeners>
 		<listener class-name="Listener.ListenerTest" />
 	</listeners>
@@ -10,18 +9,27 @@
 	<test name="ChromeTest">
 
 		<parameter name="browser" value="Chrome" />
-		<parameter name="Signatory_1_email" value="joshin3@getnada.com" />
-		<parameter name="Signatory_2_name" value="조니6번" />
-		<parameter name="Signatory_2_email" value="joshin6@getnada.com" />
+		
+		<parameter name="Signatore_rquester_name" value="조니오토 1번" />
+		<parameter name="signature_requester" value="joshinauto1@getnada.com" />
+		
+		<parameter name="Signatory_1_name" value="조니오토 2번" />
+		<parameter name="Signatory_1_email" value="joshinauto2@getnada.com" />
+		
+		<parameter name="Signatory_2_name" value="조니오토 3번" />
+		<parameter name="Signatory_2_email" value="joshinauto3@getnada.com" />
 
 		<classes>
-
-			<class name="Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case" /> 
-			<!-- <class name="Test_Regression_TC.GNB" /> -->
+			<!--<class name= "Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case" /> 
+			
+  			<class name= "Test_Regression_TC_Contract.NomarlAccount_NormalSign_Off_Case" /> 		
+			<class name="Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case" />   -->
+			
+			<class name="Test_Regression_TC.GNB" />
 			
 		</classes>
 
- 	</test>
+ 	</test>  
 
 <!--  	<test name="EdgeTest">
 		<parameter name="browser" value="Edge" />
@@ -36,45 +44,53 @@
 			<class name="Test_Regression_TC.GNB" /> 
 			
 		</classes> 
-	</test>  -->
+	</test>  
 	
-	<test name="SafariTest">
+ 	<test name="SafariTest">
 
 		<parameter name="browser" value="Safari" />
 
-		<parameter name="Signatory_1_email"
-			value="joshin3@getnada.com" />
-		<parameter name="Signatory_2_name" value="조니6번" />
-		<parameter name="Signatory_2_email"
-			value="joshin6@getnada.com" />
+		<parameter name="Signatore_rquester_name" value="조니오토 4번" />
+		<parameter name="signature_requester" value="joshinauto4@getnada.com" />
+		
+		<parameter name="Signatory_1_name" value="조니오토 5번" />
+		<parameter name="Signatory_1_email" value="joshinauto5@getnada.com" />
+		
+		<parameter name="Signatory_2_name" value="조니오토 6번" />
+		<parameter name="Signatory_2_email" value="joshinauto6@getnada.com" />
+
 
 		<classes>
-
-	<!-- 	<class name="Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case" />  -->
-			<!-- <class name="Test_Regression_TC.GNB" /> -->
+ 
+			<class name="Test_Regression_TC.GNB" /> 
 			
 		</classes>
 	</test>
+	
+	-->
 
 
-<!-- 	<test name="Firefox">
+<!--   	<test name="Firefox">
 
 		<parameter name="browser" value="Firefox" />
 
-		<parameter name="Signatory_1_email" value="joshin3@getnada.com" />
-		<parameter name="Signatory_2_name" value="조니6번" />
-		<parameter name="Signatory_2_email" value="joshin6@getnada.com" />
+		<parameter name="Signatore_rquester_name" value="조니오토 7번" />
+		<parameter name="signature_requester" value="joshinauto7@getnada.com" />
+		
+		<parameter name="Signatory_1_name" value="조니오토 8번" />
+		<parameter name="Signatory_1_email" value="joshinauto8@getnada.com" />
+		
+		<parameter name="Signatory_2_name" value="조니오토 9번" />
+		<parameter name="Signatory_2_email" value="joshinauto9@getnada.com" />
 
 		<classes>
 
-			<class name="Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case" />
 			<class name="Test_Regression_TC.GNB" />
 
 
 		</classes>
 	</test>
- -->
 
-
+  -->
 
 </suite>

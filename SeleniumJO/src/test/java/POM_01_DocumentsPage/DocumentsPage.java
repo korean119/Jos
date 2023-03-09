@@ -5,6 +5,7 @@ import static org.testng.Assert.assertEquals;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 
 import javax.imageio.ImageIO;
 
@@ -149,7 +150,7 @@ public class DocumentsPage extends BasePage {
 					+ "var newScript = document.createElement('script');" + "newScript.type = 'text/javascript';"
 					+ "newScript.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js';"
 					+ "headID.appendChild(newScript);");
-			WebDriverWait waitJQ = new WebDriverWait(driver, 30);
+			WebDriverWait waitJQ = new WebDriverWait(driver, Duration.ofSeconds(30));
 			Function<WebDriver, Boolean> jQueryAvailable = WebDriver -> ((Boolean) js
 					.executeScript("return (typeof jQuery != \"undefined\")"));
 			waitJQ.until(jQueryAvailable);
@@ -175,7 +176,7 @@ public class DocumentsPage extends BasePage {
 					+ "var newScript = document.createElement('script');" + "newScript.type = 'text/javascript';"
 					+ "newScript.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js';"
 					+ "headID.appendChild(newScript);");
-			WebDriverWait waitJQ = new WebDriverWait(driver, 30);
+			WebDriverWait waitJQ = new WebDriverWait(driver, Duration.ofSeconds(30));
 			Function<WebDriver, Boolean> jQueryAvailable = WebDriver -> ((Boolean) js
 					.executeScript("return (typeof jQuery != \"undefined\")"));
 			waitJQ.until(jQueryAvailable);
@@ -186,10 +187,13 @@ public class DocumentsPage extends BasePage {
 		Screenshot Screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000))
 				.takeScreenshot(driver, PDFLayer);
 
-		ImageIO.write(Screenshot.getImage(), "png", new File("C:\\SeleniumPractice\\logos/screenshot02.png"));
+		//ImageIO.write(Screenshot.getImage(), "png", new File("C:\\SeleniumPractice\\logos/screenshot02.png"));
+		ImageIO.write(Screenshot.getImage(), "png", new File("/Users/johnny/Desktop/Selenium_img/screenshot02.png"));
+		
 		System.out.println("스크린 캡쳐 성공");
 
-		BufferedImage expectedImage = ImageIO.read(new File("C:\\SeleniumPractice\\logos/screenshot01.png"));
+		//BufferedImage expectedImage = ImageIO.read(new File("C:\\SeleniumPractice\\logos/screenshot01.png"));
+		BufferedImage expectedImage = ImageIO.read(new File("/Users/johnny/Desktop/Selenium_img/screenshot01.png"));
 
 		BufferedImage actualImage = Screenshot.getImage();
 
@@ -202,6 +206,4 @@ public class DocumentsPage extends BasePage {
 		}
 
 	}
-	
-	//////////////////// 캡쳐용인데 나중에 어디다 쓸거 같은뎅 /////////////////////////
 }

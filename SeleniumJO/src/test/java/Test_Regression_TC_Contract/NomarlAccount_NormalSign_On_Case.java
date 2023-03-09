@@ -21,6 +21,8 @@ public class NomarlAccount_NormalSign_On_Case extends _0_BaseTest {
 			@Optional String Signatory_1_email, @Optional String Signatory_2_name, @Optional String Signatory_2_email) throws InterruptedException {
 
 		objLoginPage.Login("joshin1@getnada.com", "tlswnsdh2@@");
+		
+		objGNB.get();
 
 		objGNB.ContractSetupStart_btn();
 		
@@ -53,6 +55,7 @@ public class NomarlAccount_NormalSign_On_Case extends _0_BaseTest {
 		Thread.sleep(2000);
 		
 	}
+
 	
 	@TestRails (id = "16291")
 	@Test (priority = 3)
@@ -62,6 +65,8 @@ public class NomarlAccount_NormalSign_On_Case extends _0_BaseTest {
 			@Optional String Signatory_2_email) throws InterruptedException, IOException {
 
 		objLoginPage.Login(Signatory_2_email, "tlswnsdh2@@");
+		
+		objGNB.get();
 
 		objDocumentsPage.NomarlAccount_NormalSign_OnandOff_Case_Singatory();
 		

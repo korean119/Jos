@@ -124,9 +124,6 @@ public class DocumentsPage_ContractPage extends BasePage {
 	
 	
 	
-	
-	
-	
 	//////////////////////접근 암호 있을 경우 /////////////////////
 	
 	public void password_input(String ar1) {
@@ -148,9 +145,11 @@ public class DocumentsPage_ContractPage extends BasePage {
 
 
 	public void Contract_BaseScript(String arg1) throws InterruptedException { 
-		SignatureStart_btn.click();
+		
+		Wait.until(ExpectedConditions.visibilityOf(SignatureStart_btn)).click();
 		//SignatureMarker_btn.click();
-		Signaturesub_menu_btn.click();
+		
+		Wait.until(ExpectedConditions.visibilityOf(Signaturesub_menu_btn)).click();
 		Mysign_image_1_btn.click();
 		Image_confirmOK_btn.click();
 		WritableTextFieldCore_btn.click();
@@ -162,11 +161,14 @@ public class DocumentsPage_ContractPage extends BasePage {
 	}
 	
 	
-	public void NomarlAccount_NormalSign_Off_Case(String arg1) throws InterruptedException { 
+	public void NomarlAccount_NormalSign_Off_Case(String arg1) throws InterruptedException, IOException { 
+		
+		Wait.until(ExpectedConditions.visibilityOf(SignatureStart_btn)).click();
+		
+		//ElementCaptureaa();
+		//SignatureMarker_btn.click();
+		Wait.until(ExpectedConditions.visibilityOf(Signaturesub_menu_btn)).click();
 
-		SignatureStart_btn.click();
-		//SignatureMarker_btn.click();
-		Signaturesub_menu_btn.click();
 		Mysign_image_1_btn.click();
 		Image_confirmOK_btn.click();
 		
@@ -179,11 +181,13 @@ public class DocumentsPage_ContractPage extends BasePage {
 		Thread.sleep(2000);
 	}
 	
-	public void NomarlAccount_NormalSign_On_Case(String arg1, String arg2) throws InterruptedException { 
+	public void NomarlAccount_NormalSign_On_Case(String arg1, String arg2) throws InterruptedException, IOException { 
 		password_input(arg1);
 		password_OK_btn.click();
 		
-		SignatureStart_btn.click();
+		Wait.until(ExpectedConditions.visibilityOf(SignatureStart_btn)).click();
+		
+		//ElementCaptureaa();
 		//SignatureMarker_btn.click();
 		Signaturesub_menu_btn.click();
 		Mysign_image_1_btn.click();
@@ -196,6 +200,7 @@ public class DocumentsPage_ContractPage extends BasePage {
 		AgreeandSign_btn.click();
 		Home_btn.click();
 		Thread.sleep(2000);
+		
 	}
 	
 	
@@ -214,9 +219,8 @@ public class DocumentsPage_ContractPage extends BasePage {
 	}
 	
 	
-	public void ElementCapture() throws IOException, InterruptedException {
+	public void ElementCaptureaa() throws IOException, InterruptedException {
 
-		Thread.sleep(2000);
 		// Asot jqury 오류 대응 코드, 근데 Ashot 으로 이미지 캡쳐 안해서 필요는 없을 것 같지만 혹시나 해서 놔둠
 //		JavascriptExecutor js = (JavascriptExecutor) driver;
 //		if (!(Boolean) js.executeScript("return (typeof jQuery != \"undefined\")")) {
@@ -246,13 +250,13 @@ public class DocumentsPage_ContractPage extends BasePage {
 		// 876 x 574.22
 
 		ImageIO.write(logo_image, "png", Screenshot); 
-		FileUtils.copyFile(Screenshot, new File("C:\\SeleniumPractice\\logos/screenshot02.png"));
+		FileUtils.copyFile(Screenshot, new File("/Users/johnny/Desktop/Selenium_img/screenshot02.png"));
 		System.out.println("Screen Capture - Success");
 
-		BufferedImage expectedImage = ImageIO.read(new File("C:\\SeleniumPractice\\logos/screenshot01.png"));
+		BufferedImage expectedImage = ImageIO.read(new File("/Users/johnny/Desktop//Selenium_img/screenshot01.png"));
 		BufferedImage actualImage = logo_image;
 
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 
 		ImageDiffer imgDiff = new ImageDiffer();
 		ImageDiff diff = imgDiff.makeDiff(actualImage, expectedImage);
