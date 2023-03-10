@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Test_Regression_TC_Contract.NomarlAccount_NormalSign_Off_Case">
+      <class name="Zohnny_Test.johnnyTest$_1_Login">
         <methods>
-          <include name="NomarlAccount_NormalSign_Off_Case"/>
+          <include name="JohhnyTest"/>
           <include name="tearDown"/>
           <include name="initializeWebDriver"/>
         </methods>
-      </class> <!-- Test_Regression_TC_Contract.NomarlAccount_NormalSign_Off_Case -->
+      </class> <!-- Zohnny_Test.johnnyTest$_1_Login -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

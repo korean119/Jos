@@ -13,31 +13,31 @@ public class DocumentsPage extends _0_BaseTest {
 	@Test
 	public void GNB() throws InterruptedException {
 
-		objLoginPage.Login("joshin1@getnada.com", "tlswnsdh2@@");
+		ObjLoginPage.Login("joshin1@getnada.com", "tlswnsdh2@@");
 
-		objGNB.Externaldocuments_btn();
+		ObjGNB.Externaldocuments_btn();
 		
-		objGNB.Templates_btn();
+		ObjGNB.Templates_btn();
 		
-		objGNB.Archived_documents_btn();
+		ObjGNB.Archived_documents_btn();
 		
-		objGNB.Bulkrequests_btn();
+		ObjGNB.Bulkrequests_btn();
 		
-		objGNB.Linksignature_btn();
+		ObjGNB.Linksignature_btn();
 
-		objGNB.Approvals_btn();
+		ObjGNB.Approvals_btn();
 		
-		objGNB.Editing_documents_btn();
+		ObjGNB.Editing_documents_btn();
 		
-		objGNB.Signatures_btn();
+		ObjGNB.Signatures_btn();
 		
-		objGNB.Drafts_btn();
+		ObjGNB.Drafts_btn();
 		
 		//objGNB.Blank_btn();
 		
-		objGNB.Settings_btn();
+		ObjGNB.Settings_btn();
 		
-		objGNB.Documents_btn();
+		ObjGNB.Documents_btn();
 		
 		Thread.sleep(5000);
 		

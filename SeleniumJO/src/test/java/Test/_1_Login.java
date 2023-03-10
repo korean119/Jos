@@ -27,7 +27,7 @@ public class _1_Login extends _0_BaseTest {
 
 	public void login() throws InterruptedException {
 
-		objLoginPage.Login("joshin1@getnada.com", "tlswnsdh2@@");
+		ObjLoginPage.Login("joshin1@getnada.com", "tlswnsdh2@@");
 
 	}
 }

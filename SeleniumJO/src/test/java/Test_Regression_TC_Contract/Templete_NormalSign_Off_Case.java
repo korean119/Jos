@@ -10,7 +10,7 @@ import Test._0_BaseTest;
 import Testrail_client.Testrails.TestRails;
 import junit.framework.Assert;
 
-public class NomarlAccount_NormalSign_Off_Case extends _0_BaseTest {
+public class Templete_NormalSign_Off_Case extends _0_BaseTest {
 	
 	
 
@@ -21,19 +21,25 @@ public class NomarlAccount_NormalSign_Off_Case extends _0_BaseTest {
 	public void NomarlAccount_NormalSign_Off_Case(
 			@Optional String Signatory_1_email, @Optional String Signatory_2_name, @Optional String Signatory_2_email) throws InterruptedException {
 
-		objLoginPage.Login("joshin1@getnada.com", "tlswnsdh2@@");
+		ObjLoginPage.Login("joshin1@getnada.com", "tlswnsdh2@@");
 
-		objGNB.get();
+		ObjGNB.get();
+
+		ObjGNB.Templates_btn();
 		
-		objGNB.ContractSetupStart_btn();
+		ObjTempletePage.Templete_ListItem_1_btn();
 		
-		objDomcumentUploadModal.Contract_sample_select();
+		ObjTempletePage.Dropdown_ContractRequest_btn();
+	
+		ObjGNB.ContractSetupStart_btn();
 		
-		objContractSetup_Step1page.NomarlAccount_NormalSign_OnandOff_Case(Signatory_1_email, Signatory_2_name, Signatory_2_email);
+		ObjDomcumentUpload_Modal.Contract_SampleDoc_select();
 		
-		objContractSetup_Step2page.NomarlAccount_NormalSign_Off_Case();
+		ObjContractSetup_Step1page.NomarlAccount_NormalSign_OnandOff_Case(Signatory_1_email, Signatory_2_name, Signatory_2_email);
 		
-		objContractSetup_Step3page.NomarlAccount_NormalSign_Off_Case();
+		ObjContractSetup_Step2page.NomarlAccount_NormalSign_Off_Case();
+		
+		ObjContractSetup_Step3page.NomarlAccount_NormalSign_Off_Case();
 		
 		Thread.sleep(2000);
 		
@@ -46,13 +52,13 @@ public class NomarlAccount_NormalSign_Off_Case extends _0_BaseTest {
 	public void NomarlAccount_NormalSign_Off_Case_Signatory_1_(
 			@Optional String Signatory_1_email) throws InterruptedException, IOException {
 
-		objLoginPage.Login(Signatory_1_email, "tlswnsdh2@@");
+		ObjLoginPage.Login(Signatory_1_email, "tlswnsdh2@@");
 		
-		objGNB.get();
+		ObjGNB.get();
 		
-		objDocumentsPage.NomarlAccount_NormalSign_OnandOff_Case_Singatory();
+		ObjDocumentsPage.NomarlAccount_NormalSign_OnandOff_Case_Singatory();
 		
-		objDocumentsPage_ContractPage.NomarlAccount_NormalSign_Off_Case("텍스트 입력 필드");
+		ObjDocumentsPage_ContractPage.NomarlAccount_NormalSign_Off_Case("텍스트 입력 필드");
 		
 		Thread.sleep(2000);
 	}
@@ -65,13 +71,13 @@ public class NomarlAccount_NormalSign_Off_Case extends _0_BaseTest {
 	public void NomarlAccount_NormalSign_Off_Case_Singatory_2_(
 			@Optional String Signatory_2_email) throws InterruptedException, IOException {
 
-		objLoginPage.Login(Signatory_2_email, "tlswnsdh2@@");
+		ObjLoginPage.Login(Signatory_2_email, "tlswnsdh2@@");
 		
-		objGNB.get();
+		ObjGNB.get();
 		
-		objDocumentsPage.NomarlAccount_NormalSign_OnandOff_Case_Singatory();
+		ObjDocumentsPage.NomarlAccount_NormalSign_OnandOff_Case_Singatory();
 
-		objDocumentsPage_ContractPage.NomarlAccount_NormalSign_Off_Case("텍스트 입력 필드");
+		ObjDocumentsPage_ContractPage.NomarlAccount_NormalSign_Off_Case("텍스트 입력 필드");
 		
 		Thread.sleep(2000);
 	}

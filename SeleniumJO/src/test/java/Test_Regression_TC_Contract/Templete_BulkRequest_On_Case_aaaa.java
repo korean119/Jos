@@ -8,29 +8,29 @@ import Test._0_BaseTest;
 import Testrail_client.Testrails.TestRails;
 
 
-public class NomarlAccount_BulkRequest_Off_Case extends _0_BaseTest {
+public class Templete_BulkRequest_On_Case_aaaa extends _0_BaseTest {
 	
 	@TestRails (id = "")
 	@Test (priority = 1)
 	public void NomarlAccount_BulkRequest_Off_Case() throws InterruptedException {
 
-		objLoginPage.Login("joshin1@getnada.com", "tlswnsdh2@@");
+		ObjLoginPage.Login("joshin1@getnada.com", "tlswnsdh2@@");
 
-		objGNB.get();
+		ObjGNB.get();
+				
+		ObjGNB.Templates_btn();
 		
-		Thread.sleep(2000);
+		ObjTempletePage.CreatTemplete_btn();
 		
-		objGNB.Templates_btn();
+		ObjDomcumentUpload_Modal.Templete_Contract_SampleDocselect();
 		
-		objTempletePage.CreatTemplete_btn();
+		ObjTempletePage_CreateTempleteStep1Page.Templete_Request_Step1Page_Case("자동화서명자");
+		ObjTempletePage_CreateTempleteStep2Page.Templete_Request_Step2Page_Off_Case();
+		ObjTempletePage_CreateTempleteStep3Page.Templete_Request_Step3Page_On_Case("자동화템플릿명변");
 		
-		objDomcumentUploadModal.Contract_sample_select_BulkRequest();
+		ObjTempletePage.Templete_Dropdown_select();
 		
-		objTempletePage_CreatTemplete.NomarlAccount_BulkRequest_Off_Case();
-		
-		objTempletePage.NomarlAccount_BulkRequest_Off_Case();
-		
-		objTempletePage_Bulkreques.NomarlAccount_BulkRequest_Off_Case();
+		ObjBulkRequestPage_StartPage.NomarlAccount_BulkRequest_Off_Case();
 		
 		Thread.sleep(3000);
 		

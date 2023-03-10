@@ -1,4 +1,4 @@
-package POM_03_TempletePge;
+package POM_05_BulkRequestPage;
 
 import static org.testng.Assert.assertEquals;
 
@@ -30,9 +30,9 @@ import ru.yandex.qatools.ashot.comparison.ImageDiff;
 import ru.yandex.qatools.ashot.comparison.ImageDiffer;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 
-public class TempletePage_Bulkrequest extends BasePage {
+public class BulkRequestPage_StartPage extends BasePage {
 
-	public TempletePage_Bulkrequest(WebDriver driver) {
+	public BulkRequestPage_StartPage(WebDriver driver) {
 		super(driver);
 
 	}

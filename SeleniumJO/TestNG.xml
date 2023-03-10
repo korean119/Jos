@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="jdohnnyjangjang" thread-count="3" parallel="tests">
+<suite name="Johnny jangjang" > <!-- thread-count="3" parallel="tests">  -->
  
 	<listeners>
 		<listener class-name="Listener.ListenerTest" />
@@ -20,14 +20,16 @@
 		<parameter name="Signatory_2_email" value="joshinauto3@getnada.com" />
 
 		<classes>
-			<!--<class name= "Test_Regression_TC_Contract.NomarlAccount_NormalSign_On_Case" /> 
+		
+ <!-- 			<class name= "Test_Regression_TC_Contract.NormalSign_On_Case" /> 
+  			<class name= "Test_Regression_TC_Contract.NormalSign_Off_Case" /> 	 -->	
+  			
+			<class name= "Test_Regression_TC_Contract.Templete_BulkRequest_Off_Case" />
 			
-  			<class name= "Test_Regression_TC_Contract.NomarlAccount_NormalSign_Off_Case" /> 		
-			<class name="Test_Regression_TC_Contract.NomarlAccount_BulkRequest_Off_Case" />   -->
+			<!-- <class name="Test_Regression_TC.GNB" /> -->  
 			
-			<class name="Test_Regression_TC.GNB" />
-			
-		</classes>
+<!-- 			<class name="Zohnny_Test.johnnyTest" />
+ -->		</classes>
 
  	</test>  
 
