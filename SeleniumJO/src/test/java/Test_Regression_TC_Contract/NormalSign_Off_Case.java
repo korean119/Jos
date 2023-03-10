@@ -50,7 +50,7 @@ public class NormalSign_Off_Case extends _0_BaseTest {
 		
 		ObjGNB.get();
 		
-		ObjDocumentsPage.NomarlAccount_NormalSign_OnandOff_Case_Singatory();
+		ObjDocumentsPage.Documents_Dropdown_1_select();
 		
 		ObjDocumentsPage_ContractPage.NomarlAccount_NormalSign_Off_Case("텍스트 입력 필드");
 		
@@ -69,7 +69,7 @@ public class NormalSign_Off_Case extends _0_BaseTest {
 		
 		ObjGNB.get();
 		
-		ObjDocumentsPage.NomarlAccount_NormalSign_OnandOff_Case_Singatory();
+		ObjDocumentsPage.Documents_Dropdown_1_select();
 
 		ObjDocumentsPage_ContractPage.NomarlAccount_NormalSign_Off_Case("텍스트 입력 필드");
 		

@@ -36,83 +36,18 @@ public class BulkRequestPage_StartPage extends BasePage {
 		super(driver);
 
 	}
-	////////////////////// 대량전송 엑셀 업로드 화면  /////////////////////
-	
-	// 이건 쓸일 없을 듯
+
+	// 대량 전송 엑셀 업로드 화면 
+	// 엑셀 파일 업로드 이건 쓸일 없을 듯
 	@FindBy(xpath = ("//button[contains(text(),'3. 엑셀 업로드하기')]"))
 	WebElement BulkRequest_ExcelUpload_btn;
-	
-	///////////////////////////////////////////////////
-	
-	////////////////////// 대량전송 자동화 화면 /////////////////////
-	
-	// 폴더 목록 선택
-	@FindBy(css= ("button[class='FolderSelectBoxButton__select-btn']"))
-	WebElement FolderList_btn;
-	
-	// 폴더 목록 첫번째 선택
-	@FindBy(css = ("li:nth-child(1) button:nth-child(1)"))
-	WebElement FolderList_1_btn;
-	
-	// 전송 시작 
-	@FindBy(xpath = ("//button[contains(text(),'전송 시작')]"))
-	WebElement BulkRequestStatusChange_btn;
-	
-	///////////////////////////////////////////////////
 
-	
-	////////////////////// 전송 시작 체크박스 모달 /////////////////////
-
-	@FindBy(css = ("li:nth-child(1) .css-13e0nsf"))
-	WebElement Checkbox_1_btn;
-	
-	@FindBy(css = ("li:nth-child(2) .css-13e0nsf"))
-	WebElement Checkbox_2_btn;
-	
-	@FindBy(css = ("li:nth-child(3) .css-13e0nsf"))
-	WebElement Checkbox_3_btn;
-	
-	@FindBy(css = ("li:nth-child(4) .css-13e0nsf"))
-	WebElement Checkbox_4_btn;
-	
-	@FindBy(css = (".css-w49cdq"))
-	WebElement BulkRequestStatusChange_confirm_btn;
-	
-	///////////////////////////////////////////////////
-	
-	
-
-
-	///////////////////////////////////////////////////////////////////////////
-	
-	public void BulkRequest_ExcelUpload_btn_m() throws InterruptedException { 
+	// 엑셀 파일 업로드. 버튼 입력과 업로드 동시에 동작함 
+	public void BulkRequest_ExcelUpload_btn_m(String arg1) throws InterruptedException {
 		WebElement filepath = driver.findElement(By.cssSelector("input[type='file']"));
-		//filepath.sendKeys("C:\\SeleniumPractice/sheet.xlsx");
-		filepath.sendKeys("/Users/johnny/Desktop/Selenium_img/BulkRequset/bulkrequest.previous.xlsx");
+		filepath.sendKeys(arg1);
 
-	
-	}
-	
-	
-	public void BulkRequestStatusChange_confirm_m() throws InterruptedException { 
-		Checkbox_1_btn.click();
-		Checkbox_2_btn.click();
-		Checkbox_3_btn.click();
-		Checkbox_4_btn.click();
-		BulkRequestStatusChange_confirm_btn.click();
+		// filepath.sendKeys("/Users/johnny/Desktop/Selenium_img/BulkRequset/bulkrequest.automation.xlsx");
 
-		
 	}
-	
-	public void NomarlAccount_BulkRequest_Off_Case() throws InterruptedException { 
-		BulkRequest_ExcelUpload_btn_m();
-		Wait.until(ExpectedConditions.visibilityOf(FolderList_btn)).click();
-		FolderList_1_btn.click();
-		Thread.sleep(2000);
-		BulkRequestStatusChange_btn.click();
-		BulkRequestStatusChange_confirm_m();
-		
-	}
-
-	
 }

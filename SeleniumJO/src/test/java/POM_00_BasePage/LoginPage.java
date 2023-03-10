@@ -43,8 +43,7 @@ public class LoginPage extends BasePage  {
 	}
 
 	public void EntermyPasswrod(String arg2) {
-		// driver.findElement(Password).sendKeys(arg2);
-		//Password.sendKeys(arg2);
+		Password.sendKeys(arg2);
 		
 	}
 
@@ -58,8 +57,8 @@ public class LoginPage extends BasePage  {
 	// 대표 시나리오 작성
 	// 이메일 입력 > 패스워드 입력 > 로그인 버튼 입력
 	public void Login(String arg1, String arg2) throws InterruptedException {
-		Email.sendKeys(arg1);
-		Password.sendKeys(arg2);
+		EntermyEmail(arg1);
+		EntermyPasswrod(arg2);
 		Loginbutton.click();
 
 		String getheadertext = MainPageOK.getText().trim();

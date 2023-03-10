@@ -39,7 +39,6 @@ public class TempletePage_CreateTempleteStep1Page extends BasePage {
 
 	public void Signatory_1_role_input_m(String arg1) throws InterruptedException {
 		Wait.until(ExpectedConditions.visibilityOf(Signatory_1_role_input)).click();
-		Wait.until(ExpectedConditions.visibilityOf(Signatory_1_role_input)).clear();
 		Wait.until(ExpectedConditions.visibilityOf(Signatory_1_role_input)).sendKeys(arg1);
 	}
 
@@ -56,7 +55,7 @@ public class TempletePage_CreateTempleteStep1Page extends BasePage {
 	
 	
 	public void Templete_Request_Step1Page_Case(String arg1) throws InterruptedException {
-		Signatory_1_role_input.click();
+		Signatory_1_role_input_m(arg1);
 		Next_btn();
 
 	}

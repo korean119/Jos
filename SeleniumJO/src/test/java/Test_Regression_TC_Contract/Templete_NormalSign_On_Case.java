@@ -52,7 +52,7 @@ public class Templete_NormalSign_On_Case extends _0_BaseTest {
 
 		ObjLoginPage.Login(Signatory_1_email, "tlswnsdh2@@");
 
-		ObjDocumentsPage.NomarlAccount_NormalSign_OnandOff_Case_Singatory();
+		ObjDocumentsPage.Documents_Dropdown_1_select();
 		
 		ObjDocumentsPage_ContractPage.NomarlAccount_NormalSign_On_Case("1234", "텍스트필드 입력");
 		
@@ -72,7 +72,7 @@ public class Templete_NormalSign_On_Case extends _0_BaseTest {
 		
 		ObjGNB.get();
 
-		ObjDocumentsPage.NomarlAccount_NormalSign_OnandOff_Case_Singatory();
+		ObjDocumentsPage.Documents_Dropdown_1_select();
 		
 		ObjDocumentsPage_ContractPage.NomarlAccount_NormalSign_On_Case("1234", "텍스트필드 입력");
 		

@@ -8,18 +8,18 @@
     <parameter name="Signatory_1_email" value="joshinauto2@getnada.com"/>
     <parameter name="Signatory_2_name" value="조니오토 3번"/>
     <parameter name="browser" value="Chrome"/>
-    <parameter name="signature_requester" value="joshinauto1@getnada.com"/>
     <parameter name="Signatory_2_email" value="joshinauto3@getnada.com"/>
     <parameter name="Signatore_rquester_name" value="조니오토 1번"/>
+    <parameter name="signature_requester_email" value="joshinauto1@getnada.com"/>
     <parameter name="Signatory_1_name" value="조니오토 2번"/>
     <classes>
-      <class name="Test_Regression_TC_Contract.Templete_BulkRequest_Off_Case">
+      <class name="Test_Regression_TC_Contract.Templete_BulkRequest_On_Case">
         <methods>
-          <include name="NomarlAccount_BulkRequest_Off_Case"/>
           <include name="tearDown"/>
+          <include name="Templete_BulkRequest_DefaultCase_Singatory_1_" invocation-numbers="0"/>
           <include name="initializeWebDriver"/>
         </methods>
-      </class> <!-- Test_Regression_TC_Contract.Templete_BulkRequest_Off_Case -->
+      </class> <!-- Test_Regression_TC_Contract.Templete_BulkRequest_On_Case -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [Johnny jangjang] -->

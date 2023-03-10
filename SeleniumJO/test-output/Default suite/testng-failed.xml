@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Zohnny_Test.johnnyTest$_1_Login">
+      <class name="Test_Regression_TC_Contract.Templete_BulkRequest_Off_Case">
         <methods>
-          <include name="JohhnyTest"/>
+          <include name="Templete_BulkRequest_Off_Case"/>
           <include name="tearDown"/>
           <include name="initializeWebDriver"/>
         </methods>
-      </class> <!-- Zohnny_Test.johnnyTest$_1_Login -->
+      </class> <!-- Test_Regression_TC_Contract.Templete_BulkRequest_Off_Case -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

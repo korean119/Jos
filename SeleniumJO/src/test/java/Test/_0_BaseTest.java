@@ -27,6 +27,7 @@ import POM_03_TempletePge.TempletePage;
 import POM_03_TempletePge.TempletePage_CreateTempleteStep1Page;
 import POM_03_TempletePge.TempletePage_CreateTempleteStep2Page;
 import POM_03_TempletePge.TempletePage_CreateTempleteStep3Page;
+import POM_05_BulkRequestPage.BulkRequestPage_SendPage;
 import POM_05_BulkRequestPage.BulkRequestPage_StartPage;
 
 public class _0_BaseTest {
@@ -52,6 +53,8 @@ public class _0_BaseTest {
 	
 
 	protected BulkRequestPage_StartPage ObjBulkRequestPage_StartPage;
+	protected BulkRequestPage_SendPage ObjBulkRequestPage_SendPage;
+
 
 	@BeforeMethod
 	@Parameters("browser")
@@ -65,6 +68,12 @@ public class _0_BaseTest {
 			System.setProperty("webdriver.chrome.driver",
 					"/Users/johnny/Desktop/Selenium_img/driver/chromedriver_mac64/chromedriver");
 			driver = new ChromeDriver();
+			
+			// 헤드리스 모드 고민 필요 
+//			ChromeOptions options = new ChromeOptions();
+//			options.addArguments("--headless");
+//			options.addArguments("start-maximized");
+//			WebDriver driver = new ChromeDriver(options);
 
 		}
 
@@ -88,6 +97,8 @@ public class _0_BaseTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 		driver.get("https://stage-app.modusign.co.kr/");
+		
+		//driver.get("https://deploy-preview-8055--modusign-app.netlify.app/authentication/signin?redirectTo=%2Fdocuments");
 
 		// 페이지로드 타임아웃 효과가 있는지잘 모르겠음. 없는거 같기도..
 		// https://www.browserstack.com/guide/understanding-selenium-timeouts
@@ -117,6 +128,7 @@ public class _0_BaseTest {
 
 		
 		ObjBulkRequestPage_StartPage = new BulkRequestPage_StartPage(driver);
+		ObjBulkRequestPage_SendPage = new BulkRequestPage_SendPage(driver);
 
 	}
 

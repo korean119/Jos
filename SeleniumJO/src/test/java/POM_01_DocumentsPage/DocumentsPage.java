@@ -70,7 +70,18 @@ public class DocumentsPage extends BasePage {
 	WebElement Refusetosign_card_btn;
 	
 	
+	// 완료 된 문서 확인 
+	@FindBy(xpath = ("//input[@placeholder='8자 ~ 32자 이내']"))
+	WebElement Contract_DonePage_Password_input;
 	
+	public void Contract_DonePage_Password_input(String arg1) throws InterruptedException {
+		Wait.until(ExpectedConditions.visibilityOf(Contract_DonePage_Password_input)).click();
+		Wait.until(ExpectedConditions.visibilityOf(Contract_DonePage_Password_input)).sendKeys(arg1);
+
+	}
+	
+	
+	//input[@placeholder='8자 ~ 32자 이내']
 
 	
 	
@@ -120,7 +131,7 @@ public class DocumentsPage extends BasePage {
 	}
 	
 	
-	public void NomarlAccount_NormalSign_OnandOff_Case_Singatory() throws IOException {
+	public void Documents_Dropdown_1_select() throws IOException {
 		DocumentListItem1.click();
 		DropdownMenuRow1.click();
 		

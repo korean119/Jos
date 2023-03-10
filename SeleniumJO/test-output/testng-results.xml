@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Johnny jangjang" duration-ms="22315" started-at="2023-03-10T16:36:07 KST" finished-at="2023-03-10T16:36:30 KST">
+  <suite name="Johnny jangjang" duration-ms="19623" started-at="2023-03-10T23:42:48 KST" finished-at="2023-03-10T23:43:07 KST">
     <groups>
     </groups>
-    <test name="ChromeTest" duration-ms="22315" started-at="2023-03-10T16:36:07 KST" finished-at="2023-03-10T16:36:30 KST">
-      <class name="Test_Regression_TC_Contract.Templete_BulkRequest_Off_Case">
-        <test-method status="PASS" signature="initializeWebDriver(java.lang.String)[pri:0, instance:Test_Regression_TC_Contract.Templete_BulkRequest_Off_Case@a38d7a3]" name="initializeWebDriver" is-config="true" duration-ms="5438" started-at="2023-03-10T16:36:07 KST" finished-at="2023-03-10T16:36:13 KST">
+    <test name="ChromeTest" duration-ms="19623" started-at="2023-03-10T23:42:48 KST" finished-at="2023-03-10T23:43:07 KST">
+      <class name="Test_Regression_TC_Contract.Templete_BulkRequest_On_Case">
+        <test-method status="PASS" signature="initializeWebDriver(java.lang.String)[pri:0, instance:Test_Regression_TC_Contract.Templete_BulkRequest_On_Case@a38d7a3]" name="initializeWebDriver" is-config="true" duration-ms="5287" started-at="2023-03-10T23:42:48 KST" finished-at="2023-03-10T23:42:53 KST">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeWebDriver -->
-        <test-method status="PASS" signature="NomarlAccount_BulkRequest_Off_Case()[pri:1, instance:Test_Regression_TC_Contract.Templete_BulkRequest_Off_Case@a38d7a3]" name="NomarlAccount_BulkRequest_Off_Case" duration-ms="16426" started-at="2023-03-10T16:36:13 KST" finished-at="2023-03-10T16:36:29 KST">
+        <test-method status="PASS" signature="Templete_BulkRequest_DefaultCase_Singatory_1_(java.lang.String)[pri:0, instance:Test_Regression_TC_Contract.Templete_BulkRequest_On_Case@a38d7a3]" name="Templete_BulkRequest_DefaultCase_Singatory_1_" duration-ms="13996" started-at="2023-03-10T23:42:53 KST" finished-at="2023-03-10T23:43:07 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[joshinauto3@getnada.com]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- NomarlAccount_BulkRequest_Off_Case -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Regression_TC_Contract.Templete_BulkRequest_Off_Case@a38d7a3]" name="tearDown" is-config="true" duration-ms="425" started-at="2023-03-10T16:36:29 KST" finished-at="2023-03-10T16:36:30 KST">
+        </test-method> <!-- Templete_BulkRequest_DefaultCase_Singatory_1_ -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Regression_TC_Contract.Templete_BulkRequest_On_Case@a38d7a3]" name="tearDown" is-config="true" duration-ms="313" started-at="2023-03-10T23:43:07 KST" finished-at="2023-03-10T23:43:07 KST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Test_Regression_TC_Contract.Templete_BulkRequest_Off_Case -->
+      </class> <!-- Test_Regression_TC_Contract.Templete_BulkRequest_On_Case -->
     </test> <!-- ChromeTest -->
   </suite> <!-- Johnny jangjang -->
 </testng-results>

@@ -11,7 +11,7 @@
 		<parameter name="browser" value="Chrome" />
 		
 		<parameter name="Signatore_rquester_name" value="조니오토 1번" />
-		<parameter name="signature_requester" value="joshinauto1@getnada.com" />
+		<parameter name="signature_requester_email" value="joshinauto1@getnada.com" />
 		
 		<parameter name="Signatory_1_name" value="조니오토 2번" />
 		<parameter name="Signatory_1_email" value="joshinauto2@getnada.com" />
@@ -24,7 +24,8 @@
  <!-- 			<class name= "Test_Regression_TC_Contract.NormalSign_On_Case" /> 
   			<class name= "Test_Regression_TC_Contract.NormalSign_Off_Case" /> 	 -->	
   			
-			<class name= "Test_Regression_TC_Contract.Templete_BulkRequest_Off_Case" />
+<!-- 			<class name= "Test_Regression_TC_Contract.Templete_BulkRequest_DefaultCase" /> -->
+			<class name= "Test_Regression_TC_Contract.Templete_BulkRequest_OnCase" />
 			
 			<!-- <class name="Test_Regression_TC.GNB" /> -->  
 			

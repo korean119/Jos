@@ -62,7 +62,7 @@ public class TempletePage extends BasePage {
 ///////////////////////////////////////////////////////////////
 
 
-	public void Templete_Dropdown_select() throws InterruptedException {
+	public void Templete_Dropdown_BulckRequest_select() throws InterruptedException {
 		Templete_ListItem_1_btn();
 		Dropdown_BulkRequest_btn();
 		
