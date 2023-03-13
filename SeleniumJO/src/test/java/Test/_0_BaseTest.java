@@ -96,9 +96,11 @@ public class _0_BaseTest {
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-		driver.get("https://stage-app.modusign.co.kr/");
+		//driver.get("https://stage-app.modusign.co.kr/");
 		
-		//driver.get("https://deploy-preview-8055--modusign-app.netlify.app/authentication/signin?redirectTo=%2Fdocuments");
+		
+		// 프리뷰 URL 
+		driver.get("https://deploy-preview-8055--modusign-app.netlify.app/authentication/signin?redirectTo=%2Fdocuments");
 
 		// 페이지로드 타임아웃 효과가 있는지잘 모르겠음. 없는거 같기도..
 		// https://www.browserstack.com/guide/understanding-selenium-timeouts

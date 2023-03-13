@@ -9,13 +9,12 @@ import org.testng.annotations.Test;
 import Test._0_BaseTest;
 import Testrail_client.Testrails.TestRails;
 
-public class Templete_BulkRequest_OnCase extends _0_BaseTest {
+public class Templete_BulkRequest_OnKoreanCase extends _0_BaseTest {
 
-	/*
+	
 	@TestRails(id = "")
-	@Test
+	@Test (priority = 1)
 	@Parameters({ "signature_requester_email" })
-
 	public void Templete_BulkRequest_OnCase(@Optional String signature_requester_email)
 			throws InterruptedException, IOException {
 
@@ -43,20 +42,22 @@ public class Templete_BulkRequest_OnCase extends _0_BaseTest {
 
 		ObjBulkRequestPage_SendPage.BulkRequest_Send_m();
 
-		ObjBulkRequestPage_SendPage.BulkRequest_DoneModal_confirm_btn();
+		Thread.sleep(5000);
+		// 완료 모달 팝업 왜 안나오지 3/13 나올때 안올때가 있넹
+		//ObjBulkRequestPage_SendPage.BulkRequest_DoneModal_confirm_btn();
 
 		Thread.sleep(3000);
 
 	}
-*/
+
 
 	@TestRails(id = "")
-	@Test
+	@Test (priority = 2)
 	@Parameters({ "Signatory_2_email" })
 	public void Templete_BulkRequest_DefaultCase_Singatory_1_(@Optional String Signatory_2_email)
 			throws InterruptedException, IOException {
 
-		ObjLoginPage.Login("joshin6@getnada.com", "tlswnsdh2@@");
+		ObjLoginPage.Login(Signatory_2_email, "tlswnsdh2@@");
 
 		ObjGNB.get();
 		

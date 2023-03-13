@@ -27,13 +27,13 @@ public class Templete_BulkRequest_DefaultCase extends _0_BaseTest {
 
 		ObjGNB.Templates_btn();
 
-//		ObjTempletePage.CreatTemplete_btn();
+		ObjTempletePage.CreatTemplete_btn();
 
-//		ObjDomcumentUpload_Modal.Templete_Contract_SampleDocselect();
-//
-//		ObjTempletePage_CreateTempleteStep1Page.Templete_Request_Step1Page_Case("자동화서명");
-//		ObjTempletePage_CreateTempleteStep2Page.Templete_Request_Step2Page_Off_Case();
-//		ObjTempletePage_CreateTempleteStep3Page.Templete_Request_Step3Page_Off_Case();
+		ObjDomcumentUpload_Modal.Templete_Contract_SampleDocselect();
+
+		ObjTempletePage_CreateTempleteStep1Page.Templete_Request_Step1Page_Case("자동화서명");
+		ObjTempletePage_CreateTempleteStep2Page.Templete_Request_Step2Page_Off_Case();
+		ObjTempletePage_CreateTempleteStep3Page.Templete_Request_Step3Page_Off_Case();
 
 		ObjTempletePage.Templete_Dropdown_BulckRequest_select();
 

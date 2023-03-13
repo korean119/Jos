@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Johnny jangjang" duration-ms="19623" started-at="2023-03-10T23:42:48 KST" finished-at="2023-03-10T23:43:07 KST">
+  <suite name="Johnny jangjang" duration-ms="20640" started-at="2023-03-13T16:35:00 KST" finished-at="2023-03-13T16:35:20 KST">
     <groups>
     </groups>
-    <test name="ChromeTest" duration-ms="19623" started-at="2023-03-10T23:42:48 KST" finished-at="2023-03-10T23:43:07 KST">
-      <class name="Test_Regression_TC_Contract.Templete_BulkRequest_On_Case">
-        <test-method status="PASS" signature="initializeWebDriver(java.lang.String)[pri:0, instance:Test_Regression_TC_Contract.Templete_BulkRequest_On_Case@a38d7a3]" name="initializeWebDriver" is-config="true" duration-ms="5287" started-at="2023-03-10T23:42:48 KST" finished-at="2023-03-10T23:42:53 KST">
+    <test name="ChromeTest" duration-ms="20640" started-at="2023-03-13T16:35:00 KST" finished-at="2023-03-13T16:35:20 KST">
+      <class name="Test_Regression_TC_Contract.Templete_BulkRequest_FailCase">
+        <test-method status="PASS" signature="initializeWebDriver(java.lang.String)[pri:0, instance:Test_Regression_TC_Contract.Templete_BulkRequest_FailCase@a38d7a3]" name="initializeWebDriver" is-config="true" duration-ms="13773" started-at="2023-03-13T16:35:00 KST" finished-at="2023-03-13T16:35:14 KST">
           <params>
             <param index="0">
               <value>
@@ -18,22 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeWebDriver -->
-        <test-method status="PASS" signature="Templete_BulkRequest_DefaultCase_Singatory_1_(java.lang.String)[pri:0, instance:Test_Regression_TC_Contract.Templete_BulkRequest_On_Case@a38d7a3]" name="Templete_BulkRequest_DefaultCase_Singatory_1_" duration-ms="13996" started-at="2023-03-10T23:42:53 KST" finished-at="2023-03-10T23:43:07 KST">
+        <test-method status="PASS" signature="Templete_BulkRequest_DefaultCase(java.lang.String)[pri:0, instance:Test_Regression_TC_Contract.Templete_BulkRequest_FailCase@a38d7a3]" name="Templete_BulkRequest_DefaultCase" duration-ms="6248" started-at="2023-03-13T16:35:14 KST" finished-at="2023-03-13T16:35:20 KST">
           <params>
             <param index="0">
               <value>
-                <![CDATA[joshinauto3@getnada.com]]>
+                <![CDATA[joshinauto1@getnada.com]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Templete_BulkRequest_DefaultCase_Singatory_1_ -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Regression_TC_Contract.Templete_BulkRequest_On_Case@a38d7a3]" name="tearDown" is-config="true" duration-ms="313" started-at="2023-03-10T23:43:07 KST" finished-at="2023-03-10T23:43:07 KST">
+        </test-method> <!-- Templete_BulkRequest_DefaultCase -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Regression_TC_Contract.Templete_BulkRequest_FailCase@a38d7a3]" name="tearDown" is-config="true" duration-ms="586" started-at="2023-03-13T16:35:20 KST" finished-at="2023-03-13T16:35:20 KST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Test_Regression_TC_Contract.Templete_BulkRequest_On_Case -->
+      </class> <!-- Test_Regression_TC_Contract.Templete_BulkRequest_FailCase -->
     </test> <!-- ChromeTest -->
   </suite> <!-- Johnny jangjang -->
 </testng-results>
