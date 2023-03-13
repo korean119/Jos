@@ -77,7 +77,7 @@ public class BulkRequestPage_StartPage extends BasePage {
 
 	}
 
-	// 법인 공동 사업자 사업자 번 Validation
+	// 법인 공동 사업자 번호 Validation
 	@FindBy(xpath = ("(//li[@class='ExcelValidationError space-2x'])[3]"))
 	WebElement Validation_CorporationNumber_Text;
 
@@ -101,8 +101,20 @@ public class BulkRequestPage_StartPage extends BasePage {
 
 	}
 	
-	// 법인 공동 사업자 Validation
+	// 완료 시 문서/파일 Validation
 	@FindBy(xpath = ("(//li[@class='ExcelValidationError space-2x'])[5]"))
+	WebElement Validation_CompletePassword_Text;
+
+	public void Validation_CompletePassword_Text(String arg1) throws InterruptedException {
+		Wait.until(ExpectedConditions.visibilityOf(Validation_CompletePassword_Text)).getText();
+
+		String getheadertext = Validation_CC_Text.getText().trim();
+		Assert.assertEquals(arg1, getheadertext);
+
+	}
+	
+	// 참조자 Valiation
+	@FindBy(xpath = ("(//li[@class='ExcelValidationError space-2x'])[6]"))
 	WebElement Validation_CC_Text;
 
 	public void Validation_CC_Text(String arg1) throws InterruptedException {

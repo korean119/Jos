@@ -15,7 +15,7 @@
     <classes>
       <class name="Test_Regression_TC_Contract.Templete_BulkRequest_FailCase">
         <methods>
-          <include name="Templete_BulkRequest_DefaultCase" invocation-numbers="0"/>
+          <include name="Templete_BulkRequest_FailCase" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="initializeWebDriver"/>
         </methods>

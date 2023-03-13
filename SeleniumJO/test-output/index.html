@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Johnny_jangjang">
-              <span class="suite-name border-passed">Johnny jangjang</span>
+              <span class="suite-name border-failed">Johnny jangjang</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">6 methods, 1 failed,   5 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Johnny_jangjang" class="hide-methods failed suite-Johnny_jangjang"> (hide)</a> <!-- hide-methods failed suite-Johnny_jangjang -->
+                      <a href="#" panel-name="suite-Johnny_jangjang" class="show-methods failed suite-Johnny_jangjang"> (show)</a> <!-- show-methods failed suite-Johnny_jangjang -->
+                    </span>
+                    <div class="method-list-content failed suite-Johnny_jangjang">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Johnny_jangjang" title="Test_Regression_TC_Contract.Templete_BulkRequest_FailCase" hash-for-method="Templete_BulkRequest_FailCase(joshinauto1@getnada.com)">Templete_BulkRequest_FailCase(joshinauto1@getnada.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Johnny_jangjang -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,7 +118,27 @@
                     <div class="method-list-content passed suite-Johnny_jangjang">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Johnny_jangjang" title="Test_Regression_TC_Contract.Templete_BulkRequest_FailCase" hash-for-method="Templete_BulkRequest_DefaultCase(joshinauto1@getnada.com)">Templete_BulkRequest_DefaultCase(joshinauto1@getnada.com)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Johnny_jangjang" title="Test_Regression_TC_Contract.Templete_BulkRequest_E2E_DefaultCase" hash-for-method="Templete_BulkRequest_E2E_DefaultCase(joshinauto1@getnada.com)">Templete_BulkRequest_E2E_DefaultCase(joshinauto1@getnada.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Johnny_jangjang" title="Test_Regression_TC_Contract.Templete_BulkRequest_E2E_DefaultCase" hash-for-method="Templete_BulkRequest_E2E_DefaultCase_Singatory_1_(joshinauto2@getnada.com)">Templete_BulkRequest_E2E_DefaultCase_Singatory_1_(joshinauto2@getnada.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Johnny_jangjang" title="Test_Regression_TC_Contract.Templete_BulkRequest_E2E_OnCase" hash-for-method="Templete_BulkRequest_E2E_OnCase(joshinauto1@getnada.com)">Templete_BulkRequest_E2E_OnCase(joshinauto1@getnada.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Johnny_jangjang" title="Test_Regression_TC_Contract.Templete_BulkRequest_E2E_OnCase" hash-for-method="Templete_BulkRequest_E2E_OnCase_Singatory_1_(joshinauto2@getnada.com)">Templete_BulkRequest_E2E_OnCase_Singatory_1_(joshinauto2@getnada.com)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Johnny_jangjang" title="Test_Regression_TC_Contract.Templete_BulkRequest_E2E_OnCase" hash-for-method="Templete_BulkRequest_E2E_OnCase_Singatory_2_(joshinauto3@getnada.com)">Templete_BulkRequest_E2E_OnCase_Singatory_2_(joshinauto3@getnada.com)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Johnny_jangjang -->
@@ -119,18 +153,82 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Johnny_jangjang" class="panel Johnny_jangjang">
-          <div class="suite-Johnny_jangjang-class-passed">
+          <div class="suite-Johnny_jangjang-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">Test_Regression_TC_Contract.Templete_BulkRequest_FailCase</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Templete_BulkRequest_DefaultCase(joshinauto1@getnada.com)">
-                  </a> <!-- Templete_BulkRequest_DefaultCase(joshinauto1@getnada.com) -->
-                  <span class="method-name">Templete_BulkRequest_DefaultCase</span>
+                  <a name="Templete_BulkRequest_FailCase(joshinauto1@getnada.com)">
+                  </a> <!-- Templete_BulkRequest_FailCase(joshinauto1@getnada.com) -->
+                  <span class="method-name">Templete_BulkRequest_FailCase</span>
                   <span class="parameters">(joshinauto1@getnada.com)</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [M8 참조자
+올바른 이메일 또는 휴대폰 번호를 입력해 주세요. 여러명일 경우 &apos;,&apos;로 구분해 주세요.] but found [L7 참조자
+잠금 비밀번호완료문서 잠금 비밀번호는 8자~32자로 설정해주세요.]
+	at POM_05_BulkRequestPage.BulkRequestPage_StartPage.Validation_CC_Text(BulkRequestPage_StartPage.java:124)
+	at Test_Regression_TC_Contract.Templete_BulkRequest_FailCase.Templete_BulkRequest_FailCase(Templete_BulkRequest_FailCase.java:68)
+	at java.util.ArrayList.forEach(ArrayList.java:1259)
+... Removed 33 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Johnny_jangjang-class-failed -->
+          <div class="suite-Johnny_jangjang-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Test_Regression_TC_Contract.Templete_BulkRequest_E2E_DefaultCase</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Templete_BulkRequest_E2E_DefaultCase(joshinauto1@getnada.com)">
+                  </a> <!-- Templete_BulkRequest_E2E_DefaultCase(joshinauto1@getnada.com) -->
+                  <span class="method-name">Templete_BulkRequest_E2E_DefaultCase</span>
+                  <span class="parameters">(joshinauto1@getnada.com)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Templete_BulkRequest_E2E_DefaultCase_Singatory_1_(joshinauto2@getnada.com)">
+                  </a> <!-- Templete_BulkRequest_E2E_DefaultCase_Singatory_1_(joshinauto2@getnada.com) -->
+                  <span class="method-name">Templete_BulkRequest_E2E_DefaultCase_Singatory_1_</span>
+                  <span class="parameters">(joshinauto2@getnada.com)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Johnny_jangjang-class-passed -->
+          <div class="suite-Johnny_jangjang-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">Test_Regression_TC_Contract.Templete_BulkRequest_E2E_OnCase</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Templete_BulkRequest_E2E_OnCase(joshinauto1@getnada.com)">
+                  </a> <!-- Templete_BulkRequest_E2E_OnCase(joshinauto1@getnada.com) -->
+                  <span class="method-name">Templete_BulkRequest_E2E_OnCase</span>
+                  <span class="parameters">(joshinauto1@getnada.com)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Templete_BulkRequest_E2E_OnCase_Singatory_1_(joshinauto2@getnada.com)">
+                  </a> <!-- Templete_BulkRequest_E2E_OnCase_Singatory_1_(joshinauto2@getnada.com) -->
+                  <span class="method-name">Templete_BulkRequest_E2E_OnCase_Singatory_1_</span>
+                  <span class="parameters">(joshinauto2@getnada.com)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Templete_BulkRequest_E2E_OnCase_Singatory_2_(joshinauto3@getnada.com)">
+                  </a> <!-- Templete_BulkRequest_E2E_OnCase_Singatory_2_(joshinauto3@getnada.com) -->
+                  <span class="method-name">Templete_BulkRequest_E2E_OnCase_Singatory_2_</span>
+                  <span class="parameters">(joshinauto3@getnada.com)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -157,6 +255,8 @@
     &lt;parameter name=&quot;signature_requester_email&quot; value=&quot;joshinauto1@getnada.com&quot;/&gt;
     &lt;parameter name=&quot;Signatory_1_name&quot; value=&quot;조니오토 2번&quot;/&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;Test_Regression_TC_Contract.Templete_BulkRequest_E2E_DefaultCase&quot;/&gt;
+      &lt;class name=&quot;Test_Regression_TC_Contract.Templete_BulkRequest_E2E_OnCase&quot;/&gt;
       &lt;class name=&quot;Test_Regression_TC_Contract.Templete_BulkRequest_FailCase&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- ChromeTest --&gt;
@@ -171,7 +271,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">ChromeTest (1 class)</span>
+                <span class="test-name">ChromeTest (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -197,16 +297,36 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Templete_BulkRequest_DefaultCase')
-data.setCell(0, 2, 'Test_Regression_TC_Contract.Templete_BulkRequest_FailCase')
-data.setCell(0, 3, 6248);
+data.setCell(0, 1, 'Templete_BulkRequest_E2E_OnCase_Singatory_2_')
+data.setCell(0, 2, 'Test_Regression_TC_Contract.Templete_BulkRequest_E2E_OnCase')
+data.setCell(0, 3, 22544);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'Templete_BulkRequest_E2E_OnCase')
+data.setCell(1, 2, 'Test_Regression_TC_Contract.Templete_BulkRequest_E2E_OnCase')
+data.setCell(1, 3, 21272);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'Templete_BulkRequest_E2E_OnCase_Singatory_1_')
+data.setCell(2, 2, 'Test_Regression_TC_Contract.Templete_BulkRequest_E2E_OnCase')
+data.setCell(2, 3, 20594);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'Templete_BulkRequest_E2E_DefaultCase')
+data.setCell(3, 2, 'Test_Regression_TC_Contract.Templete_BulkRequest_E2E_DefaultCase')
+data.setCell(3, 3, 16722);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'Templete_BulkRequest_E2E_DefaultCase_Singatory_1_')
+data.setCell(4, 2, 'Test_Regression_TC_Contract.Templete_BulkRequest_E2E_DefaultCase')
+data.setCell(4, 3, 13388);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'Templete_BulkRequest_FailCase')
+data.setCell(5, 2, 'Test_Regression_TC_Contract.Templete_BulkRequest_FailCase')
+data.setCell(5, 3, 11586);
 window.suiteTableData['Johnny_jangjang']= { tableData: data, tableDiv: 'times-div-Johnny_jangjang'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Johnny_jangjang">
               </div> <!-- times-div-Johnny_jangjang -->
             </div> <!-- times-div -->
@@ -232,18 +352,86 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">Test_Regression_TC_Contract.Templete_BulkRequest_FailCase</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">Test_Regression_TC_Contract.Templete_BulkRequest_E2E_DefaultCase</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">initializeWebDriver(Chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">Templete_BulkRequest_DefaultCase(joshinauto1@getnada.com)</span>
-                <span class="method-start">13774 ms</span>
+                <span class="method-name">Templete_BulkRequest_E2E_DefaultCase(joshinauto1@getnada.com)</span>
+                <span class="method-start">14031 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">20025 ms</span>
+                <span class="method-start">30756 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeWebDriver(Chrome)</span>
+                <span class="method-start">30758 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Templete_BulkRequest_E2E_DefaultCase_Singatory_1_(joshinauto2@getnada.com)</span>
+                <span class="method-start">42284 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">55673 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Test_Regression_TC_Contract.Templete_BulkRequest_E2E_OnCase</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeWebDriver(Chrome)</span>
+                <span class="method-start">55674 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Templete_BulkRequest_E2E_OnCase(joshinauto1@getnada.com)</span>
+                <span class="method-start">66986 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">88259 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeWebDriver(Chrome)</span>
+                <span class="method-start">88260 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Templete_BulkRequest_E2E_OnCase_Singatory_1_(joshinauto2@getnada.com)</span>
+                <span class="method-start">98972 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">119567 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeWebDriver(Chrome)</span>
+                <span class="method-start">119567 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Templete_BulkRequest_E2E_OnCase_Singatory_2_(joshinauto3@getnada.com)</span>
+                <span class="method-start">131453 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">153998 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">Test_Regression_TC_Contract.Templete_BulkRequest_FailCase</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeWebDriver(Chrome)</span>
+                <span class="method-start">153999 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Templete_BulkRequest_FailCase(joshinauto1@getnada.com)</span>
+                <span class="method-start">165630 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">177218 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

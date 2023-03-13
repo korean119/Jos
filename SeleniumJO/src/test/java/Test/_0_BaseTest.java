@@ -136,6 +136,6 @@ public class _0_BaseTest {
 
 	@AfterMethod
 	public void tearDown() {
-		//driver.quit();
+		driver.quit();
 	}
 }
