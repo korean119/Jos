@@ -70,7 +70,7 @@ public class DocumentsPage extends BasePage {
 	WebElement Refusetosign_card_btn;
 	
 	
-	// 완료 된 문서 확인 
+	// 완료 된 문서 패스워드 
 	@FindBy(xpath = ("//input[@placeholder='8자 ~ 32자 이내']"))
 	WebElement Contract_DonePage_Password_input;
 	
@@ -79,6 +79,16 @@ public class DocumentsPage extends BasePage {
 		Wait.until(ExpectedConditions.visibilityOf(Contract_DonePage_Password_input)).sendKeys(arg1);
 
 	}
+	// 완료 된 문서패스워드 확인 버튼. 
+	@FindBy(xpath = ("//button[contains(text(),'확인')]"))
+	WebElement Contract_DonePage_Password_Done_btn;
+	
+	public void Contract_DonePage_Password_Done_btn() throws InterruptedException {
+		Wait.until(ExpectedConditions.visibilityOf(Contract_DonePage_Password_Done_btn)).click();
+
+	}
+	
+
 	
 	
 	//input[@placeholder='8자 ~ 32자 이내']
