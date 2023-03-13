@@ -113,6 +113,17 @@ public class BulkRequestPage_SendPage extends BasePage {
 	}
 	
 	
+	
+	// 대량전송 완료상태 체크 
+	@FindBy(css = (".BulkRequestStatusBar__status.BulkRequestStatusBar__status--done"))
+	WebElement BulkRequest_StatusDone_Check;
+	
+	public void BulkRequest_StatusDone_Check() throws InterruptedException { 
+		Wait.until(ExpectedConditions.visibilityOf(BulkRequest_StatusDone_Check)).isDisplayed();
+	}
+
+	
+	
 ///////////////////////////////////////////////////////////////////////////////
 	
 
@@ -130,7 +141,9 @@ public class BulkRequestPage_SendPage extends BasePage {
 		
 		BulkRequest_Start_confirm_btn();
 		
-		BulkRequest_DoneModal_confirm_btn();
+		Thread.sleep(3000);
+		
+		//BulkRequest_DoneModal_confirm_btn();
 		
 	}
 

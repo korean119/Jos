@@ -10,17 +10,19 @@ import POM_05_BulkRequestPage.BulkRequestPage_StartPage;
 import Test._0_BaseTest;
 import Testrail_client.Testrails.TestRails;
 
-public class Templete_BulkRequest_DefaultCase extends _0_BaseTest {
+public class Templete_BulkRequest_E2E_DefaultCase extends _0_BaseTest {
 
 	@TestRails(id = "")
-	@Test
+	@Test(priority = 1)
 	@Parameters({ "signature_requester_email" })
 
-	public void Templete_BulkRequest_DefaultCase(@Optional String signature_requester_email)
+	public void Templete_BulkRequest_E2E_DefaultCase(@Optional String signature_requester_email)
 			throws InterruptedException, IOException {
 
 		ObjLoginPage.Login(signature_requester_email, "tlswnsdh2@@");
 
+		Thread.sleep(2000);
+		
 		ObjGNB.get();
 		
 		Thread.sleep(1000);
@@ -28,7 +30,7 @@ public class Templete_BulkRequest_DefaultCase extends _0_BaseTest {
 		ObjGNB.Templates_btn();
 
 //		ObjTempletePage.CreatTemplete_btn();
-
+//
 //		ObjDomcumentUpload_Modal.Templete_Contract_SampleDocselect();
 //
 //		ObjTempletePage_CreateTempleteStep1Page.Templete_Request_Step1Page_Case("자동화서명");
@@ -38,25 +40,28 @@ public class Templete_BulkRequest_DefaultCase extends _0_BaseTest {
 		ObjTempletePage.Templete_Dropdown_BulckRequest_select();
 
 		ObjBulkRequestPage_StartPage.BulkRequest_ExcelUpload_btn_m(
-				"/Users/johnny/Desktop/Selenium_img/BulkRequset/Bulkrequest_Automation/Bulkrequest.previous.xlsx");
-				//"/Users/johnny/Desktop/Selenium_img/BulkRequset/Bulkrequest_Automation/Bulkrequest.Automation.DefaultCase.xlsx");
+				"/Users/johnny/Desktop/Selenium_img/BulkRequset/Bulkrequest_Automation/Bulkrequest.Automation.E2E_DefaultCase.xlsx");
 
 		ObjBulkRequestPage_SendPage.BulkRequest_Send_m();
+		
+		ObjBulkRequestPage_SendPage.BulkRequest_StatusDone_Check();
 
-		ObjBulkRequestPage_SendPage.BulkRequest_DoneModal_confirm_btn();
+		// ObjBulkRequestPage_SendPage.BulkRequest_DoneModal_confirm_btn();
 
 		Thread.sleep(3000);
 
 	}
 
 	@TestRails(id = "")
-	@Test
-	@Parameters({ "Signatory_2_email" })
-	public void Templete_BulkRequest_DefaultCase_Singatory_1_(@Optional String Signatory_2_email)
+	@Test(priority = 2)
+	@Parameters({ "Signatory_1_email" })
+	public void Templete_BulkRequest_E2E_DefaultCase_Singatory_1_(@Optional String Signatory_1_email)
 			throws InterruptedException, IOException {
 
-		ObjLoginPage.Login(Signatory_2_email, "tlswnsdh2@@");
+		ObjLoginPage.Login(Signatory_1_email, "tlswnsdh2@@");
 
+		Thread.sleep(2000);
+		
 		ObjGNB.get();
 		
 		Thread.sleep(1000);
@@ -65,7 +70,6 @@ public class Templete_BulkRequest_DefaultCase extends _0_BaseTest {
 
 		ObjDocumentsPage_ContractPage.NomarlAccount_NormalSign_Off_Case("텍스트 입력 필드");
 
-		Thread.sleep(2000);
 	}
 
 }

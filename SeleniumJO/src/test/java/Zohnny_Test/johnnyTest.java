@@ -12,6 +12,14 @@ public class johnnyTest {
 
 		public void JohhnyTest() throws InterruptedException {
 
+			
+		
+			driver.navigate().refresh();
+			
+			driver.navigate().refresh();
+			
+			driver.navigate().refresh();
+			
 			ObjLoginPage.Login("joshin1@getnada.com", "tlswnsdh2@@");
 			
 			ObjGNB.get();

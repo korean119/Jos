@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="6" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Johnny jangjang" duration-ms="19623" started-at="2023-03-10T23:42:48 KST" finished-at="2023-03-10T23:43:07 KST">
+  <suite name="Johnny jangjang" duration-ms="177256" started-at="2023-03-13T18:43:56 KST" finished-at="2023-03-13T18:46:53 KST">
     <groups>
     </groups>
-    <test name="ChromeTest" duration-ms="19623" started-at="2023-03-10T23:42:48 KST" finished-at="2023-03-10T23:43:07 KST">
-      <class name="Test_Regression_TC_Contract.Templete_BulkRequest_On_Case">
-        <test-method status="PASS" signature="initializeWebDriver(java.lang.String)[pri:0, instance:Test_Regression_TC_Contract.Templete_BulkRequest_On_Case@a38d7a3]" name="initializeWebDriver" is-config="true" duration-ms="5287" started-at="2023-03-10T23:42:48 KST" finished-at="2023-03-10T23:42:53 KST">
+    <test name="ChromeTest" duration-ms="177256" started-at="2023-03-13T18:43:56 KST" finished-at="2023-03-13T18:46:53 KST">
+      <class name="Test_Regression_TC_Contract.Templete_BulkRequest_E2E_DefaultCase">
+        <test-method status="PASS" signature="initializeWebDriver(java.lang.String)[pri:0, instance:Test_Regression_TC_Contract.Templete_BulkRequest_E2E_DefaultCase@63440df3]" name="initializeWebDriver" is-config="true" duration-ms="14030" started-at="2023-03-13T18:43:56 KST" finished-at="2023-03-13T18:44:10 KST">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,113 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeWebDriver -->
-        <test-method status="PASS" signature="Templete_BulkRequest_DefaultCase_Singatory_1_(java.lang.String)[pri:0, instance:Test_Regression_TC_Contract.Templete_BulkRequest_On_Case@a38d7a3]" name="Templete_BulkRequest_DefaultCase_Singatory_1_" duration-ms="13996" started-at="2023-03-10T23:42:53 KST" finished-at="2023-03-10T23:43:07 KST">
+        <test-method status="PASS" signature="Templete_BulkRequest_E2E_DefaultCase(java.lang.String)[pri:1, instance:Test_Regression_TC_Contract.Templete_BulkRequest_E2E_DefaultCase@63440df3]" name="Templete_BulkRequest_E2E_DefaultCase" duration-ms="16722" started-at="2023-03-13T18:44:10 KST" finished-at="2023-03-13T18:44:27 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[joshinauto1@getnada.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Templete_BulkRequest_E2E_DefaultCase -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Regression_TC_Contract.Templete_BulkRequest_E2E_DefaultCase@63440df3]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-03-13T18:44:27 KST" finished-at="2023-03-13T18:44:27 KST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="initializeWebDriver(java.lang.String)[pri:0, instance:Test_Regression_TC_Contract.Templete_BulkRequest_E2E_DefaultCase@63440df3]" name="initializeWebDriver" is-config="true" duration-ms="11526" started-at="2023-03-13T18:44:27 KST" finished-at="2023-03-13T18:44:38 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeWebDriver -->
+        <test-method status="PASS" signature="Templete_BulkRequest_E2E_DefaultCase_Singatory_1_(java.lang.String)[pri:2, instance:Test_Regression_TC_Contract.Templete_BulkRequest_E2E_DefaultCase@63440df3]" name="Templete_BulkRequest_E2E_DefaultCase_Singatory_1_" duration-ms="13388" started-at="2023-03-13T18:44:38 KST" finished-at="2023-03-13T18:44:51 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[joshinauto2@getnada.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Templete_BulkRequest_E2E_DefaultCase_Singatory_1_ -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Regression_TC_Contract.Templete_BulkRequest_E2E_DefaultCase@63440df3]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-03-13T18:44:51 KST" finished-at="2023-03-13T18:44:51 KST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Test_Regression_TC_Contract.Templete_BulkRequest_E2E_DefaultCase -->
+      <class name="Test_Regression_TC_Contract.Templete_BulkRequest_E2E_OnCase">
+        <test-method status="PASS" signature="initializeWebDriver(java.lang.String)[pri:0, instance:Test_Regression_TC_Contract.Templete_BulkRequest_E2E_OnCase@43738a82]" name="initializeWebDriver" is-config="true" duration-ms="11312" started-at="2023-03-13T18:44:51 KST" finished-at="2023-03-13T18:45:03 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeWebDriver -->
+        <test-method status="PASS" signature="Templete_BulkRequest_E2E_OnCase(java.lang.String)[pri:1, instance:Test_Regression_TC_Contract.Templete_BulkRequest_E2E_OnCase@43738a82]" name="Templete_BulkRequest_E2E_OnCase" duration-ms="21272" started-at="2023-03-13T18:45:03 KST" finished-at="2023-03-13T18:45:24 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[joshinauto1@getnada.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Templete_BulkRequest_E2E_OnCase -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Regression_TC_Contract.Templete_BulkRequest_E2E_OnCase@43738a82]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-03-13T18:45:24 KST" finished-at="2023-03-13T18:45:24 KST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="initializeWebDriver(java.lang.String)[pri:0, instance:Test_Regression_TC_Contract.Templete_BulkRequest_E2E_OnCase@43738a82]" name="initializeWebDriver" is-config="true" duration-ms="10712" started-at="2023-03-13T18:45:24 KST" finished-at="2023-03-13T18:45:35 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeWebDriver -->
+        <test-method status="PASS" signature="Templete_BulkRequest_E2E_OnCase_Singatory_1_(java.lang.String)[pri:2, instance:Test_Regression_TC_Contract.Templete_BulkRequest_E2E_OnCase@43738a82]" name="Templete_BulkRequest_E2E_OnCase_Singatory_1_" duration-ms="20594" started-at="2023-03-13T18:45:35 KST" finished-at="2023-03-13T18:45:55 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[joshinauto2@getnada.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Templete_BulkRequest_E2E_OnCase_Singatory_1_ -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Regression_TC_Contract.Templete_BulkRequest_E2E_OnCase@43738a82]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-03-13T18:45:55 KST" finished-at="2023-03-13T18:45:55 KST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="initializeWebDriver(java.lang.String)[pri:0, instance:Test_Regression_TC_Contract.Templete_BulkRequest_E2E_OnCase@43738a82]" name="initializeWebDriver" is-config="true" duration-ms="11886" started-at="2023-03-13T18:45:55 KST" finished-at="2023-03-13T18:46:07 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeWebDriver -->
+        <test-method status="PASS" signature="Templete_BulkRequest_E2E_OnCase_Singatory_2_(java.lang.String)[pri:3, instance:Test_Regression_TC_Contract.Templete_BulkRequest_E2E_OnCase@43738a82]" name="Templete_BulkRequest_E2E_OnCase_Singatory_2_" duration-ms="22544" started-at="2023-03-13T18:46:07 KST" finished-at="2023-03-13T18:46:30 KST">
           <params>
             <param index="0">
               <value>
@@ -28,12 +134,89 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Templete_BulkRequest_DefaultCase_Singatory_1_ -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Regression_TC_Contract.Templete_BulkRequest_On_Case@a38d7a3]" name="tearDown" is-config="true" duration-ms="313" started-at="2023-03-10T23:43:07 KST" finished-at="2023-03-10T23:43:07 KST">
+        </test-method> <!-- Templete_BulkRequest_E2E_OnCase_Singatory_2_ -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Regression_TC_Contract.Templete_BulkRequest_E2E_OnCase@43738a82]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-03-13T18:46:30 KST" finished-at="2023-03-13T18:46:30 KST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- Test_Regression_TC_Contract.Templete_BulkRequest_On_Case -->
+      </class> <!-- Test_Regression_TC_Contract.Templete_BulkRequest_E2E_OnCase -->
+      <class name="Test_Regression_TC_Contract.Templete_BulkRequest_FailCase">
+        <test-method status="PASS" signature="initializeWebDriver(java.lang.String)[pri:0, instance:Test_Regression_TC_Contract.Templete_BulkRequest_FailCase@c81cdd1]" name="initializeWebDriver" is-config="true" duration-ms="11631" started-at="2023-03-13T18:46:30 KST" finished-at="2023-03-13T18:46:41 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeWebDriver -->
+        <test-method status="FAIL" signature="Templete_BulkRequest_FailCase(java.lang.String)[pri:1, instance:Test_Regression_TC_Contract.Templete_BulkRequest_FailCase@c81cdd1]" name="Templete_BulkRequest_FailCase" duration-ms="11586" started-at="2023-03-13T18:46:41 KST" finished-at="2023-03-13T18:46:53 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[joshinauto1@getnada.com]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [M8 참조자
+올바른 이메일 또는 휴대폰 번호를 입력해 주세요. 여러명일 경우 ','로 구분해 주세요.] but found [L7 참조자
+잠금 비밀번호완료문서 잠금 비밀번호는 8자~32자로 설정해주세요.]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [M8 참조자
+올바른 이메일 또는 휴대폰 번호를 입력해 주세요. 여러명일 경우 ','로 구분해 주세요.] but found [L7 참조자
+잠금 비밀번호완료문서 잠금 비밀번호는 8자~32자로 설정해주세요.]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at POM_05_BulkRequestPage.BulkRequestPage_StartPage.Validation_CC_Text(BulkRequestPage_StartPage.java:124)
+at Test_Regression_TC_Contract.Templete_BulkRequest_FailCase.Templete_BulkRequest_FailCase(Templete_BulkRequest_FailCase.java:68)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1259)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Templete_BulkRequest_FailCase -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Regression_TC_Contract.Templete_BulkRequest_FailCase@c81cdd1]" name="tearDown" is-config="true" duration-ms="0" started-at="2023-03-13T18:46:53 KST" finished-at="2023-03-13T18:46:53 KST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Test_Regression_TC_Contract.Templete_BulkRequest_FailCase -->
     </test> <!-- ChromeTest -->
   </suite> <!-- Johnny jangjang -->
 </testng-results>
