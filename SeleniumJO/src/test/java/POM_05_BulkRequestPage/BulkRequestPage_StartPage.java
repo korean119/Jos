@@ -108,7 +108,7 @@ public class BulkRequestPage_StartPage extends BasePage {
 	public void Validation_CompletePassword_Text(String arg1) throws InterruptedException {
 		Wait.until(ExpectedConditions.visibilityOf(Validation_CompletePassword_Text)).getText();
 
-		String getheadertext = Validation_CC_Text.getText().trim();
+		String getheadertext = Validation_CompletePassword_Text.getText().trim();
 		Assert.assertEquals(arg1, getheadertext);
 
 	}

@@ -1,5 +1,6 @@
 package Zohnny_Test;
 
+import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import Test._0_BaseTest;
@@ -22,23 +23,9 @@ public class johnnyTest {
 			
 			ObjLoginPage.Login("joshin1@getnada.com", "tlswnsdh2@@");
 			
-			ObjGNB.get();
-			
-			
-			ObjGNB.Templates_btn();
-			
-			ObjTempletePage.CreatTemplete_btn();
-			
-			ObjDomcumentUpload_Modal.Templete_Contract_SampleDocselect();
-			
-			ObjTempletePage_CreateTempleteStep1Page.AnyOrder_radiobtn();
-			
+			Reporter.log("log랑께요");
 
-			ObjTempletePage_CreateTempleteStep1Page.Ordrer_radiobtn();
-			
-			ObjTempletePage_CreateTempleteStep1Page.AnyOrder_radiobtn();
-
-			
+	
 
 		}
 	}

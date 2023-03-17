@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
@@ -67,7 +68,12 @@ public class _0_BaseTest {
 
 			System.setProperty("webdriver.chrome.driver",
 					"/Users/johnny/Desktop/Selenium_img/driver/chromedriver_mac64/chromedriver");
-			driver = new ChromeDriver();
+			
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--remote-allow-origins=*");
+			driver = new ChromeDriver(options);
+			
+			
 			
 			// 헤드리스 모드 고민 필요 
 //			ChromeOptions options = new ChromeOptions();
@@ -100,8 +106,10 @@ public class _0_BaseTest {
 		
 		
 		// 프리뷰 URL 
-		driver.get("https://deploy-preview-8055--modusign-app.netlify.app/authentication/signin?redirectTo=%2Fdocuments");
+		//driver.get("https://deploy-preview-8055--modusign-app.netlify.app/authentication/signin?redirectTo=%2Fdocuments");
 
+		driver.get("https://deploy-preview-8055--modusign-app.netlify.app/editor/others-require/position");
+		
 		// 페이지로드 타임아웃 효과가 있는지잘 모르겠음. 없는거 같기도..
 		// https://www.browserstack.com/guide/understanding-selenium-timeouts
 		// driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
