@@ -13,13 +13,13 @@
     <parameter name="signature_requester_email" value="joshinauto1@getnada.com"/>
     <parameter name="Signatory_1_name" value="조니오토 2번"/>
     <classes>
-      <class name="Test_Regression_TC_Contract.Templete_BulkRequest_FailCase">
+      <class name="Test_Regression_TC_Contract.NormalSign_On_Case">
         <methods>
-          <include name="Templete_BulkRequest_FailCase" invocation-numbers="0"/>
+          <include name="NormalSign_On_Case" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="initializeWebDriver"/>
         </methods>
-      </class> <!-- Test_Regression_TC_Contract.Templete_BulkRequest_FailCase -->
+      </class> <!-- Test_Regression_TC_Contract.NormalSign_On_Case -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [Johnny jangjang] -->

@@ -2,6 +2,7 @@ package Test_Regression_TC_Contract;
 
 import java.io.IOException;
 
+import org.testng.Reporter;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -22,9 +23,9 @@ public class Templete_BulkRequest_E2E_DefaultCase extends _0_BaseTest {
 		ObjLoginPage.Login(signature_requester_email, "tlswnsdh2@@");
 
 		Thread.sleep(2000);
-		
+
 		ObjGNB.get();
-		
+
 		Thread.sleep(1000);
 
 		ObjGNB.Templates_btn();
@@ -43,12 +44,14 @@ public class Templete_BulkRequest_E2E_DefaultCase extends _0_BaseTest {
 				"/Users/johnny/Desktop/Selenium_img/BulkRequset/Bulkrequest_Automation/Bulkrequest.Automation.E2E_DefaultCase.xlsx");
 
 		ObjBulkRequestPage_SendPage.BulkRequest_Send_m();
-		
+
 		ObjBulkRequestPage_SendPage.BulkRequest_StatusDone_Check();
 
 		// ObjBulkRequestPage_SendPage.BulkRequest_DoneModal_confirm_btn();
 
 		Thread.sleep(3000);
+		
+		Reporter.log("log랑께요");
 
 	}
 
@@ -61,9 +64,9 @@ public class Templete_BulkRequest_E2E_DefaultCase extends _0_BaseTest {
 		ObjLoginPage.Login(Signatory_1_email, "tlswnsdh2@@");
 
 		Thread.sleep(2000);
-		
+
 		ObjGNB.get();
-		
+
 		Thread.sleep(1000);
 
 		ObjDocumentsPage.Documents_Dropdown_1_select();
