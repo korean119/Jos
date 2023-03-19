@@ -2,6 +2,8 @@ package POM_00_ContractPage;
 
 import static org.testng.Assert.assertEquals;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -24,8 +26,12 @@ public class ContractSetup_Step2page extends BasePage {
 	@FindBy(xpath = ("//button[contains(text(),'+ 텍스트 입력하기')]"))
 	WebElement Signature_Requester_Textinput_btn;
 
+	@FindBy(xpath = ("(//textarea[@placeholder='추가할 내용을 입력하세요.'])[3]"))
+	WebElement Signature_Requester_Textinput_input;
+
 	public void Signature_Requester_Textinput_btn() throws InterruptedException {
 		Wait.until(ExpectedConditions.visibilityOf(Signature_Requester_Textinput_btn)).click();
+
 	}
 
 	@FindBy(xpath = ("//button[contains(text(),'+ 체크박스 입력하기')]"))
@@ -79,19 +85,18 @@ public class ContractSetup_Step2page extends BasePage {
 	// PDF 클릭 = pdf에 항목들이 올라감
 	@FindBy(css = (".PDFSetupBusinessPage__virtual-layer"))
 	WebElement PDFSreen_go_Btn;
-	
+
 	public void PDFSreen_go_Btn() throws InterruptedException {
 		Wait.until(ExpectedConditions.visibilityOf(PDFSreen_go_Btn)).click();
 	}
-	
-	
+
 	@FindBy(css = (".RequesterFieldBusinessPage__virtual-layer.css-1xi4blx"))
 	WebElement PDFSreen_go_Btn2;
-	
+
 	public void PDFSreen_go_Btn2() throws InterruptedException {
 		Wait.until(ExpectedConditions.visibilityOf(PDFSreen_go_Btn2)).click();
-	}
 
+	}
 
 	@FindBy(css = (".Btn--primary"))
 	WebElement Next_btn;
@@ -189,14 +194,21 @@ public class ContractSetup_Step2page extends BasePage {
 
 	public void NormalSign_On_Case_Sonny() throws InterruptedException {
 
-		for (int i = 0; i < 100; i++) {
+		for (int i = 1; i < 101; i++) {
+
 			Signature_Requester_Textinput_btn();
 			PDFSreen_go_Btn2();
 		}
+
+		for (int x = 1; x < 101; x++) {
+			driver.findElement(By.xpath("(//textarea[@placeholder='추가할 내용을 입력하세요.'])[" + x + "]")).sendKeys("텍스트 입력");
+		}
 	}
-		public void NormalSign_On_Case_Sonny2() throws InterruptedException {
+
+	public void NormalSign_On_Case_Sonny2() throws InterruptedException {
 
 		for (int i = 0; i < 100; i++) {
+
 			Signature_Requester_Checkboxinput_btn();
 			PDFSreen_go_Btn2();
 

@@ -62,12 +62,12 @@ public class _0_BaseTest {
 	public void initializeWebDriver(String browser) throws IOException {
 
 		if (browser.equalsIgnoreCase("Chrome")) {
-			// System.setProperty("webdriver.chrome.driver",
-			// "C:\\Automation_Driver\\chromedriver_win32 (1)/chromedriver.exe");
-			// driver = new ChromeDriver();
+			 System.setProperty("webdriver.chrome.driver",
+			 "C:\\Automation_Driver\\chromedriver_win32 (1)/chromedriver.exe");
+		
 
-			System.setProperty("webdriver.chrome.driver",
-					"/Users/johnny/Desktop/Selenium_img/driver/chromedriver_mac64/chromedriver");
+			//System.setProperty("webdriver.chrome.driver",
+			//		"/Users/johnny/Desktop/Selenium_img/driver/chromedriver_mac64/chromedriver");
 			
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--remote-allow-origins=*");
@@ -108,7 +108,7 @@ public class _0_BaseTest {
 		// 프리뷰 URL 
 		//driver.get("https://deploy-preview-8055--modusign-app.netlify.app/authentication/signin?redirectTo=%2Fdocuments");
 
-		driver.get("https://deploy-preview-8055--modusign-app.netlify.app/editor/others-require/position");
+		driver.get("https://deploy-preview-8187--modusign-app.netlify.app/editor/others-require/position");
 		
 		// 페이지로드 타임아웃 효과가 있는지잘 모르겠음. 없는거 같기도..
 		// https://www.browserstack.com/guide/understanding-selenium-timeouts
@@ -144,6 +144,6 @@ public class _0_BaseTest {
 
 	@AfterMethod
 	public void tearDown() {
-		driver.quit();
+		//driver.quit();
 	}
 }

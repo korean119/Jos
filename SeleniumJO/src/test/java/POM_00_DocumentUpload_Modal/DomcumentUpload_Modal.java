@@ -84,7 +84,7 @@ public class DomcumentUpload_Modal extends BasePage {
 	@FindBy(css = (".css-1uzrp8i"))
 	WebElement SampleDocuments_Upload_btn;
 
-	public void Sample_DocumentsUploadModal_Btn() throws InterruptedException {
+	public void SampleDocuments_Upload_btn() throws InterruptedException {
 		Wait.until(ExpectedConditions.visibilityOf(SampleDocuments_Upload_btn)).click();
 	
 	}
@@ -111,8 +111,8 @@ public class DomcumentUpload_Modal extends BasePage {
 	public void Contract_SampleDoc_select() throws InterruptedException {
 		SampleDocuments_Btn.click();
 		SapmleDocuments_UploadDoc_1_btn.click();
-		SampleDocuments_Upload_btn.click();
-		ContractStart_CheckandStart.click();
+		SampleDocuments_Upload_btn();
+		ContractStart_CheckandStart();
 		
 	}
 	

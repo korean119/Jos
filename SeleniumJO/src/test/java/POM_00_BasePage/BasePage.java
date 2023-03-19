@@ -27,7 +27,7 @@ public class BasePage extends LoadableComponent<BasePage> {
 		//요소가 페이지의 DOM에 있고 표시 되는지 확인하는 데 사용됩니다. 
 		//By호출 가능한 함수가 있는 객체 대신 객체를 사용하여 WebElement해당 요소를 먼저 찾은 다음 
 		//요소가 표시되는지 여부를 확인한다는 의미입니다.
-     	Wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+     	Wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
 	
 	

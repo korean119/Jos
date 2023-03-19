@@ -2,6 +2,9 @@ package Test_Regression_TC_Contract;
 
 import java.io.IOException;
 
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -25,8 +28,6 @@ public class Templete_NormalSign_On_Case extends _0_BaseTest {
 		ObjGNB.get();
 		
 		ObjGNB.Templates_btn();
-		
-//		objTempletePage.
 
 		ObjGNB.ContractSetupStart_btn();
 		
@@ -38,8 +39,6 @@ public class Templete_NormalSign_On_Case extends _0_BaseTest {
 		
 		ObjContractSetup_Step3page.NomarlAccount_NormalSign_On_Case("NomarlAccount_NormalSign_On_Case", "12341234", "joshin1@getnada.com", "메롱", "1234");
 		
-		
-		Thread.sleep(2000);
 	}
 	
 	
