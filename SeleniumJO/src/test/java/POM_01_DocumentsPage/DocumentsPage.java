@@ -39,62 +39,53 @@ public class DocumentsPage extends BasePage {
 	}
 
 	// 문서함 > 리스트 첫 번째(내용 확인하고 서명)
-	@FindBy(css = ("div:nth-child(1) > .DocumentListItem .css-2q6pdu"))
+	@FindBy(css = ("div:nth-child(1) > .DocumentListItem"))
 	WebElement DocumentListItem1;
 
 	// 문서함 > 리스트 두 번째
-	@FindBy(css = ("div:nth-child(2) > .DocumentListItem .css-2q6pdu"))
+	@FindBy(css = ("div:nth-child(2) > .DocumentListItem"))
 	WebElement DocumentListItem2;
 
 	@FindBy(css = (".DropdownWrapper--opened .DropdownMenuRow:nth-child(1)"))
 	WebElement DropdownMenuRow1;
-	
+
 	@FindBy(css = (".DropdownWrapper--opened .DropdownMenuRow:nth-child(2)"))
 	WebElement DropdownMenuRow2;
-	
 
-	// 거절 팝업 텍스트 입력 
+	// 거절 팝업 텍스트 입력
 	@FindBy(name = ("comment"))
 	WebElement Refusetosign_modal_text_area;
-	
-	
+
 	@FindBy(xpath = ("//button[contains(text(),'거절하기')]"))
 	WebElement Refusetosign_modal_refuse_btn;
-	
+
 	@FindBy(xpath = ("//button[contains(text(),'서명 취소하기')]"))
 	WebElement Refusetosign_modal_signcancle_btn;
-	
-	
-	
+
 	@FindBy(xpath = ("//button[contains(text(),'확인')]"))
 	WebElement Refusetosign_card_btn;
-	
-	
-	// 완료 된 문서 패스워드 
+
+	// 완료 된 문서 패스워드
 	@FindBy(xpath = ("//input[@placeholder='8자 ~ 32자 이내']"))
 	WebElement Contract_DonePage_Password_input;
-	
+
 	public void Contract_DonePage_Password_input(String arg1) throws InterruptedException {
 		Wait.until(ExpectedConditions.visibilityOf(Contract_DonePage_Password_input)).click();
 		Wait.until(ExpectedConditions.visibilityOf(Contract_DonePage_Password_input)).sendKeys(arg1);
 
 	}
-	// 완료 된 문서패스워드 확인 버튼. 
+
+	// 완료 된 문서패스워드 확인 버튼.
 	@FindBy(xpath = ("//button[contains(text(),'확인')]"))
 	WebElement Contract_DonePage_Password_Done_btn;
-	
+
 	public void Contract_DonePage_Password_Done_btn() throws InterruptedException {
 		Wait.until(ExpectedConditions.visibilityOf(Contract_DonePage_Password_Done_btn)).click();
 
 	}
-	
 
-	
-	
-	//input[@placeholder='8자 ~ 32자 이내']
+	// input[@placeholder='8자 ~ 32자 이내']
 
-	
-	
 	//////////////////// 캡쳐용인데 나중에 어디다 쓸거 같은뎅 /////////////////////////
 
 	@FindBy(css = (".PDFTextLayer"))
@@ -102,7 +93,6 @@ public class DocumentsPage extends BasePage {
 
 	//////////////////// 캡쳐용인데 나중에 어디다 쓸거 같은뎅 /////////////////////////
 
-	
 	public void DocumentListItem1() {
 		DocumentListItem1.click();
 
@@ -114,9 +104,9 @@ public class DocumentsPage extends BasePage {
 	}
 
 	public void Doucment_Dropdown_BaseScript() {
-		DocumentListItem1.click();
-		DropdownMenuRow1.click();
-		
+		Wait.until(ExpectedConditions.visibilityOf(DocumentListItem1)).click();
+		Wait.until(ExpectedConditions.visibilityOf(DropdownMenuRow1)).click();
+
 	}
 
 	public void Doucment_Dropdown_BaseScript2(String arg1) throws IOException {
@@ -126,10 +116,9 @@ public class DocumentsPage extends BasePage {
 		Refusetosign_modal_text_area.sendKeys(arg1);
 		Refusetosign_modal_refuse_btn.click();
 		Refusetosign_card_btn.click();
-		
+
 	}
-	
-	
+
 	public void Doucment_Dropdown_BaseScript3(String arg1) throws IOException {
 		DocumentListItem1.click();
 		DropdownMenuRow2.click();
@@ -137,22 +126,17 @@ public class DocumentsPage extends BasePage {
 		Refusetosign_modal_text_area.sendKeys(arg1);
 		Refusetosign_modal_signcancle_btn.click();
 		Refusetosign_card_btn.click();
-		
-	}
-	
-	
-	public void Documents_Dropdown_1_select() throws IOException {
-		DocumentListItem1.click();
-		DropdownMenuRow1.click();
-		
+
 	}
 
-	
-	
-	
-	
+	public void Documents_Dropdown_1_select() throws IOException {
+		Wait.until(ExpectedConditions.visibilityOf(DocumentListItem1)).click();
+		Wait.until(ExpectedConditions.visibilityOf(DropdownMenuRow1)).click();
+
+	}
+
 	//////////////////// 캡쳐용인데 나중에 어디다 쓸거 같은뎅 /////////////////////////
-	
+
 	public void AllScreen() throws IOException, InterruptedException {
 
 		File f = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -208,12 +192,14 @@ public class DocumentsPage extends BasePage {
 		Screenshot Screenshot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000))
 				.takeScreenshot(driver, PDFLayer);
 
-		//ImageIO.write(Screenshot.getImage(), "png", new File("C:\\SeleniumPractice\\logos/screenshot02.png"));
+		// ImageIO.write(Screenshot.getImage(), "png", new
+		// File("C:\\SeleniumPractice\\logos/screenshot02.png"));
 		ImageIO.write(Screenshot.getImage(), "png", new File("/Users/johnny/Desktop/Selenium_img/screenshot02.png"));
-		
+
 		System.out.println("스크린 캡쳐 성공");
 
-		//BufferedImage expectedImage = ImageIO.read(new File("C:\\SeleniumPractice\\logos/screenshot01.png"));
+		// BufferedImage expectedImage = ImageIO.read(new
+		// File("C:\\SeleniumPractice\\logos/screenshot01.png"));
 		BufferedImage expectedImage = ImageIO.read(new File("/Users/johnny/Desktop/Selenium_img/screenshot01.png"));
 
 		BufferedImage actualImage = Screenshot.getImage();

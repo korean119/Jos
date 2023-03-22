@@ -63,7 +63,7 @@ public class GNB extends BasePage {
 	@FindBy(xpath = ("//a[@href='/external-documents/folders']"))
 	WebElement Externaldocuments_btn;
 
-	@FindBy(xpath = ("//a[@href='/templates']"))
+	@FindBy(xpath = ("//a[@href='/templates']//div[@class='css-1xc9aey']"))
 	WebElement Templates_btn;
 
 	@FindBy(xpath = ("//a[@href='/archived-documents']"))

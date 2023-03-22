@@ -50,7 +50,7 @@ public class Templete_BulkRequest_E2E_DefaultCase extends _0_BaseTest {
 	}
 
 	@TestRails(id = "")
-	@Test(priority = 2, enabled = false)
+	@Test(priority = 2, enabled = true)
 	@Parameters({ "Signatory_1_email" })
 	public void Templete_BulkRequest_E2E_DefaultCase_Singatory_1_(@Optional String Signatory_1_email)
 			throws InterruptedException, IOException {

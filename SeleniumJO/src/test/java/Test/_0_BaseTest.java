@@ -107,6 +107,7 @@ public class _0_BaseTest {
 
 		//driver.get("https://deploy-preview-8055--modusign-app.netlify.app/editor/others-require/position");
 
+		// 프로덕션 주소 
 		driver.get("https://app.modusign.co.kr/authentication/signin?redirectTo=%2Fdocuments");
 		
 		// 페이지로드 타임아웃 효과가 있는지잘 모르겠음. 없는거 같기도..
@@ -143,7 +144,7 @@ public class _0_BaseTest {
 	@AfterMethod
 	public void tearDown(ITestResult Result) {
 		if (Result.getStatus() == ITestResult.SUCCESS)
-			driver.close();
+		
 			driver.quit();
 
 	}
