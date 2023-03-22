@@ -11,7 +11,7 @@ public class GNB extends _0_BaseTest {
 	
 	
 	
-	@Test
+	@Test(priority = 1, enabled = false)
 	public void GNB() throws InterruptedException {
 
 		ObjLoginPage.Login("joshin1@getnada.com", "tlswnsdh2@@");

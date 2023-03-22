@@ -198,6 +198,7 @@ public class ContractSetup_Step2page extends BasePage {
 
 			Signature_Requester_Textinput_btn();
 			PDFSreen_go_Btn2();
+			// 샌드키로 바꾸고 좌표를 변수로 바꿔서 돌리면 될듯 함 
 		}
 
 		for (int x = 1; x < 101; x++) {

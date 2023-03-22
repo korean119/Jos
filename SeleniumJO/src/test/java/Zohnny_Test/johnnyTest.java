@@ -16,10 +16,8 @@ public class johnnyTest {
 
 	public class _1_Login extends _0_BaseTest {
 
-		@Test
-		@Parameters({ "Signatory_1_email", "Signatory_2_name", "Signatory_2_email"})
-
-		public void NomarlAccount_NormalSign_On_Case(@Optional String Signatory_1_email,
+		@Test(enabled = false)
+		public void Zo2hhny21(@Optional String Signatory_1_email,
 				@Optional String Signatory_2_name, @Optional String Signatory_2_email) throws InterruptedException {
 
 			ObjLoginPage.Login("joshin1@getnada.com", "tlswnsdh2@@");

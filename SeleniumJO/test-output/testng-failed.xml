@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Johnny jangjang]" guice-stage="DEVELOPMENT">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Johnny jangjang]">
   <listeners>
     <listener class-name="Listener.ListenerTest"/>
   </listeners>
@@ -13,13 +13,13 @@
     <parameter name="signature_requester_email" value="joshinauto1@getnada.com"/>
     <parameter name="Signatory_1_name" value="조니오토 2번"/>
     <classes>
-      <class name="Zohnny_Test.johnnyTest$_1_Login">
+      <class name="Test_BulkRequest.Templete_BulkRequest_E2E_OnCase">
         <methods>
-          <include name="NomarlAccount_NormalSign_On_Case" invocation-numbers="0"/>
+          <include name="Templete_BulkRequest_E2E_OnCase_Singatory_2_" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="initializeWebDriver"/>
         </methods>
-      </class> <!-- Zohnny_Test.johnnyTest$_1_Login -->
+      </class> <!-- Test_BulkRequest.Templete_BulkRequest_E2E_OnCase -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [Johnny jangjang] -->

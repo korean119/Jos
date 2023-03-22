@@ -11,6 +11,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
@@ -38,7 +39,7 @@ public class _0_BaseTest {
 	protected LoginPage ObjLoginPage;
 
 	protected DomcumentUpload_Modal ObjDomcumentUpload_Modal;
-	
+
 	protected ContractSetup_Step1page ObjContractSetup_Step1page;
 	protected ContractSetup_Step2page ObjContractSetup_Step2page;
 	protected ContractSetup_Step3page ObjContractSetup_Step3page;
@@ -51,31 +52,27 @@ public class _0_BaseTest {
 	protected TempletePage_CreateTempleteStep1Page ObjTempletePage_CreateTempleteStep1Page;
 	protected TempletePage_CreateTempleteStep2Page ObjTempletePage_CreateTempleteStep2Page;
 	protected TempletePage_CreateTempleteStep3Page ObjTempletePage_CreateTempleteStep3Page;
-	
 
 	protected BulkRequestPage_StartPage ObjBulkRequestPage_StartPage;
 	protected BulkRequestPage_SendPage ObjBulkRequestPage_SendPage;
-
 
 	@BeforeMethod
 	@Parameters("browser")
 	public void initializeWebDriver(String browser) throws IOException {
 
 		if (browser.equalsIgnoreCase("Chrome")) {
-			 System.setProperty("webdriver.chrome.driver",
-			 "C:\\Automation_Driver\\chromedriver_win32 (1)/chromedriver.exe");
-		
+			// System.setProperty("webdriver.chrome.driver",
+			// "C:\\Automation_Driver\\chromedriver_win32 (1)/chromedriver.exe");
 
-			//System.setProperty("webdriver.chrome.driver",
-			//		"/Users/johnny/Desktop/Selenium_img/driver/chromedriver_mac64/chromedriver");
-			
+			System.setProperty("webdriver.chrome.driver",
+					"/Users/johnny/Desktop/Selenium_img/driver/chromedriver_mac64/chromedriver");
+
+			// 크롬 업데이트대응 
 			ChromeOptions options = new ChromeOptions();
 			options.addArguments("--remote-allow-origins=*");
 			driver = new ChromeDriver(options);
-			
-			
-			
-			// 헤드리스 모드 고민 필요 
+
+			// 헤드리스 모드 고민 필요
 //			ChromeOptions options = new ChromeOptions();
 //			options.addArguments("--headless");
 //			options.addArguments("start-maximized");
@@ -90,35 +87,37 @@ public class _0_BaseTest {
 		// }
 
 		else if (browser.equalsIgnoreCase("Safari")) {
-	        SafariOptions options = new SafariOptions();
-	        driver = new SafariDriver(options);
+			SafariOptions options = new SafariOptions();
+			driver = new SafariDriver(options);
 
 		}
 
 		else if (browser.equalsIgnoreCase("Firefox")) {
-			System.setProperty("webdriver.firefox.driver", "/Users/johnny/Desktop/Selenium_img/driver/geckodriver-v0.32.2-macos");
+			System.setProperty("webdriver.firefox.driver",
+					"/Users/johnny/Desktop/Selenium_img/driver/geckodriver-v0.32.2-macos");
 			driver = new FirefoxDriver();
 		}
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-		//driver.get("https://stage-app.modusign.co.kr/");
-		
-		
-		// 프리뷰 URL 
-		//driver.get("https://deploy-preview-8055--modusign-app.netlify.app/authentication/signin?redirectTo=%2Fdocuments");
+		// driver.get("https://stage-app.modusign.co.kr/");
 
-		driver.get("https://deploy-preview-8187--modusign-app.netlify.app/editor/others-require/position");
+		// 프리뷰 URL
+		// driver.get("https://deploy-preview-8055--modusign-app.netlify.app/authentication/signin?redirectTo=%2Fdocuments");
+
+		//driver.get("https://deploy-preview-8055--modusign-app.netlify.app/editor/others-require/position");
+
+		driver.get("https://app.modusign.co.kr/authentication/signin?redirectTo=%2Fdocuments");
 		
 		// 페이지로드 타임아웃 효과가 있는지잘 모르겠음. 없는거 같기도..
 		// https://www.browserstack.com/guide/understanding-selenium-timeouts
 		// driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 
 		// 브라우저 위치/크기
-		driver.manage().window().setPosition(new Point(2000, 1));
+		driver.manage().window().setPosition(new Point(-3000, 1));
 		driver.manage().window().maximize();
+		//driver.manage().window().minimize();
 
-		
 		// 드라이버 재선언
 		ObjLoginPage = new LoginPage(driver);
 
@@ -136,14 +135,16 @@ public class _0_BaseTest {
 		ObjTempletePage_CreateTempleteStep2Page = new TempletePage_CreateTempleteStep2Page(driver);
 		ObjTempletePage_CreateTempleteStep3Page = new TempletePage_CreateTempleteStep3Page(driver);
 
-		
 		ObjBulkRequestPage_StartPage = new BulkRequestPage_StartPage(driver);
 		ObjBulkRequestPage_SendPage = new BulkRequestPage_SendPage(driver);
 
 	}
 
 	@AfterMethod
-	public void tearDown() {
-		//driver.quit();
+	public void tearDown(ITestResult Result) {
+		if (Result.getStatus() == ITestResult.SUCCESS)
+			driver.close();
+			driver.quit();
+
 	}
 }

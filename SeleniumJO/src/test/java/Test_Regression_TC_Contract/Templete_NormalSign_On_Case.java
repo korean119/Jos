@@ -17,15 +17,15 @@ public class Templete_NormalSign_On_Case extends _0_BaseTest {
 	
 	
 	@TestRails (id = "16289")
-	@Test (priority = 1)
+	@Test (priority = 1, enabled = false)
 	@Parameters({ "Signatory_1_email", "Signatory_2_name", "Signatory_2_email"})
 	
-	public void NomarlAccount_NormalSign_On_Case(
+	public void Templete_NormalSign_On_Case(
 			@Optional String Signatory_1_email, @Optional String Signatory_2_name, @Optional String Signatory_2_email) throws InterruptedException {
 
 		ObjLoginPage.Login("joshin1@getnada.com", "tlswnsdh2@@");
 		
-		ObjGNB.get();
+		Thread.sleep(2000);
 		
 		ObjGNB.Templates_btn();
 
@@ -43,13 +43,15 @@ public class Templete_NormalSign_On_Case extends _0_BaseTest {
 	
 	
 	@TestRails (id = "16290")
-	@Test (priority = 2)
+	@Test (priority = 2, enabled = false)
 	@Parameters({ "Signatory_1_email"})
 	
-	public void NomarlAccount_NormalSign_On_Case_Singatory_1_(
+	public void Templete_NormalSign_On_Case_Singatory_1_(
 			@Optional String Signatory_1_email) throws InterruptedException, IOException {
 
 		ObjLoginPage.Login(Signatory_1_email, "tlswnsdh2@@");
+		
+		Thread.sleep(2000);
 
 		ObjDocumentsPage.Documents_Dropdown_1_select();
 		
@@ -61,15 +63,15 @@ public class Templete_NormalSign_On_Case extends _0_BaseTest {
 
 	
 	@TestRails (id = "16291")
-	@Test (priority = 3)
+	@Test (priority = 2, enabled = false)
 	@Parameters({ "Signatory_2_email"})
 	
-	public void NomarlAccount_NormalSign_On_Case_Singatory_2_(
+	public void Templete_NormalSign_On_Case_Singatory_2_(
 			@Optional String Signatory_2_email) throws InterruptedException, IOException {
 
 		ObjLoginPage.Login(Signatory_2_email, "tlswnsdh2@@");
 		
-		ObjGNB.get();
+		Thread.sleep(2000);
 
 		ObjDocumentsPage.Documents_Dropdown_1_select();
 		

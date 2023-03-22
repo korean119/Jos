@@ -33,22 +33,22 @@ public class DocumentsPage_ContractPage extends BasePage {
 	
 	// 남길 말 모달 텍스트 확인 
 	@FindBy(css = ("span[class='Linkify'] p"))
-	WebElement Namgilma_Modal_Text_Assert;
+	WebElement Namgilmal_Modal_Text_Assert;
 	
-	public void Namgilma_Modal_Text_Assert(String arg1) throws InterruptedException {
-		Wait.until(ExpectedConditions.visibilityOf(Namgilma_Modal_Text_Assert)).getText();
+	public void Namgilmal_Modal_Text_Assert(String arg1) throws InterruptedException {
+		Wait.until(ExpectedConditions.visibilityOf(Namgilmal_Modal_Text_Assert)).getText();
 		
-		String getheadertext = Namgilma_Modal_Text_Assert.getText().trim();
+		String getheadertext = Namgilmal_Modal_Text_Assert.getText().trim();
 		Assert.assertEquals(arg1, getheadertext);
 	}
 
 	
 	// 남길 말 모달 확인 버튼 
 	@FindBy(xpath = ("//button[contains(text(),'확인')]"))
-	WebElement Namgilma_Modal_btn;
+	WebElement Namgilmal_Modal_btn;
 	
-	public void Namgilma_Modal_btn() throws InterruptedException {
-		Wait.until(ExpectedConditions.visibilityOf(Namgilma_Modal_btn)).click();
+	public void Namgilmal_Modal_btn() throws InterruptedException {
+		Wait.until(ExpectedConditions.visibilityOf(Namgilmal_Modal_btn)).click();
 	}
 
 	

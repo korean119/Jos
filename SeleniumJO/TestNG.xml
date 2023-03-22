@@ -21,17 +21,22 @@
 
 		<classes>
 		
-<!--			<class name= "Test_Regression_TC_Contract.NormalSign_On_Case" /> 
-   			<class name= "Test_Regression_TC_Contract.NormalSign_Off_Case" /> 	 -->	
+		    <class name="Test_Regression_TC.GNB" /> 
+		
+			<class name= "Test_Regression_TC_Contract.NormalSign_On_Case" /> 
+   			<class name= "Test_Regression_TC_Contract.NormalSign_Off_Case" /> 	 
   			
-  <!-- 			<class name= "Test_Regression_TC_Contract.Templete_BulkRequest_E2E_DefaultCase" /> 
- 			<class name= "Test_Regression_TC_Contract.Templete_BulkRequest_E2E_OnCase" />
- 			<class name= "Test_Regression_TC_Contract.Templete_BulkRequest_FailCase" />   -->
+    		<class name= "Test_BulkRequest.Templete_BulkRequest_E2E_DefaultCase" /> 
+ 			<class name= "Test_BulkRequest.Templete_BulkRequest_E2E_OnCase" />
+ 			<class name= "Test_BulkRequest.Templete_BulkRequest_E2E_OnCase_Many" />
+ 			<class name= "Test_BulkRequest.Templete_BulkRequest_FailCase" />  
 			
-			 			<!--<class name= "Test_Regression_TC_Contract.Templete_NormalSign_On_Case" />   --> 
-			<!-- <class name="Test_Regression_TC.GNB" /> -->  
-			
-		  <class name="Zohnny_Test.johnnyTest" /> 
+			<class name= "Test_Regression_TC_Contract.Templete_NormalSign_On_Case" />  
+			<class name= "Test_Regression_TC_Contract.Templete_NormalSign_Off_Case" />  
+	
+			 <class name="Zohnny_Test.johnnyTest" />  
+			 <class name="Zohnny_Test.johnnyTest2" />  
+			 
 		</classes>
 
  	</test>  
