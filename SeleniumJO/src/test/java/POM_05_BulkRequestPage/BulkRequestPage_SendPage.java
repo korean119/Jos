@@ -74,14 +74,50 @@ public class BulkRequestPage_SendPage extends BasePage {
 
 	}
 
-	// 테스트 전송하기 완료 모달 확인 Modal_TestSen_Check
+	// 테스트 전송하기 완료 모달 확인
 	@FindBy(xpath = ("//strong[contains(text(),'테스트 전송 성공')]"))
-	WebElement Modal_TestSen_Check;
+	WebElement Modal_TestSend_Check;
 
-	public void Modal_TestSen_Check() throws InterruptedException {
-		Wait.until(ExpectedConditions.visibilityOf(Modal_TestSen_Check)).click();
+	public void Modal_TestSend_Check() throws InterruptedException {
+		Wait.until(ExpectedConditions.visibilityOf(Modal_TestSend_Check)).click();
 
 	}
+
+	// 테스트 전송하기 완료 모달 확인 버튼
+	@FindBy(xpath = ("//button[contains(text(),'확인')]"))
+	WebElement Modal_TestSend_Modal_btn;
+
+	public void Modal_TestSend_Modal_btn() throws InterruptedException {
+		Wait.until(ExpectedConditions.visibilityOf(Modal_TestSend_Modal_btn)).click();
+
+	}
+	
+	
+	// 테스트 전송 페이지 나가기 버튼 
+	@FindBy(xpath = ("(//button[contains(text(),'나가기')])[1]"))
+	WebElement Modal_TestSend_PageOut_btn;
+
+	public void Modal_TestSend_PageOut_btn() throws InterruptedException {
+		Wait.until(ExpectedConditions.visibilityOf(Modal_TestSend_PageOut_btn)).click();
+
+	}
+	
+	
+	// 일단 여기도 나가자 
+	@FindBy(xpath = ("(//button[@class='BulkRequestHeader__left-btn'])[1]"))
+	WebElement SendPage_Out_btn;
+
+	public void SendPage_Out_btn() throws InterruptedException {
+		Wait.until(ExpectedConditions.visibilityOf(SendPage_Out_btn)).click();
+
+	}
+	
+
+	
+	
+	
+	
+	
 
 	// 폴더 목록 선택
 	@FindBy(css = ("button[class='FolderSelectBoxButton__select-btn']"))

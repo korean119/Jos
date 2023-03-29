@@ -31,6 +31,7 @@ import POM_03_TempletePge.TempletePage_CreateTempleteStep2Page;
 import POM_03_TempletePge.TempletePage_CreateTempleteStep3Page;
 import POM_05_BulkRequestPage.BulkRequestPage_SendPage;
 import POM_05_BulkRequestPage.BulkRequestPage_StartPage;
+import POM_08_Settings.SettingsPage_PricingPaymentPage;
 
 public class _0_BaseTest {
 
@@ -55,6 +56,8 @@ public class _0_BaseTest {
 
 	protected BulkRequestPage_StartPage ObjBulkRequestPage_StartPage;
 	protected BulkRequestPage_SendPage ObjBulkRequestPage_SendPage;
+	
+	protected SettingsPage_PricingPaymentPage ObjSettingsPage_PricingPaymentPage;
 
 	@BeforeMethod
 	@Parameters("browser")
@@ -100,15 +103,14 @@ public class _0_BaseTest {
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-		// driver.get("https://stage-app.modusign.co.kr/");
+		// Stage URL
+		driver.get("https://stage-app.modusign.co.kr/");
 
 		// 프리뷰 URL
-		// driver.get("https://deploy-preview-8055--modusign-app.netlify.app/authentication/signin?redirectTo=%2Fdocuments");
+		//driver.get("https://deploy-preview-8218--modusign-app.netlify.app");
 
-		//driver.get("https://deploy-preview-8055--modusign-app.netlify.app/editor/others-require/position");
-
-		// 프로덕션 주소 
-		driver.get("https://app.modusign.co.kr/authentication/signin?redirectTo=%2Fdocuments");
+		// 프로덕션 URL
+		//driver.get("https://app.modusign.co.kr/authentication/signin?redirectTo=%2Fdocuments");
 		
 		// 페이지로드 타임아웃 효과가 있는지잘 모르겠음. 없는거 같기도..
 		// https://www.browserstack.com/guide/understanding-selenium-timeouts
@@ -139,6 +141,8 @@ public class _0_BaseTest {
 		ObjBulkRequestPage_StartPage = new BulkRequestPage_StartPage(driver);
 		ObjBulkRequestPage_SendPage = new BulkRequestPage_SendPage(driver);
 
+		
+		ObjSettingsPage_PricingPaymentPage = new SettingsPage_PricingPaymentPage(driver);
 	}
 
 	@AfterMethod

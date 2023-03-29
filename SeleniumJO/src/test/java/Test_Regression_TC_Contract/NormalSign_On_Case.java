@@ -13,13 +13,13 @@ import junit.framework.Assert;
 public class NormalSign_On_Case extends _0_BaseTest {
 
 	@TestRails(id = "16289")
-	@Test(priority = 1, enabled = false)
-	@Parameters({ "Signatory_1_email", "Signatory_2_name", "Signatory_2_email" })
+	@Test(priority = 1, enabled = true)
+	@Parameters({ "signature_requester_email", "Signatory_1_email", "Signatory_2_name", "Signatory_2_email" })
 
-	public void NormalSign_On_Case(@Optional String Signatory_1_email, @Optional String Signatory_2_name,
+	public void NormalSign_On_Case(@Optional String signature_requester_email,  @Optional String Signatory_1_email, @Optional String Signatory_2_name,
 			@Optional String Signatory_2_email) throws InterruptedException {
 
-		ObjLoginPage.Login("joshin1@getnada.com", "tlswnsdh2@@");
+		ObjLoginPage.Login(signature_requester_email, "tlswnsdh2@@");
 
 		Thread.sleep(2000);
 
@@ -59,7 +59,7 @@ public class NormalSign_On_Case extends _0_BaseTest {
 	}
 
 	@TestRails(id = "16291")
-	@Test(priority = 3, enabled = false)
+	@Test(priority = 3, enabled = true)
 	@Parameters({ "Signatory_2_email" })
 
 	public void NormalSign_On_Case_Singatory_2_(@Optional String Signatory_2_email)

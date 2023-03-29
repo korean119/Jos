@@ -13,13 +13,13 @@
     <parameter name="signature_requester_email" value="joshinauto1@getnada.com"/>
     <parameter name="Signatory_1_name" value="조니오토 2번"/>
     <classes>
-      <class name="Test_BulkRequest.Templete_BulkRequest_E2E_OnCase">
+      <class name="Test_BulkRequest.Templete_BulkRequest_TestSend">
         <methods>
-          <include name="Templete_BulkRequest_E2E_OnCase_Singatory_2_" invocation-numbers="0"/>
+          <include name="Templete_BulkRequest_TestSend" invocation-numbers="0"/>
           <include name="tearDown"/>
           <include name="initializeWebDriver"/>
         </methods>
-      </class> <!-- Test_BulkRequest.Templete_BulkRequest_E2E_OnCase -->
+      </class> <!-- Test_BulkRequest.Templete_BulkRequest_TestSend -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [Johnny jangjang] -->

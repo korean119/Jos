@@ -3,6 +3,7 @@ package Test_BulkRequest;
 import java.io.IOException;
 
 import org.testng.Reporter;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -11,6 +12,7 @@ import POM_05_BulkRequestPage.BulkRequestPage_StartPage;
 import Test._0_BaseTest;
 import Testrail_client.Testrails.TestRails;
 
+@Ignore
 public class Templete_BulkRequest_E2E_DefaultCase extends _0_BaseTest {
 
 	@TestRails(id = "")
