@@ -21,7 +21,7 @@
 
 		<classes>
 		
-		    <class name="Test_Regression_TC.GNB" /> 	 
+		    <class name="Test_Basic.GNB" /> 	 
   			
     		<class name= "Test_BulkRequest.Templete_BulkRequest_E2E_DefaultCase" /> 
  			<class name= "Test_BulkRequest.Templete_BulkRequest_E2E_OnCase" />
@@ -41,6 +41,9 @@
 		</classes>
 
  	</test>  
+
+
+<!--  엣지 파폭 사파리 지금은 사용 안하기 때문에 주석 처리 해둠 -->
 
 <!--  	<test name="EdgeTest">
 		<parameter name="browser" value="Edge" />
