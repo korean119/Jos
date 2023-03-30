@@ -7,16 +7,19 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Reporter;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import Test._0_BaseTest;
+import Test.TestBase;
 import Testrail_client.Testrails.TestRails;
 
+
+@Ignore
 public class johnnyTest2 {
 
-	public class _1_Login extends _0_BaseTest {
+	public class _1_Login extends TestBase {
 
 		@TestRails(id = "")
 		@Test(priority = 1, invocationCount = 1, enabled = false)
@@ -24,7 +27,7 @@ public class johnnyTest2 {
 
 		public void Zo2hhny2(@Optional String signature_requester_email) throws InterruptedException, IOException {
 
-			ObjLoginPage.Login(signature_requester_email, "tlswnsdh2@@");
+			ObjLoginPage.Login_m(signature_requester_email, "tlswnsdh2@@");
 
 			Thread.sleep(2000);
 

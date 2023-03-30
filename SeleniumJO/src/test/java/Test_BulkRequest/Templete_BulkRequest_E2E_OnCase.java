@@ -7,11 +7,11 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import Test._0_BaseTest;
+import Test.TestBase;
 import Testrail_client.Testrails.TestRails;
 
 @Ignore
-public class Templete_BulkRequest_E2E_OnCase extends _0_BaseTest {
+public class Templete_BulkRequest_E2E_OnCase extends TestBase {
 
 	@TestRails(id = "")
 	@Test(priority = 1, enabled = true)
@@ -19,7 +19,7 @@ public class Templete_BulkRequest_E2E_OnCase extends _0_BaseTest {
 	public void Templete_BulkRequest_E2E_OnCase(@Optional String signature_requester_email)
 			throws InterruptedException, IOException {
 
-		ObjLoginPage.Login(signature_requester_email, "tlswnsdh2@@");
+		ObjLoginPage.Login_m(signature_requester_email, "tlswnsdh2@@");
 
 		Thread.sleep(2000);
 
@@ -59,11 +59,11 @@ public class Templete_BulkRequest_E2E_OnCase extends _0_BaseTest {
 	public void Templete_BulkRequest_E2E_OnCase_Singatory_1_(@Optional String Signatory_1_email)
 			throws InterruptedException, IOException {
 
-		ObjLoginPage.Login(Signatory_1_email, "tlswnsdh2@@");
+		ObjLoginPage.Login_m(Signatory_1_email, "tlswnsdh2@@");
 
 		Thread.sleep(2000);
 
-		ObjDocumentsPage.Documents_Dropdown_1_select();
+		ObjDocumentsPage.Documents_Dropdown_1_select_m();
 
 		ObjDocumentsPage_ContractPage.Namgilmal_Modal_Text_Assert("E2E 한국어 확인 남길말");
 		ObjDocumentsPage_ContractPage.Namgilmal_Modal_btn();
@@ -78,7 +78,7 @@ public class Templete_BulkRequest_E2E_OnCase extends _0_BaseTest {
 
 		driver.navigate().refresh();
 
-		ObjDocumentsPage.Documents_Dropdown_1_select();
+		ObjDocumentsPage.Documents_Dropdown_1_select_m();
 
 		ObjDocumentsPage.Contract_DonePage_Password_input("12341234");
 
@@ -92,11 +92,11 @@ public class Templete_BulkRequest_E2E_OnCase extends _0_BaseTest {
 	public void Templete_BulkRequest_E2E_OnCase_Singatory_2_(@Optional String Signatory_2_email)
 			throws InterruptedException, IOException {
 
-		ObjLoginPage.Login(Signatory_2_email, "tlswnsdh2@@");
+		ObjLoginPage.Login_m(Signatory_2_email, "tlswnsdh2@@");
 
 		Thread.sleep(2000);
 
-		ObjDocumentsPage.Documents_Dropdown_1_select();
+		ObjDocumentsPage.Documents_Dropdown_1_select_m();
 
 		ObjDocumentsPage_ContractPage.Namgilmal_Modal_Text_Assert("E2E 영어 확인 남길말");
 		ObjDocumentsPage_ContractPage.Namgilmal_Modal_btn();
@@ -111,7 +111,7 @@ public class Templete_BulkRequest_E2E_OnCase extends _0_BaseTest {
 
 		driver.navigate().refresh();
 
-		ObjDocumentsPage.Documents_Dropdown_1_select();
+		ObjDocumentsPage.Documents_Dropdown_1_select_m();
 
 		ObjDocumentsPage.Contract_DonePage_Password_input("12341234");
 

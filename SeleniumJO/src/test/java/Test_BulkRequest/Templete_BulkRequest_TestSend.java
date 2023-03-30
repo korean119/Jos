@@ -8,11 +8,11 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import Test._0_BaseTest;
+import Test.TestBase;
 import Testrail_client.Testrails.TestRails;
 
-//@Ignore
-public class Templete_BulkRequest_TestSend extends _0_BaseTest {
+@Ignore
+public class Templete_BulkRequest_TestSend extends TestBase {
 
 	@TestRails(id = "")
 	@Test(priority = 1, enabled = true)
@@ -21,7 +21,7 @@ public class Templete_BulkRequest_TestSend extends _0_BaseTest {
 	public void Templete_BulkRequest_TestSend(@Optional String signature_requester_email)
 			throws InterruptedException, IOException {
 
-		ObjLoginPage.Login(signature_requester_email, "tlswnsdh2@@");
+		ObjLoginPage.Login_m(signature_requester_email, "tlswnsdh2@@");
 
 		Thread.sleep(2000);
 
@@ -50,19 +50,13 @@ public class Templete_BulkRequest_TestSend extends _0_BaseTest {
 
 		// 미리보기 들어간 후에 테스트 전송 까지 진행 
 		ObjBulkRequestPage_SendPage.Preview_btn();
-
 		ObjBulkRequestPage_SendPage.TestSend_btn();
-
 		ObjBulkRequestPage_SendPage.TestSend_EmailandPhoneNumber_input_m();
 
 		ObjBulkRequestPage_SendPage.Modal_TestSend_btn();
-
 		ObjBulkRequestPage_SendPage.Modal_TestSend_Check();
-
 		ObjBulkRequestPage_SendPage.Modal_TestSend_Modal_btn();
-
 		ObjBulkRequestPage_SendPage.Modal_TestSend_PageOut_btn();
-
 		ObjBulkRequestPage_SendPage.SendPage_Out_btn();
 
 		// 다시 설정 가서 차감 확인

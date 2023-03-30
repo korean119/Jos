@@ -7,17 +7,17 @@ import java.io.IOException;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-import Test._0_BaseTest;
+import Test.TestBase;
 import Testrail_client.Testrails.TestRails;
 import junit.framework.Assert;
 
-public class BaseScript_1_ComplexSign extends _0_BaseTest {
+public class BaseScript_1_ComplexSign extends TestBase {
 	
 	// 서명자(본인), 서명 요청자 에게 서명 요청 
 	@Test (priority = 1)
 	public void BaseScript() throws InterruptedException {
 
-		ObjLoginPage.Login("joshin1@getnada.com", "tlswnsdh2@@");
+		ObjLoginPage.Login_m("joshin1@getnada.com", "tlswnsdh2@@");
 
 		ObjGNB.ContractSetupStart_btn();
 		
@@ -42,9 +42,9 @@ public class BaseScript_1_ComplexSign extends _0_BaseTest {
 	@Test(priority = 2)
 	public void BaseScript2() throws InterruptedException, IOException {
 
-		ObjLoginPage.Login("joshin4@getnada.com", "tlswnsdh2@@");
+		ObjLoginPage.Login_m("joshin4@getnada.com", "tlswnsdh2@@");
 
-		ObjDocumentsPage.Doucment_Dropdown_BaseScript();
+		ObjDocumentsPage.Doucment_Dropdown_BaseScript_m();
 
 		ObjDocumentsPage_ContractPage.Contract_BaseScript("BaseScript");
 
@@ -54,9 +54,9 @@ public class BaseScript_1_ComplexSign extends _0_BaseTest {
 	@Test(priority = 3)
 	public void BaseScript3() throws InterruptedException, IOException {
 
-		ObjLoginPage.Login("joshin5@getnada.com", "tlswnsdh2@@");
+		ObjLoginPage.Login_m("joshin5@getnada.com", "tlswnsdh2@@");
 
-		ObjDocumentsPage.Doucment_Dropdown_BaseScript();
+		ObjDocumentsPage.Doucment_Dropdown_BaseScript_m();
 
 		ObjDocumentsPage_ContractPage.Contract_BaseScript("BaseScript");
 

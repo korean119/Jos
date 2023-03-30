@@ -91,9 +91,8 @@ public class BulkRequestPage_SendPage extends BasePage {
 		Wait.until(ExpectedConditions.visibilityOf(Modal_TestSend_Modal_btn)).click();
 
 	}
-	
-	
-	// 테스트 전송 페이지 나가기 버튼 
+
+	// 테스트 전송 페이지 나가기 버튼
 	@FindBy(xpath = ("(//button[contains(text(),'나가기')])[1]"))
 	WebElement Modal_TestSend_PageOut_btn;
 
@@ -101,9 +100,8 @@ public class BulkRequestPage_SendPage extends BasePage {
 		Wait.until(ExpectedConditions.visibilityOf(Modal_TestSend_PageOut_btn)).click();
 
 	}
-	
-	
-	// 일단 여기도 나가자 
+
+	// 일단 여기도 나가자
 	@FindBy(xpath = ("(//button[@class='BulkRequestHeader__left-btn'])[1]"))
 	WebElement SendPage_Out_btn;
 
@@ -111,13 +109,6 @@ public class BulkRequestPage_SendPage extends BasePage {
 		Wait.until(ExpectedConditions.visibilityOf(SendPage_Out_btn)).click();
 
 	}
-	
-
-	
-	
-	
-	
-	
 
 	// 폴더 목록 선택
 	@FindBy(css = ("button[class='FolderSelectBoxButton__select-btn']"))

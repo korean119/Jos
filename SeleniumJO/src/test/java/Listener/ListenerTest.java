@@ -6,6 +6,8 @@ import org.testng.ITestResult;
 
 public class ListenerTest implements ITestListener {
 	
+	// 콘솔에 어떻게 나오는지 설정 하는 곳, 자동화 코드 자체와는 연관 없음 
+	// 단, tearDown이 Success 유무에 따라 동작 함 
 
 	@Override
 	public void onFinish(ITestContext Result) {

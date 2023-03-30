@@ -54,9 +54,9 @@ public class LoginPage extends BasePage  {
 	}
 	
 
-	// 대표 시나리오 작성
+	
 	// 이메일 입력 > 패스워드 입력 > 로그인 버튼 입력
-	public void Login(String arg1, String arg2) throws InterruptedException {
+	public void Login_m(String arg1, String arg2) throws InterruptedException {
 		EntermyEmail(arg1);
 		EntermyPasswrod(arg2);
 		Loginbutton.click();

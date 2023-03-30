@@ -9,11 +9,11 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import POM_05_BulkRequestPage.BulkRequestPage_StartPage;
-import Test._0_BaseTest;
+import Test.TestBase;
 import Testrail_client.Testrails.TestRails;
 
-//@Ignore
-public class Templete_BulkRequest_E2E_DefaultCase extends _0_BaseTest {
+@Ignore
+public class Templete_BulkRequest_E2E_DefaultCase extends TestBase {
 
 	@TestRails(id = "")
 	@Test(priority = 1, enabled = true)
@@ -22,7 +22,7 @@ public class Templete_BulkRequest_E2E_DefaultCase extends _0_BaseTest {
 	public void Templete_BulkRequest_E2E_DefaultCase(@Optional String signature_requester_email)
 			throws InterruptedException, IOException {
 
-		ObjLoginPage.Login(signature_requester_email, "tlswnsdh2@@");
+		ObjLoginPage.Login_m(signature_requester_email, "tlswnsdh2@@");
 
 		Thread.sleep(2000);
 
@@ -57,13 +57,13 @@ public class Templete_BulkRequest_E2E_DefaultCase extends _0_BaseTest {
 	public void Templete_BulkRequest_E2E_DefaultCase_Singatory_1_(@Optional String Signatory_1_email)
 			throws InterruptedException, IOException {
 
-		ObjLoginPage.Login(Signatory_1_email, "tlswnsdh2@@");
+		ObjLoginPage.Login_m(Signatory_1_email, "tlswnsdh2@@");
 
 		Thread.sleep(2000);
 
-		ObjDocumentsPage.Documents_Dropdown_1_select();
+		ObjDocumentsPage.Documents_Dropdown_1_select_m();
 
-		ObjDocumentsPage_ContractPage.NomarlAccount_NormalSign_Off_Case("텍스트 입력 필드");
+		ObjDocumentsPage_ContractPage.NormalSign_Off_Case("텍스트 입력 필드");
 
 	}
 

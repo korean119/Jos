@@ -8,6 +8,7 @@ import org.openqa.selenium.Point;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.openqa.selenium.safari.SafariOptions;
@@ -33,7 +34,7 @@ import POM_05_BulkRequestPage.BulkRequestPage_SendPage;
 import POM_05_BulkRequestPage.BulkRequestPage_StartPage;
 import POM_08_Settings.SettingsPage_PricingPaymentPage;
 
-public class _0_BaseTest {
+public class TestBase {
 
 	public WebDriver driver;
 
@@ -64,11 +65,11 @@ public class _0_BaseTest {
 	public void initializeWebDriver(String browser) throws IOException {
 
 		if (browser.equalsIgnoreCase("Chrome")) {
-			// System.setProperty("webdriver.chrome.driver",
-			// "C:\\Automation_Driver\\chromedriver_win32 (1)/chromedriver.exe");
+			 System.setProperty("webdriver.chrome.driver",
+			 "C:\\Automation_Driver\\chromedriver_win32 (1)/chromedriver.exe");
 
-			System.setProperty("webdriver.chrome.driver",
-					"/Users/johnny/Desktop/Selenium_img/driver/chromedriver_mac64/chromedriver");
+			//System.setProperty("webdriver.chrome.driver",
+			//		"/Users/johnny/Desktop/Selenium_img/driver/chromedriver_mac64/chromedriver");
 
 			// 크롬 업데이트대응 
 			ChromeOptions options = new ChromeOptions();
@@ -76,6 +77,10 @@ public class _0_BaseTest {
 			driver = new ChromeDriver(options);
 
 			// 헤드리스 모드 고민 필요
+			// 현재 자동화가 브라우저가 켜지면서 돌아가는데 그럴 때 내가 다른 작업을 하면 자동화가 멈추는 경우가 있음
+			// 자동화 돌아가는거 구경만 하고 있어야 하는 상황이라 헤드리스를 사용해야 할 것 같긴한데 
+			// 그럼 Fail 난 경우 추적하기가 번거롭기도 함 --> 대책이 있다면 상관 없음
+			// 일단 크롬 드라이버 업데이트로 헤드리스 자체에 에러가 있어 객체 찾지 못해서 보류 상태  
 //			ChromeOptions options = new ChromeOptions();
 //			options.addArguments("--remote-allow-origins=*");
 //			options.addArguments("--headless");
@@ -86,11 +91,11 @@ public class _0_BaseTest {
 
 		}
 
-		// else if(browser.equalsIgnoreCase("Edge")){
-		// System.setProperty("webdriver.edge.driver",
-		// "C:\\Automation_Driver\\edgedriver_win64/msedgedriver.exe");
-		// driver = new EdgeDriver();
-		// }
+		 else if(browser.equalsIgnoreCase("Edge")){
+		 System.setProperty("webdriver.edge.driver",
+		 "C:\\Automation_Driver\\edgedriver_win64/msedgedriver.exe");
+		 driver = new EdgeDriver();
+		 }
 
 		else if (browser.equalsIgnoreCase("Safari")) {
 			SafariOptions options = new SafariOptions();

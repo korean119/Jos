@@ -36,8 +36,5 @@ public class BulkRequestPage extends BasePage {
 		super(driver);
 
 	}
-	
-	// 대량전송 페이지에 항목이 만들어지는 케이스가 1번 케이스가 됨 = On/Off Case 하나를 먼저 돌려야함 
-	// 템플릿 먼저 생성 후에 화면에서 하는걸 정리 해야함 
-	
+
 }

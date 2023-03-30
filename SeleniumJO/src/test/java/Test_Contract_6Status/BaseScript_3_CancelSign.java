@@ -7,17 +7,17 @@ import java.io.IOException;
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
-import Test._0_BaseTest;
+import Test.TestBase;
 import Testrail_client.Testrails.TestRails;
 import junit.framework.Assert;
 
-public class BaseScript_3_CancelSign extends _0_BaseTest {
+public class BaseScript_3_CancelSign extends TestBase {
 	
 	// 서명자(본인), 서명 요청자 에게 서명 요청 
 	@Test (priority = 1)
 	public void BaseScript() throws InterruptedException {
 
-		ObjLoginPage.Login("joshin1@getnada.com", "tlswnsdh2@@");
+		ObjLoginPage.Login_m("joshin1@getnada.com", "tlswnsdh2@@");
 		
 		ObjGNB.get();
 
@@ -41,30 +41,29 @@ public class BaseScript_3_CancelSign extends _0_BaseTest {
 		ObjGNB.get();	
 	}
 
-//	// 서명자 서명 후 서명 취소 
-//	@Test(priority = 2)
-//	public void BaseScript2() throws InterruptedException, IOException {
-//
-//		objLoginPage.Login("joshin4@getnada.com", "tlswnsdh2@@");
-//
-//		objDocumentsPage.Doucment_Dropdown_BaseScript();
-//
-//		objContractPage.Contract_BaseScript("BaseScript");
-//		
-//		objDocumentsPage.Doucment_Dropdown_BaseScript2("자동화 서명 취소");
-//
-//	}
+	// 서명자 서명 후 서명 취소 
+	@Test(priority = 2)
+	public void BaseScript2() throws InterruptedException, IOException {
 
-//	// 서명 요청자 서명
-//	@Test(priority = 3)
-//	public void BaseScript3() throws InterruptedException, IOException {
-//
-//		objLoginPage.Login("joshin5@getnada.com", "tlswnsdh2@@");
-//
-//		objDocumentsPage.Doucment_Dropdown_BaseScript();
-//
-//		objContractPage.Contract_BaseScript("BaseScript");
-//
-//	}
-//}
+		ObjLoginPage.Login_m("joshin4@getnada.com", "tlswnsdh2@@");
+
+		ObjDocumentsPage.Doucment_Dropdown_BaseScript_m();
+
+		ObjDocumentsPage_ContractPage.Contract_BaseScript("BaseScript");
+		
+		ObjDocumentsPage.Doucment_Dropdown_BaseScript2_m("자동화 서명 취소");
+
+	}
+
+	// 서명 요청자 서명
+	@Test(priority = 3)
+	public void BaseScript3() throws InterruptedException, IOException {
+
+		ObjLoginPage.Login_m("joshin5@getnada.com", "tlswnsdh2@@");
+
+		ObjDocumentsPage.Doucment_Dropdown_BaseScript_m();
+
+		ObjDocumentsPage_ContractPage.Contract_BaseScript("BaseScript");
+
+	}
 }

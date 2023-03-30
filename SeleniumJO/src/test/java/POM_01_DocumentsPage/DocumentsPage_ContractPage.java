@@ -78,10 +78,6 @@ public class DocumentsPage_ContractPage extends BasePage {
 		Wait.until(ExpectedConditions.visibilityOf(Password_OK_btn)).click();
 	}
 
-	////////////////////// 첨부 파일 있을 경우 /////////////////////
-
-	///////////////////////////////////////////////////
-
 	// 2. 입력 화면 - [서명 시작하기] 버튼
 	@FindBy(xpath = ("//button[contains(.,'서명 시작하기')]"))
 	WebElement SignatureStart_btn;
@@ -214,7 +210,7 @@ public class DocumentsPage_ContractPage extends BasePage {
 		Thread.sleep(2000);
 	}
 
-	public void NomarlAccount_NormalSign_Off_Case(String arg1) throws InterruptedException, IOException {
+	public void NormalSign_Off_Case(String arg1) throws InterruptedException, IOException {
 
 		Wait.until(ExpectedConditions.visibilityOf(SignatureStart_btn)).click();
 
@@ -234,7 +230,7 @@ public class DocumentsPage_ContractPage extends BasePage {
 		Thread.sleep(2000);
 	}
 
-	public void NomarlAccount_NormalSign_On_Case(String arg1, String arg2) throws InterruptedException, IOException {
+	public void NormalSign_On_Case(String arg1, String arg2) throws InterruptedException, IOException {
 		Password_input(arg1);
 		Password_OK_btn.click();
 
@@ -256,8 +252,9 @@ public class DocumentsPage_ContractPage extends BasePage {
 
 	}
 
-	///////////////////////////////////////////////////////////////////////////
+	
 
+	// 전체 스크린 캡쳐
 	public void AllScreen() throws IOException, InterruptedException {
 
 		File f = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -267,6 +264,8 @@ public class DocumentsPage_ContractPage extends BasePage {
 
 	}
 
+	// 이미지 부분 캡쳐 및 이미지 자른 후 비교 
+	// 어디를 캡쳐 할지 아직 안 정해서 사용 안하는 중
 	public void ElementCaptureaa() throws IOException, InterruptedException {
 
 		// Asot jqury 오류 대응 코드, 근데 Ashot 으로 이미지 캡쳐 안해서 필요는 없을 것 같지만 혹시나 해서 놔둠

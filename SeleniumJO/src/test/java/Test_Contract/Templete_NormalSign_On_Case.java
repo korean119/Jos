@@ -5,15 +5,18 @@ import java.io.IOException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import Test._0_BaseTest;
+import Test.TestBase;
 import Testrail_client.Testrails.TestRails;
 import junit.framework.Assert;
 
-public class Templete_NormalSign_On_Case extends _0_BaseTest {
+
+@Ignore
+public class Templete_NormalSign_On_Case extends TestBase {
 
 	@TestRails(id = "16289")
 	@Test(priority = 1, enabled = true)
@@ -22,7 +25,7 @@ public class Templete_NormalSign_On_Case extends _0_BaseTest {
 	public void Templete_NormalSign_On_Case(@Optional String signature_requester_email,
 			@Optional String Signatory_1_email, @Optional String Signatory_2_name, @Optional String Signatory_2_email)
 			throws InterruptedException {
-		ObjLoginPage.Login(signature_requester_email, "tlswnsdh2@@");
+		ObjLoginPage.Login_m(signature_requester_email, "tlswnsdh2@@");
 
 		Thread.sleep(2000);
 
@@ -51,13 +54,13 @@ public class Templete_NormalSign_On_Case extends _0_BaseTest {
 	public void Templete_NormalSign_On_Case_Singatory_1_(@Optional String Signatory_1_email)
 			throws InterruptedException, IOException {
 
-		ObjLoginPage.Login(Signatory_1_email, "tlswnsdh2@@");
+		ObjLoginPage.Login_m(Signatory_1_email, "tlswnsdh2@@");
 
 		Thread.sleep(2000);
 
-		ObjDocumentsPage.Documents_Dropdown_1_select();
+		ObjDocumentsPage.Documents_Dropdown_1_select_m();
 
-		ObjDocumentsPage_ContractPage.NomarlAccount_NormalSign_On_Case("1234", "텍스트필드 입력");
+		ObjDocumentsPage_ContractPage.NormalSign_On_Case("1234", "텍스트필드 입력");
 
 		Thread.sleep(2000);
 
@@ -70,13 +73,13 @@ public class Templete_NormalSign_On_Case extends _0_BaseTest {
 	public void Templete_NormalSign_On_Case_Singatory_2_(@Optional String Signatory_2_email)
 			throws InterruptedException, IOException {
 
-		ObjLoginPage.Login(Signatory_2_email, "tlswnsdh2@@");
+		ObjLoginPage.Login_m(Signatory_2_email, "tlswnsdh2@@");
 
 		Thread.sleep(2000);
 
-		ObjDocumentsPage.Documents_Dropdown_1_select();
+		ObjDocumentsPage.Documents_Dropdown_1_select_m();
 
-		ObjDocumentsPage_ContractPage.NomarlAccount_NormalSign_On_Case("1234", "텍스트필드 입력");
+		ObjDocumentsPage_ContractPage.NormalSign_On_Case("1234", "텍스트필드 입력");
 
 		Thread.sleep(2000);
 	}

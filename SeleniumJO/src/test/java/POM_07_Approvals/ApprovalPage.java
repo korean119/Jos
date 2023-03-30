@@ -1,4 +1,4 @@
-package POM_07_Approval;
+package POM_07_Approvals;
 
 import static org.testng.Assert.assertEquals;
 
@@ -37,6 +37,6 @@ public class ApprovalPage extends BasePage {
 
 	}
 	
-	// 결제선 라인에 체크해야할게 많다ㅠ_ㅠ...
+	// 결제선 라인에 체크해야할게 많다!
 	
 }
