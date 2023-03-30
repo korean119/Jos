@@ -25,6 +25,8 @@ public class ContractSetup_Step2page extends BasePage {
 
 	@FindBy(xpath = ("//button[contains(text(),'+ 텍스트 입력하기')]"))
 	WebElement Signature_Requester_Textinput_btn;
+	
+	
 
 	@FindBy(xpath = ("(//textarea[@placeholder='추가할 내용을 입력하세요.'])[3]"))
 	WebElement Signature_Requester_Textinput_input;
@@ -97,6 +99,7 @@ public class ContractSetup_Step2page extends BasePage {
 		Wait.until(ExpectedConditions.visibilityOf(PDFSreen_go_Btn2)).click();
 
 	}
+	
 
 	@FindBy(css = (".Btn--primary"))
 	WebElement Next_btn;
@@ -108,12 +111,37 @@ public class ContractSetup_Step2page extends BasePage {
 	//////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	public void AddAttachFiletype_1_input_m(String arg1) throws InterruptedException {
-		AddAttachFiletype_input.click();
-		AddAttachFiletype_input.sendKeys(arg1);
+		Wait.until(ExpectedConditions.visibilityOf(AddAttachFiletype_input)).click();
+		Wait.until(ExpectedConditions.visibilityOf(AddAttachFiletype_input)).sendKeys(arg1);
+
 	}
 
 	public void ContractSetup_Step2page_Setup_BaseScript() throws InterruptedException {
 
+		Wait.until(ExpectedConditions.visibilityOf(SignatureField_1_btn)).click();
+		PDFSreen_go_Btn();
+
+		Wait.until(ExpectedConditions.visibilityOf(TextField_1_btn)).click();
+		PDFSreen_go_Btn();
+
+		Wait.until(ExpectedConditions.visibilityOf(CheckboxField_1_btn)).click();
+		PDFSreen_go_Btn();
+
+		Wait.until(ExpectedConditions.visibilityOf(SignatureField_2_btn)).click();
+		PDFSreen_go_Btn();
+
+		Wait.until(ExpectedConditions.visibilityOf(TextField_2_btn)).click();
+		PDFSreen_go_Btn();
+
+		Wait.until(ExpectedConditions.visibilityOf(CheckboxField_2_btn)).click();
+		PDFSreen_go_Btn();
+
+		Wait.until(ExpectedConditions.visibilityOf(Next_btn)).click();
+
+	}
+
+	public void NormalSign_Off_Case() throws InterruptedException {
+
 		SignatureField_1_btn.click();
 		PDFSreen_go_Btn.click();
 
@@ -136,31 +164,7 @@ public class ContractSetup_Step2page extends BasePage {
 
 	}
 
-	public void NomarlAccount_NormalSign_Off_Case() throws InterruptedException {
-
-		SignatureField_1_btn.click();
-		PDFSreen_go_Btn.click();
-
-		TextField_1_btn.click();
-		PDFSreen_go_Btn.click();
-
-		CheckboxField_1_btn.click();
-		PDFSreen_go_Btn.click();
-
-		SignatureField_2_btn.click();
-		PDFSreen_go_Btn.click();
-
-		TextField_2_btn.click();
-		PDFSreen_go_Btn.click();
-
-		CheckboxField_2_btn.click();
-		PDFSreen_go_Btn.click();
-
-		Next_btn.click();
-
-	}
-
-	public void NomarlAccount_NormalSign_On_Case(String arg1) throws InterruptedException {
+	public void NormalSign_On_Case(String arg1) throws InterruptedException {
 
 		SignatureField_1_btn.click();
 		PDFSreen_go_Btn.click();
@@ -197,8 +201,9 @@ public class ContractSetup_Step2page extends BasePage {
 		for (int i = 1; i < 101; i++) {
 
 			Signature_Requester_Textinput_btn();
-			PDFSreen_go_Btn2();
-			// 샌드키로 바꾸고 좌표를 변수로 바꿔서 돌리면 될듯 함 
+			
+			PDFSreen_go_Btn2.sendKeys(null);
+			// 샌드키로 바꾸고 좌표를 변수로 바꿔서 돌리면 될듯 함
 		}
 
 		for (int x = 1; x < 101; x++) {

@@ -12,7 +12,7 @@ import POM_05_BulkRequestPage.BulkRequestPage_StartPage;
 import Test._0_BaseTest;
 import Testrail_client.Testrails.TestRails;
 
-@Ignore
+//@Ignore
 public class Templete_BulkRequest_E2E_DefaultCase extends _0_BaseTest {
 
 	@TestRails(id = "")

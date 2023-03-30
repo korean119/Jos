@@ -1,10 +1,7 @@
-package Test_Regression_TC_Contract;
+package Test_Contract;
 
 import java.io.IOException;
 
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -13,32 +10,32 @@ import Test._0_BaseTest;
 import Testrail_client.Testrails.TestRails;
 import junit.framework.Assert;
 
-public class Templete_NormalSign_On_Case extends _0_BaseTest {
+public class NormalSign_On_Case extends _0_BaseTest {
 
 	@TestRails(id = "16289")
 	@Test(priority = 1, enabled = true)
 	@Parameters({ "signature_requester_email", "Signatory_1_email", "Signatory_2_name", "Signatory_2_email" })
 
-	public void Templete_NormalSign_On_Case(@Optional String signature_requester_email,
-			@Optional String Signatory_1_email, @Optional String Signatory_2_name, @Optional String Signatory_2_email)
-			throws InterruptedException {
+	public void NormalSign_On_Case(@Optional String signature_requester_email,  @Optional String Signatory_1_email, @Optional String Signatory_2_name,
+			@Optional String Signatory_2_email) throws InterruptedException {
+
 		ObjLoginPage.Login(signature_requester_email, "tlswnsdh2@@");
 
 		Thread.sleep(2000);
-
-		ObjGNB.Templates_btn();
 
 		ObjGNB.ContractSetupStart_btn();
 
 		ObjDomcumentUpload_Modal.Contract_SampleDoc_select();
 
-		ObjContractSetup_Step1page.NomarlAccount_NormalSign_OnandOff_Case(Signatory_1_email, Signatory_2_name,
+		ObjContractSetup_Step1page.NormalSign_OnandOff_Case(Signatory_1_email, Signatory_2_name,
 				Signatory_2_email);
 
-		ObjContractSetup_Step2page.NomarlAccount_NormalSign_On_Case("첨부파일 올려주세요");
+		ObjContractSetup_Step2page.NormalSign_On_Case("첨부파일 올려주세요");
 
 		ObjContractSetup_Step3page.NomarlAccount_NormalSign_On_Case("NomarlAccount_NormalSign_On_Case", "12341234",
-				"joshin1@getnada.com", "메롱", "1234");
+				"joshin1@getnada.com", "메롱", "1234"); //
+
+		Thread.sleep(2000);
 
 	}
 
@@ -46,11 +43,11 @@ public class Templete_NormalSign_On_Case extends _0_BaseTest {
 	@Test(priority = 2, enabled = true)
 	@Parameters({ "Signatory_1_email" })
 
-	public void Templete_NormalSign_On_Case_Singatory_1_(@Optional String Signatory_1_email)
+	public void NormalSign_On_Case_Singatory_1_(@Optional String Signatory_1_email)
 			throws InterruptedException, IOException {
 
 		ObjLoginPage.Login(Signatory_1_email, "tlswnsdh2@@");
-
+		
 		Thread.sleep(2000);
 
 		ObjDocumentsPage.Documents_Dropdown_1_select();
@@ -62,16 +59,16 @@ public class Templete_NormalSign_On_Case extends _0_BaseTest {
 	}
 
 	@TestRails(id = "16291")
-	@Test(priority = 2, enabled = false)
+	@Test(priority = 3, enabled = true)
 	@Parameters({ "Signatory_2_email" })
 
-	public void Templete_NormalSign_On_Case_Singatory_2_(@Optional String Signatory_2_email)
+	public void NormalSign_On_Case_Singatory_2_(@Optional String Signatory_2_email)
 			throws InterruptedException, IOException {
 
 		ObjLoginPage.Login(Signatory_2_email, "tlswnsdh2@@");
-
+		
 		Thread.sleep(2000);
-
+		
 		ObjDocumentsPage.Documents_Dropdown_1_select();
 
 		ObjDocumentsPage_ContractPage.NomarlAccount_NormalSign_On_Case("1234", "텍스트필드 입력");

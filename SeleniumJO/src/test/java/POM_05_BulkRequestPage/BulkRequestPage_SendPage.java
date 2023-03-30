@@ -197,7 +197,7 @@ public class BulkRequestPage_SendPage extends BasePage {
 		FolderList_1_Select();
 
 		// 동적 버튼이라 바로 찾지 말고 상태가 변경 되면 입력 되어야 해서 그냥 시간을 둠
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		BulkRequestStatusChange_btn();
 
 		Checkbox_checkbox_m();

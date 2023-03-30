@@ -1,4 +1,4 @@
-package Test_Regression_TC_Contract;
+package Test_Contract;
 
 import java.io.IOException;
 
@@ -27,17 +27,16 @@ public class Templete_NormalSign_Off_Case extends _0_BaseTest {
 
 		ObjGNB.Templates_btn();
 		
-		ObjTempletePage.Templete_ListItem_1_btn();
+		ObjDomcumentUpload_Modal.Templete_Contract_SampleDocselect();
 		
-		ObjTempletePage.Dropdown_ContractRequest_btn();
-	
-		ObjGNB.ContractSetupStart_btn();
+		ObjTempletePage_CreateTempleteStep1Page.Templete_Request_Step1Page_Case("자동화서명");
+		ObjTempletePage_CreateTempleteStep2Page.Templete_Request_Step2Page_Off_Case();
+		ObjTempletePage_CreateTempleteStep3Page.Templete_Request_Step3Page_Off_Case();
+
+
+		ObjContractSetup_Step1page.NormalSign_OnandOff_Case(Signatory_1_email, Signatory_2_name, Signatory_2_email);
 		
-		ObjDomcumentUpload_Modal.Contract_SampleDoc_select();
-		
-		ObjContractSetup_Step1page.NomarlAccount_NormalSign_OnandOff_Case(Signatory_1_email, Signatory_2_name, Signatory_2_email);
-		
-		ObjContractSetup_Step2page.NomarlAccount_NormalSign_Off_Case();
+		ObjContractSetup_Step2page.NormalSign_Off_Case();
 		
 		ObjContractSetup_Step3page.NomarlAccount_NormalSign_Off_Case();
 		
@@ -46,7 +45,7 @@ public class Templete_NormalSign_Off_Case extends _0_BaseTest {
 	}
 	
 	@TestRails (id = "16287")
-	@Test (priority = 2, enabled = false)
+	@Test (priority = 2, enabled = true)
 	@Parameters({"Signatory_1_email"})
 	
 	public void NomarlAccount_NormalSign_Off_Case_Signatory_1_(

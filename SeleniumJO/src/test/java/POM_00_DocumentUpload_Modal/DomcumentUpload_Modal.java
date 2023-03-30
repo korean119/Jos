@@ -118,9 +118,10 @@ public class DomcumentUpload_Modal extends BasePage {
 	
 	// 템플릿 생성에 사용 
 	public void Templete_Contract_SampleDocselect() throws InterruptedException {
-		SampleDocuments_Btn.click();
-		SapmleDocuments_UploadDoc_1_btn.click();
-		SampleDocuments_Upload_btn.click();
+		Wait.until(ExpectedConditions.visibilityOf(SampleDocuments_Btn)).click();
+		Wait.until(ExpectedConditions.visibilityOf(SapmleDocuments_UploadDoc_1_btn)).click();
+		Wait.until(ExpectedConditions.visibilityOf(SampleDocuments_Upload_btn)).click();
+
 		
 	}
 }

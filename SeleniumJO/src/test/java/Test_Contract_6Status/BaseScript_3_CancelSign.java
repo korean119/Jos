@@ -28,7 +28,7 @@ public class BaseScript_3_CancelSign extends _0_BaseTest {
 		
 		
 		// 서명자1 이메일, 서명자2 이름 , 서명자2 이메일
-		ObjContractSetup_Step1page.ContractSetup_Step1page_Setup_Quick("joshin4@getnada.com", "조니4", "joshin5@getnada.com");
+		ObjContractSetup_Step1page.NormalSign_OnandOff_Case("joshin4@getnada.com", "조니4", "joshin5@getnada.com");
 		
 		
 		ObjContractSetup_Step2page.ContractSetup_Step2page_Setup_BaseScript();

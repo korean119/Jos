@@ -18,8 +18,7 @@ public class ContractSetup_Step3page extends BasePage {
 
 	@FindBy(css = (".fa-pen-to-square")) // 요
 	WebElement DocumentModification_filename_edit_btn;
-	// @FindBy(css = (".Btn--light"))
-	// WebElement LimitedTextareaselect_btn;
+
 
 	// @FindBy(css = ("textarea[placeholder='1자 이상 100자 이내']"))
 	@FindBy(xpath = ("//textarea[@placeholder='1자 이상 100자 이내']")) // 요 
@@ -48,7 +47,7 @@ public class ContractSetup_Step3page extends BasePage {
 
 	////////////////////// 참조자 cc /////////////////////
 
-	@FindBy(xpath = ("//button[@class='css-1mmu0eb']")) // 
+	@FindBy(xpath = ("//button[@class='css-1mmuxfw']")) // 
 	WebElement cc_btn;
 
 	@FindBy(xpath = ("//div[@class='css-o537dh']//input[@placeholder='이메일 또는 휴대폰 번호']"))

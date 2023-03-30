@@ -60,8 +60,10 @@ public class BulkRequestPage_StartPage extends BasePage {
 	public void Validation_Phone_Text(String arg1) throws InterruptedException {
 		Wait.until(ExpectedConditions.visibilityOf(Validation_Phone_Text)).getText();
 
-		String getheadertext = Validation_Phone_Text.getText().trim();
-		Assert.assertEquals(arg1, getheadertext);
+		String gettext = Validation_Phone_Text.getText().trim();
+		System.out.println(gettext);
+		
+		Assert.assertEquals(arg1, gettext);
 
 	}
 
@@ -72,8 +74,10 @@ public class BulkRequestPage_StartPage extends BasePage {
 	public void Validation_Name_Text(String arg1) throws InterruptedException {
 		Wait.until(ExpectedConditions.visibilityOf(Validation_Name_Text)).getText();
 
-		String getheadertext = Validation_Name_Text.getText().trim();
-		Assert.assertEquals(arg1, getheadertext);
+		String gettext = Validation_Name_Text.getText().trim();
+		System.out.println(gettext);
+
+		Assert.assertEquals(arg1, gettext);
 
 	}
 
@@ -84,8 +88,10 @@ public class BulkRequestPage_StartPage extends BasePage {
 	public void Validation_CorporationNumber_Text(String arg1) throws InterruptedException {
 		Wait.until(ExpectedConditions.visibilityOf(Validation_CorporationNumber_Text)).getText();
 
-		String getheadertext = Validation_CorporationNumber_Text.getText().trim();
-		Assert.assertEquals(arg1, getheadertext);
+		String gettext = Validation_CorporationNumber_Text.getText().trim();
+		System.out.println(gettext);
+
+		Assert.assertEquals(arg1, gettext);
 
 	}
 
@@ -108,8 +114,10 @@ public class BulkRequestPage_StartPage extends BasePage {
 	public void Validation_CompletePassword_Text(String arg1) throws InterruptedException {
 		Wait.until(ExpectedConditions.visibilityOf(Validation_CompletePassword_Text)).getText();
 
-		String getheadertext = Validation_CompletePassword_Text.getText().trim();
-		Assert.assertEquals(arg1, getheadertext);
+		String gettext = Validation_CompletePassword_Text.getText().trim();
+		System.out.println(gettext);
+
+		Assert.assertEquals(arg1, gettext);
 
 	}
 	
@@ -120,8 +128,10 @@ public class BulkRequestPage_StartPage extends BasePage {
 	public void Validation_CC_Text(String arg1) throws InterruptedException {
 		Wait.until(ExpectedConditions.visibilityOf(Validation_CC_Text)).getText();
 
-		String getheadertext = Validation_CC_Text.getText().trim();
-		Assert.assertEquals(arg1, getheadertext);
+		String gettext = Validation_CC_Text.getText().trim();
+		System.out.println(gettext);
+
+		Assert.assertEquals(arg1, gettext);
 
 	}
 }

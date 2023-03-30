@@ -1,15 +1,17 @@
-package Test_Regression_TC_Contract;
+package Test_Contract;
 
 import java.io.IOException;
 
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import Test._0_BaseTest;
 import Testrail_client.Testrails.TestRails;
-import junit.framework.Assert;
 
+
+//@Ignore
 public class NormalSign_Off_Case extends _0_BaseTest {
 
 	@TestRails(id = "16286")
@@ -27,10 +29,10 @@ public class NormalSign_Off_Case extends _0_BaseTest {
 
 		ObjDomcumentUpload_Modal.Contract_SampleDoc_select();
 
-		ObjContractSetup_Step1page.NomarlAccount_NormalSign_OnandOff_Case(Signatory_1_email, Signatory_2_name,
+		ObjContractSetup_Step1page.NormalSign_OnandOff_Case(Signatory_1_email, Signatory_2_name,
 				Signatory_2_email);
 
-		ObjContractSetup_Step2page.NomarlAccount_NormalSign_Off_Case();
+		ObjContractSetup_Step2page.NormalSign_Off_Case();
 
 		ObjContractSetup_Step3page.NomarlAccount_NormalSign_Off_Case();
 
@@ -39,7 +41,7 @@ public class NormalSign_Off_Case extends _0_BaseTest {
 	}
 
 	@TestRails(id = "16287")
-	@Test(priority = 2, enabled = false)
+	@Test(priority = 2, enabled = true)
 	@Parameters({ "Signatory_1_email" })
 
 	public void NormalSign_Off_Case_Signatory_1_(@Optional String Signatory_1_email)

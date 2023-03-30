@@ -77,9 +77,12 @@ public class _0_BaseTest {
 
 			// 헤드리스 모드 고민 필요
 //			ChromeOptions options = new ChromeOptions();
+//			options.addArguments("--remote-allow-origins=*");
 //			options.addArguments("--headless");
-//			options.addArguments("start-maximized");
-//			WebDriver driver = new ChromeDriver(options);
+//			options.addArguments("--window-size=1920,1080");
+//			options.addArguments("--no-sandbox");
+//			options.addArguments("--disable-gpu");
+//			driver = new ChromeDriver(options);
 
 		}
 
