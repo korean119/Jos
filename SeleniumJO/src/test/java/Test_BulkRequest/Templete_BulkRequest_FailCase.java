@@ -8,11 +8,11 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import POM_05_BulkRequestPage.BulkRequestPage_StartPage;
-import Test._0_BaseTest;
+import Test.TestBase;
 import Testrail_client.Testrails.TestRails;
 
-//@Ignore
-public class Templete_BulkRequest_FailCase extends _0_BaseTest {
+@Ignore
+public class Templete_BulkRequest_FailCase extends TestBase {
 
 	@TestRails(id = "")
 	@Test(priority = 1, enabled = true)
@@ -21,7 +21,7 @@ public class Templete_BulkRequest_FailCase extends _0_BaseTest {
 	public void Templete_BulkRequest_FailCase(@Optional String signature_requester_email)
 			throws InterruptedException, IOException {
 
-		ObjLoginPage.Login(signature_requester_email, "tlswnsdh2@@");
+		ObjLoginPage.Login_m(signature_requester_email, "tlswnsdh2@@");
 
 		Thread.sleep(2000);
 

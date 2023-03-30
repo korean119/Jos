@@ -7,12 +7,12 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-import Test._0_BaseTest;
+import Test.TestBase;
 import Testrail_client.Testrails.TestRails;
 
 
 //@Ignore
-public class NormalSign_Off_Case extends _0_BaseTest {
+public class NormalSign_Off_Case extends TestBase {
 
 	@TestRails(id = "16286")
 	@Test(priority = 1, enabled = true)
@@ -21,7 +21,7 @@ public class NormalSign_Off_Case extends _0_BaseTest {
 	public void NormalSign_Off_Case(@Optional String signature_requester_email,  @Optional String Signatory_1_email, @Optional String Signatory_2_name,
 			@Optional String Signatory_2_email) throws InterruptedException {
 
-		ObjLoginPage.Login(signature_requester_email, "tlswnsdh2@@");
+		ObjLoginPage.Login_m(signature_requester_email, "tlswnsdh2@@");
 
 		Thread.sleep(2000);
 
@@ -47,13 +47,15 @@ public class NormalSign_Off_Case extends _0_BaseTest {
 	public void NormalSign_Off_Case_Signatory_1_(@Optional String Signatory_1_email)
 			throws InterruptedException, IOException {
 
-		ObjLoginPage.Login(Signatory_1_email, "tlswnsdh2@@");
+		ObjLoginPage.Login_m(Signatory_1_email, "tlswnsdh2@@");
 
 		Thread.sleep(2000);
+		
+		ObjDocumentsPage.ContractStatus_Check();
 
-		ObjDocumentsPage.Documents_Dropdown_1_select();
+		ObjDocumentsPage.Documents_Dropdown_1_select_m();
 
-		ObjDocumentsPage_ContractPage.NomarlAccount_NormalSign_Off_Case("텍스트 입력 필드");
+		ObjDocumentsPage_ContractPage.NormalSign_Off_Case("텍스트 입력 필드");
 
 		Thread.sleep(2000);
 	}
@@ -65,13 +67,15 @@ public class NormalSign_Off_Case extends _0_BaseTest {
 	public void NormalSign_Off_Case_Singatory_2_(@Optional String Signatory_2_email)
 			throws InterruptedException, IOException {
 
-		ObjLoginPage.Login(Signatory_2_email, "tlswnsdh2@@");
+		ObjLoginPage.Login_m(Signatory_2_email, "tlswnsdh2@@");
 
 		Thread.sleep(2000);
+		
+		ObjDocumentsPage.ContractStatus_Check();
 
-		ObjDocumentsPage.Documents_Dropdown_1_select();
+		ObjDocumentsPage.Documents_Dropdown_1_select_m();
 
-		ObjDocumentsPage_ContractPage.NomarlAccount_NormalSign_Off_Case("텍스트 입력 필드");
+		ObjDocumentsPage_ContractPage.NormalSign_Off_Case("텍스트 입력 필드");
 
 		Thread.sleep(2000);
 	}

@@ -1,6 +1,7 @@
 package POM_01_DocumentsPage;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -12,6 +13,7 @@ import javax.imageio.ImageIO;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -20,7 +22,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import com.google.common.base.Function;
 
@@ -38,32 +42,102 @@ public class DocumentsPage extends BasePage {
 
 	}
 
+	// 문서함 첫번째 리스트 "내 서명 필요 확인"
+	// 화면이 바로 갱신 되지 않는 이슈? 경우? 가 있음 (특히 프리뷰에서) 
+	// 때문에 간혹 멈추는 경우가 있어 임시로 넣어둠 효과 없으면 삭제 예정
+	@FindBy(xpath = (("(//li[@display='flex'])[1]")))
+	WebElement ContractStatus_Check;
+
+	public void ContractStatus_Check() throws InterruptedException {
+
+		String actual = Wait.until(ExpectedConditions.visibilityOf(ContractStatus_Check)).getText();
+		String expect = ("내 서명 필요");
+
+		System.out.println(expect + " <-- 내 서명 필요 출력 됬나?");
+
+		for (int i = 0; i < 10; i++) {
+			try {
+				if (actual.equals(expect)) {
+
+				} else {
+					System.out.println("내 서명 필요 상태가 아님");
+
+					driver.navigate().refresh();
+					i++;
+
+				}
+			} catch (NoSuchElementException e) {
+				System.out.println(e);
+			}
+		}
+	}
+
 	// 문서함 > 리스트 첫 번째(내용 확인하고 서명)
 	@FindBy(css = ("div:nth-child(1) > .DocumentListItem"))
 	WebElement DocumentListItem1;
+
+	public void DocumentListItem1() throws InterruptedException {
+		Wait.until(ExpectedConditions.visibilityOf(DocumentListItem1)).click();
+
+	}
 
 	// 문서함 > 리스트 두 번째
 	@FindBy(css = ("div:nth-child(2) > .DocumentListItem"))
 	WebElement DocumentListItem2;
 
+	public void DocumentListItem2() throws InterruptedException {
+		Wait.until(ExpectedConditions.visibilityOf(DocumentListItem2)).click();
+
+	}
+
 	@FindBy(css = (".DropdownWrapper--opened .DropdownMenuRow:nth-child(1)"))
 	WebElement DropdownMenuRow1;
 
+	public void DropdownMenuRow1() throws InterruptedException {
+		Wait.until(ExpectedConditions.visibilityOf(DropdownMenuRow1)).click();
+
+	}
+
 	@FindBy(css = (".DropdownWrapper--opened .DropdownMenuRow:nth-child(2)"))
 	WebElement DropdownMenuRow2;
+
+	public void DropdownMenuRow2() throws InterruptedException {
+		Wait.until(ExpectedConditions.visibilityOf(DropdownMenuRow2)).click();
+
+	}
 
 	// 거절 팝업 텍스트 입력
 	@FindBy(name = ("comment"))
 	WebElement Refusetosign_modal_text_area;
 
+	public void Refusetosign_modal_text_area(String arg1) throws InterruptedException {
+		Wait.until(ExpectedConditions.visibilityOf(Refusetosign_modal_text_area)).click();
+		Wait.until(ExpectedConditions.visibilityOf(Refusetosign_modal_text_area)).sendKeys(arg1);
+	}
+
 	@FindBy(xpath = ("//button[contains(text(),'거절하기')]"))
 	WebElement Refusetosign_modal_refuse_btn;
+
+	public void Refusetosign_modal_refuse_btn() throws InterruptedException {
+		Wait.until(ExpectedConditions.visibilityOf(Refusetosign_modal_refuse_btn)).click();
+
+	}
 
 	@FindBy(xpath = ("//button[contains(text(),'서명 취소하기')]"))
 	WebElement Refusetosign_modal_signcancle_btn;
 
+	public void Refusetosign_modal_signcancle_btn() throws InterruptedException {
+		Wait.until(ExpectedConditions.visibilityOf(Refusetosign_modal_signcancle_btn)).click();
+
+	}
+
 	@FindBy(xpath = ("//button[contains(text(),'확인')]"))
 	WebElement Refusetosign_card_btn;
+
+	public void Refusetosign_card_btn() throws InterruptedException {
+		Wait.until(ExpectedConditions.visibilityOf(Refusetosign_card_btn)).click();
+
+	}
 
 	// 완료 된 문서 패스워드
 	@FindBy(xpath = ("//input[@placeholder='8자 ~ 32자 이내']"))
@@ -84,58 +158,43 @@ public class DocumentsPage extends BasePage {
 
 	}
 
-	// input[@placeholder='8자 ~ 32자 이내']
+	// 6Stauts 에서 사용하려고 임시로 만들어둠
+	public void Doucment_Dropdown_BaseScript_m() throws InterruptedException {
+		DocumentListItem1();
+		DropdownMenuRow1();
 
-	//////////////////// 캡쳐용인데 나중에 어디다 쓸거 같은뎅 /////////////////////////
+	}
 
+	public void Doucment_Dropdown_BaseScript2_m(String arg1) throws InterruptedException {
+		DocumentListItem1();
+		DropdownMenuRow2();
+		Refusetosign_modal_text_area(arg1);
+		Refusetosign_modal_refuse_btn();
+		Refusetosign_card_btn();
+
+	}
+
+	public void Doucment_Dropdown_BaseScript3_m(String arg1) throws InterruptedException {
+		DocumentListItem1();
+		DropdownMenuRow2();
+		Refusetosign_modal_text_area(arg1);
+		Refusetosign_modal_signcancle_btn();
+		Refusetosign_card_btn();
+
+	}
+
+	// 문서 선택에 대부분 공통적으로 사용 됨
+	public void Documents_Dropdown_1_select_m() throws InterruptedException {
+		DocumentListItem1();
+		DropdownMenuRow1();
+
+	}
+
+	//////////////////// 캡쳐 /////////////////////////
+
+	// 캡쳐용 PDFLayer 영역
 	@FindBy(css = (".PDFTextLayer"))
 	WebElement PDFLayer;
-
-	//////////////////// 캡쳐용인데 나중에 어디다 쓸거 같은뎅 /////////////////////////
-
-	public void DocumentListItem1() {
-		DocumentListItem1.click();
-
-	}
-
-	public void DropdownMenuRow() {
-		DropdownMenuRow1.click();
-
-	}
-
-	public void Doucment_Dropdown_BaseScript() {
-		Wait.until(ExpectedConditions.visibilityOf(DocumentListItem1)).click();
-		Wait.until(ExpectedConditions.visibilityOf(DropdownMenuRow1)).click();
-
-	}
-
-	public void Doucment_Dropdown_BaseScript2(String arg1) throws IOException {
-		DocumentListItem1.click();
-		DropdownMenuRow2.click();
-		Refusetosign_modal_text_area.click();
-		Refusetosign_modal_text_area.sendKeys(arg1);
-		Refusetosign_modal_refuse_btn.click();
-		Refusetosign_card_btn.click();
-
-	}
-
-	public void Doucment_Dropdown_BaseScript3(String arg1) throws IOException {
-		DocumentListItem1.click();
-		DropdownMenuRow2.click();
-		Refusetosign_modal_text_area.click();
-		Refusetosign_modal_text_area.sendKeys(arg1);
-		Refusetosign_modal_signcancle_btn.click();
-		Refusetosign_card_btn.click();
-
-	}
-
-	public void Documents_Dropdown_1_select() throws IOException {
-		Wait.until(ExpectedConditions.visibilityOf(DocumentListItem1)).click();
-		Wait.until(ExpectedConditions.visibilityOf(DropdownMenuRow1)).click();
-
-	}
-
-	//////////////////// 캡쳐용인데 나중에 어디다 쓸거 같은뎅 /////////////////////////
 
 	public void AllScreen() throws IOException, InterruptedException {
 

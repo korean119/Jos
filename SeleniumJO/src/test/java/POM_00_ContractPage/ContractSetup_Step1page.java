@@ -97,7 +97,7 @@ public class ContractSetup_Step1page extends BasePage {
 
 	}
 
-	// 서명 관련 전부 이걸로 씀
+	// 현재 서명 관련 전부 이걸로 통일하여 사용 
 	public void NormalSign_OnandOff_Case(String arg1, String arg2, String arg3) throws InterruptedException {
 		Signatory_1_email_del_btn();
 		Signatory_1_email_input(arg1);

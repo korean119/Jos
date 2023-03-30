@@ -11,7 +11,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
-import Test._0_BaseTest;
+import Test.TestBase;
 import Testrail_client.Testrails.TestRails;
 
 public class TestrailAPI_Send {
@@ -20,9 +20,9 @@ public class TestrailAPI_Send {
 	String PROJECT_ID = "17";
 
 
-	// 아래는 Testail API, 원래 _0_BaseTest에 포함 되어 있었는데 보기 불편해서 잠깐 떨어트려놓았음
+	// 아래는 Testail API, 원래 _0_BaseTest에 포함 되어 있었는데 보기 불편해서 떨어트려놓았음
 	// 근데 _0_BaseTest가 왜 이 클래스를 상속 받으면 작동 하는지 Testng 프레임워크 자체가 이해가 안가긴 하는데.. 
-	// 나중에 다른 api 연동 시킬 때 문제가 될거지만 일단 되니까 놔둠;
+	// 나중에 다른 api 연동 시킬 때 문제가 될거지만 일단 되니까 놔둠; 근데 Testrail 자체가 불편해서 굳이 써야하나 고민중
 	
 	@BeforeSuite
 	public void createSuite(ITestContext ctx) throws Exception {
