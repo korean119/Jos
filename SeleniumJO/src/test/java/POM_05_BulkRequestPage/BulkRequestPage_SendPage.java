@@ -59,9 +59,9 @@ public class BulkRequestPage_SendPage extends BasePage {
 	@FindBy(xpath = ("//input[@placeholder='이메일 또는 휴대폰 번호']"))
 	WebElement TestSend_EmailandPhoneNumber_input;
 
-	public void TestSend_EmailandPhoneNumber_input_m() throws InterruptedException {
+	public void TestSend_EmailandPhoneNumber_input_m(String arg1) throws InterruptedException {
 		Wait.until(ExpectedConditions.visibilityOf(TestSend_EmailandPhoneNumber_input)).click();
-		Wait.until(ExpectedConditions.visibilityOf(TestSend_EmailandPhoneNumber_input)).sendKeys("joshin1@getnada.com");
+		Wait.until(ExpectedConditions.visibilityOf(TestSend_EmailandPhoneNumber_input)).sendKeys(arg1);
 
 	}
 
@@ -183,6 +183,28 @@ public class BulkRequestPage_SendPage extends BasePage {
 
 ///////////////////////////////////////////////////////////////////////////////
 
+	
+	// 2? 4건 이하 보낼 경우에만 완료 모달 나오는 이슈 대응 
+	public void BulkRequest_Send_1Send_m() throws InterruptedException {
+		FolderList_btn();
+		FolderList_1_Select();
+
+		// 동적 버튼이라 바로 찾지 말고 상태가 변경 되면 입력 되어야 해서 그냥 시간을 둠
+		Thread.sleep(2000);
+		BulkRequestStatusChange_btn();
+
+		Checkbox_checkbox_m();
+		BulkRequest_StatusChange_confirm_btn();
+
+		BulkRequest_Start_confirm_btn();
+
+		Thread.sleep(3000);
+
+		BulkRequest_DoneModal_confirm_btn();
+
+	}
+	
+	
 	public void BulkRequest_Send_m() throws InterruptedException {
 		FolderList_btn();
 		FolderList_1_Select();

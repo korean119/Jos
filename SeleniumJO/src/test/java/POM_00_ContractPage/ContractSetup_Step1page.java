@@ -15,11 +15,25 @@ public class ContractSetup_Step1page extends BasePage {
 
 	// 서명자 1
 	// 첫번째 서명자 이메일/카카오톡 초기화 = x 버튼
+	// 가끔 못 찾는 경우가 있어서 예외 처리 해둠 
+	
+	// 예외처리도 피해가면 아래 코드 사용 예정 
+	// wait.until(ExpectedConditions.presenceOfElementLocated(By.id("테이블")));
+
 	@FindBy(xpath = ("//button[@aria-label='clear']"))
 	WebElement Signatory_1_email_del_btn;
 
 	public void Signatory_1_email_del_btn() throws InterruptedException {
-		Wait.until(ExpectedConditions.visibilityOf(Signatory_1_email_del_btn)).click();
+		
+		for(int i=0; i<=2;i++){
+			  try{
+					Wait.until(ExpectedConditions.visibilityOf(Signatory_1_email_del_btn)).click();
+			     break;
+			  }
+			  catch(Exception e){
+			     System.out.println(e.getMessage());
+			  }
+			}
 
 		// POM initElements() 도 피하는 항목... 동적 버튼 이라 DOM에서 사라지는걸 의미하는게 아닌가 싶음
 		// https://www.softwaretestingmaterial.com/stale-element-reference-exception-selenium-webdriver/

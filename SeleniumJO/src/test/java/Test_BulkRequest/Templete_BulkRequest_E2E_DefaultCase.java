@@ -12,7 +12,7 @@ import POM_05_BulkRequestPage.BulkRequestPage_StartPage;
 import Test.TestBase;
 import Testrail_client.Testrails.TestRails;
 
-@Ignore
+//@Ignore
 public class Templete_BulkRequest_E2E_DefaultCase extends TestBase {
 
 	@TestRails(id = "")
@@ -60,11 +60,17 @@ public class Templete_BulkRequest_E2E_DefaultCase extends TestBase {
 		ObjLoginPage.Login_m(Signatory_1_email, "tlswnsdh2@@");
 
 		Thread.sleep(2000);
+		
+		ObjDocumentsPage.ContractStatus_Check();
 
 		ObjDocumentsPage.Documents_Dropdown_1_select_m();
 
 		ObjDocumentsPage_ContractPage.NormalSign_Off_Case("텍스트 입력 필드");
+		
+		Thread.sleep(3000);
 
+		ObjDocumentsPage.ContractStatus_Check2();
+		
 	}
 
 }

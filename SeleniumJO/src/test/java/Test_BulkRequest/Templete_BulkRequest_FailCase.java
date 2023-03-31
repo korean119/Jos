@@ -11,7 +11,7 @@ import POM_05_BulkRequestPage.BulkRequestPage_StartPage;
 import Test.TestBase;
 import Testrail_client.Testrails.TestRails;
 
-@Ignore
+//@Ignore
 public class Templete_BulkRequest_FailCase extends TestBase {
 
 	@TestRails(id = "")

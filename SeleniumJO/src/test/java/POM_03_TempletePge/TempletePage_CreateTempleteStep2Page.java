@@ -19,8 +19,12 @@ public class TempletePage_CreateTempleteStep2Page extends BasePage {
 	// .체크박스 입력하기.
 	// +이미지 입력하기.
 
+	// css 로 잡혀 있는 부분 임시 수정 해본 상태
 	// 첫 번째 서명자 사인/도장.
-	@FindBy(css = (".css-w07yg0 .css-1dgk6ra"))
+	// @FindBy(css = (".css-w07yg0 .css-1dgk6ra"))
+	// WebElement SignatureField_1_btn;
+
+	@FindBy(xpath = ("(//button[@type='button'])[8]"))
 	WebElement SignatureField_1_btn;
 
 	public void SignatureField_1_btn() throws InterruptedException {
@@ -29,7 +33,10 @@ public class TempletePage_CreateTempleteStep2Page extends BasePage {
 	}
 
 	// 첫 번째 서명자 텍스트 필드.
-	@FindBy(css = (".css-skfhhz"))
+	// @FindBy(css = (".css-skfhhz"))
+	// WebElement TextField_1_btn;
+
+	@FindBy(xpath = ("(//button[@type='button'])[10]"))
 	WebElement TextField_1_btn;
 
 	public void TextField_1_btn() throws InterruptedException {
@@ -38,7 +45,10 @@ public class TempletePage_CreateTempleteStep2Page extends BasePage {
 	}
 
 	// 첫 번째 서명자 체크박스 선택.
-	@FindBy(css = (".css-w07yg0 .FieldLocator:nth-child(3) > .css-skfhhz"))
+	// @FindBy(css = (".css-w07yg0 .FieldLocator:nth-child(3) > .css-skfhhz"))
+	// WebElement CheckboxField_1_btn;
+
+	@FindBy(xpath = ("(//button[@type='button'])[11]"))
 	WebElement CheckboxField_1_btn;
 
 	public void CheckboxField_1_btn() throws InterruptedException {

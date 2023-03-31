@@ -1,11 +1,228 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="3" total="3" passed="0">
+<testng-results skipped="0" failed="0" ignored="19" total="25" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11" started-at="2023-03-29T10:56:46 KST" finished-at="2023-03-29T10:56:46 KST">
+  <suite name="Johnny jangjang" duration-ms="192909" started-at="2023-03-31T16:17:59 KST" finished-at="2023-03-31T16:21:12 KST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11" started-at="2023-03-29T10:56:46 KST" finished-at="2023-03-29T10:56:46 KST">
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    <test name="ChromeTest" duration-ms="192909" started-at="2023-03-31T16:17:59 KST" finished-at="2023-03-31T16:21:12 KST">
+      <class name="Test_Contract.NormalSign_On_Case">
+        <test-method status="PASS" signature="initializeWebDriver(java.lang.String)[pri:0, instance:Test_Contract.NormalSign_On_Case@6ec8211c]" name="initializeWebDriver" is-config="true" duration-ms="12427" started-at="2023-03-31T16:19:51 KST" finished-at="2023-03-31T16:20:03 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeWebDriver -->
+        <test-method status="PASS" signature="NormalSign_On_Case(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:Test_Contract.NormalSign_On_Case@6ec8211c]" name="NormalSign_On_Case" duration-ms="16676" started-at="2023-03-31T16:20:03 KST" finished-at="2023-03-31T16:20:20 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[joshinauto1@getnada.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[joshinauto2@getnada.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[조니오토 3번]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[joshinauto3@getnada.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NormalSign_On_Case -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Test_Contract.NormalSign_On_Case@6ec8211c]" name="tearDown" is-config="true" duration-ms="152" started-at="2023-03-31T16:20:20 KST" finished-at="2023-03-31T16:20:20 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=NormalSign_On_Case status=SUCCESS method=NormalSign_On_Case.NormalSign_On_Case(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:1, instance:Test_Contract.NormalSign_On_Case@6ec8211c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="initializeWebDriver(java.lang.String)[pri:0, instance:Test_Contract.NormalSign_On_Case@6ec8211c]" name="initializeWebDriver" is-config="true" duration-ms="7868" started-at="2023-03-31T16:20:20 KST" finished-at="2023-03-31T16:20:28 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeWebDriver -->
+        <test-method status="PASS" signature="NormalSign_On_Case_Singatory_1_(java.lang.String)[pri:2, instance:Test_Contract.NormalSign_On_Case@6ec8211c]" name="NormalSign_On_Case_Singatory_1_" duration-ms="18730" started-at="2023-03-31T16:20:28 KST" finished-at="2023-03-31T16:20:47 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[joshinauto2@getnada.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NormalSign_On_Case_Singatory_1_ -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Test_Contract.NormalSign_On_Case@6ec8211c]" name="tearDown" is-config="true" duration-ms="154" started-at="2023-03-31T16:20:47 KST" finished-at="2023-03-31T16:20:47 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=NormalSign_On_Case_Singatory_1_ status=SUCCESS method=NormalSign_On_Case.NormalSign_On_Case_Singatory_1_(java.lang.String)[pri:2, instance:Test_Contract.NormalSign_On_Case@6ec8211c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="initializeWebDriver(java.lang.String)[pri:0, instance:Test_Contract.NormalSign_On_Case@6ec8211c]" name="initializeWebDriver" is-config="true" duration-ms="5971" started-at="2023-03-31T16:20:47 KST" finished-at="2023-03-31T16:20:53 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeWebDriver -->
+        <test-method status="PASS" signature="NormalSign_On_Case_Singatory_2_(java.lang.String)[pri:3, instance:Test_Contract.NormalSign_On_Case@6ec8211c]" name="NormalSign_On_Case_Singatory_2_" duration-ms="19020" started-at="2023-03-31T16:20:53 KST" finished-at="2023-03-31T16:21:12 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[joshinauto3@getnada.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NormalSign_On_Case_Singatory_2_ -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Test_Contract.NormalSign_On_Case@6ec8211c]" name="tearDown" is-config="true" duration-ms="207" started-at="2023-03-31T16:21:12 KST" finished-at="2023-03-31T16:21:12 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=NormalSign_On_Case_Singatory_2_ status=SUCCESS method=NormalSign_On_Case.NormalSign_On_Case_Singatory_2_(java.lang.String)[pri:3, instance:Test_Contract.NormalSign_On_Case@6ec8211c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Test_Contract.NormalSign_On_Case -->
+      <class name="Test_BulkRequest.Templete_BulkRequest_E2E_OnCase_Many">
+        <test-method status="PASS" signature="initializeWebDriver(java.lang.String)[pri:0, instance:Test_BulkRequest.Templete_BulkRequest_E2E_OnCase_Many@782663d3]" name="initializeWebDriver" is-config="true" duration-ms="8323" started-at="2023-03-31T16:17:59 KST" finished-at="2023-03-31T16:18:08 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeWebDriver -->
+        <test-method status="PASS" signature="Templete_BulkRequest_E2E_OnCase_Many(java.lang.String)[pri:1, instance:Test_BulkRequest.Templete_BulkRequest_E2E_OnCase_Many@782663d3]" name="Templete_BulkRequest_E2E_OnCase_Many" duration-ms="44995" started-at="2023-03-31T16:18:08 KST" finished-at="2023-03-31T16:18:53 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[joshinauto1@getnada.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Templete_BulkRequest_E2E_OnCase_Many -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Test_BulkRequest.Templete_BulkRequest_E2E_OnCase_Many@782663d3]" name="tearDown" is-config="true" duration-ms="165" started-at="2023-03-31T16:18:53 KST" finished-at="2023-03-31T16:18:53 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Templete_BulkRequest_E2E_OnCase_Many status=SUCCESS method=Templete_BulkRequest_E2E_OnCase_Many.Templete_BulkRequest_E2E_OnCase_Many(java.lang.String)[pri:1, instance:Test_BulkRequest.Templete_BulkRequest_E2E_OnCase_Many@782663d3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="initializeWebDriver(java.lang.String)[pri:0, instance:Test_BulkRequest.Templete_BulkRequest_E2E_OnCase_Many@782663d3]" name="initializeWebDriver" is-config="true" duration-ms="7012" started-at="2023-03-31T16:18:53 KST" finished-at="2023-03-31T16:19:00 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeWebDriver -->
+        <test-method status="PASS" signature="Templete_BulkRequest_E2E_OnCase_Many_Singatory_1_(java.lang.String)[pri:2, instance:Test_BulkRequest.Templete_BulkRequest_E2E_OnCase_Many@782663d3]" name="Templete_BulkRequest_E2E_OnCase_Many_Singatory_1_" duration-ms="22549" started-at="2023-03-31T16:19:00 KST" finished-at="2023-03-31T16:19:22 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[joshinauto2@getnada.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Templete_BulkRequest_E2E_OnCase_Many_Singatory_1_ -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Test_BulkRequest.Templete_BulkRequest_E2E_OnCase_Many@782663d3]" name="tearDown" is-config="true" duration-ms="155" started-at="2023-03-31T16:19:22 KST" finished-at="2023-03-31T16:19:22 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Templete_BulkRequest_E2E_OnCase_Many_Singatory_1_ status=SUCCESS method=Templete_BulkRequest_E2E_OnCase_Many.Templete_BulkRequest_E2E_OnCase_Many_Singatory_1_(java.lang.String)[pri:2, instance:Test_BulkRequest.Templete_BulkRequest_E2E_OnCase_Many@782663d3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="initializeWebDriver(java.lang.String)[pri:0, instance:Test_BulkRequest.Templete_BulkRequest_E2E_OnCase_Many@782663d3]" name="initializeWebDriver" is-config="true" duration-ms="5494" started-at="2023-03-31T16:19:22 KST" finished-at="2023-03-31T16:19:28 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeWebDriver -->
+        <test-method status="PASS" signature="Templete_BulkRequest_E2E_OnCase_Many_Singatory_2_(java.lang.String)[pri:3, instance:Test_BulkRequest.Templete_BulkRequest_E2E_OnCase_Many@782663d3]" name="Templete_BulkRequest_E2E_OnCase_Many_Singatory_2_" duration-ms="22808" started-at="2023-03-31T16:19:28 KST" finished-at="2023-03-31T16:19:51 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[joshinauto3@getnada.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Templete_BulkRequest_E2E_OnCase_Many_Singatory_2_ -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:Test_BulkRequest.Templete_BulkRequest_E2E_OnCase_Many@782663d3]" name="tearDown" is-config="true" duration-ms="157" started-at="2023-03-31T16:19:51 KST" finished-at="2023-03-31T16:19:51 KST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Templete_BulkRequest_E2E_OnCase_Many_Singatory_2_ status=SUCCESS method=Templete_BulkRequest_E2E_OnCase_Many.Templete_BulkRequest_E2E_OnCase_Many_Singatory_2_(java.lang.String)[pri:3, instance:Test_BulkRequest.Templete_BulkRequest_E2E_OnCase_Many@782663d3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- Test_BulkRequest.Templete_BulkRequest_E2E_OnCase_Many -->
+    </test> <!-- ChromeTest -->
+  </suite> <!-- Johnny jangjang -->
 </testng-results>

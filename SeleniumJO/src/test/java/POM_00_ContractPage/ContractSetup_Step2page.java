@@ -21,8 +21,9 @@ public class ContractSetup_Step2page extends BasePage {
 		super(driver);
 	}
 
-	////////////////////// 추가 내용 입력하기 /////////////////////
 
+
+	// 추가 내용 입력하기 - 텍스트 
 	@FindBy(xpath = ("//button[contains(text(),'+ 텍스트 입력하기')]"))
 	WebElement Signature_Requester_Textinput_btn;
 	

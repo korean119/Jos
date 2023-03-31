@@ -42,25 +42,47 @@ public class DocumentsPage extends BasePage {
 
 	}
 
+	// 0329
 	// 문서함 첫번째 리스트 "내 서명 필요 확인"
-	// 화면이 바로 갱신 되지 않는 이슈? 경우? 가 있음 (특히 프리뷰에서) 
+	// 화면이 바로 갱신 되지 않는 이슈? 경우? 가 있음 (특히 프리뷰에서)
 	// 때문에 간혹 멈추는 경우가 있어 임시로 넣어둠 효과 없으면 삭제 예정
+	// fail 이 나더라도 멈추지 않고 Fail 상태확인 할 수 있게 두었음 
+	
+	// 0331
+	// 문서가 생각보다 더 늦게 만들어지는 경우가 있는듯(서명을 뭔가 대량으로 발생 시켰을 경우? 프리뷰  경우?) 
+	// 문서 ID 와 같은 걸로 100%매칭 시킬 필요가 있지 않을까도 싶음 
 	@FindBy(xpath = (("(//li[@display='flex'])[1]")))
 	WebElement ContractStatus_Check;
 
 	public void ContractStatus_Check() throws InterruptedException {
 
-		String actual = Wait.until(ExpectedConditions.visibilityOf(ContractStatus_Check)).getText();
-		String expect = ("내 서명 필요");
-
-		System.out.println(expect + " <-- 내 서명 필요 출력 됬나?");
-
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < 5; i++) {
 			try {
-				if (actual.equals(expect)) {
+				if (Wait.until(ExpectedConditions.visibilityOf(ContractStatus_Check)).getText().equals("내 서명 필요")) {
 
 				} else {
+					
 					System.out.println("내 서명 필요 상태가 아님");
+					driver.navigate().refresh();
+					
+					i++;
+
+				}
+			} catch (NoSuchElementException e) {
+				System.out.println(e);
+			}
+		}
+	}
+
+	public void ContractStatus_Check2() throws InterruptedException {
+
+		for (int i = 0; i < 5; i++) {
+			try {
+				if (Wait.until(ExpectedConditions.visibilityOf(ContractStatus_Check)).getText().equals("완료된 문서")) {
+
+				} else {
+					
+					System.out.println("완료된 문서 상태가 아님");
 
 					driver.navigate().refresh();
 					i++;
@@ -207,7 +229,7 @@ public class DocumentsPage extends BasePage {
 
 	public void ElementCapture() throws IOException, InterruptedException {
 
-		// jqury 오류 대응 코드, 이게 뭔지는 나도 잘 모름
+		// Asot jqury 오류 대응 코드, 근데 Ashot 으로 이미지 캡쳐 안해서 필요는 없을 것 같지만 혹시나 해서 놔둠
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		if (!(Boolean) js.executeScript("return (typeof jQuery != \"undefined\")")) {
 			js.executeScript("var headID = document.getElementsByTagName('head')[0];"

@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import Test.TestBase;
 import Testrail_client.Testrails.TestRails;
 
-@Ignore
+//@Ignore
 public class Templete_BulkRequest_E2E_OnCase extends TestBase {
 
 	@TestRails(id = "")
@@ -36,6 +36,7 @@ public class Templete_BulkRequest_E2E_OnCase extends TestBase {
 		Thread.sleep(3000);
 
 		driver.navigate().refresh();
+		
 		ObjTempletePage.Templete_Dropdown_BulckRequest_select();
 
 		// 파일 너무 빨리 올리면 에러 나와서 추가 해둠
@@ -62,6 +63,8 @@ public class Templete_BulkRequest_E2E_OnCase extends TestBase {
 		ObjLoginPage.Login_m(Signatory_1_email, "tlswnsdh2@@");
 
 		Thread.sleep(2000);
+		
+		ObjDocumentsPage.ContractStatus_Check();
 
 		ObjDocumentsPage.Documents_Dropdown_1_select_m();
 
@@ -75,8 +78,8 @@ public class Templete_BulkRequest_E2E_OnCase extends TestBase {
 		ObjDocumentsPage_ContractPage.Step2Page_BasicinputCase_m();
 
 		Thread.sleep(3000);
-
-		driver.navigate().refresh();
+		
+		ObjDocumentsPage.ContractStatus_Check2();
 
 		ObjDocumentsPage.Documents_Dropdown_1_select_m();
 
@@ -95,6 +98,8 @@ public class Templete_BulkRequest_E2E_OnCase extends TestBase {
 		ObjLoginPage.Login_m(Signatory_2_email, "tlswnsdh2@@");
 
 		Thread.sleep(2000);
+		
+		ObjDocumentsPage.ContractStatus_Check();
 
 		ObjDocumentsPage.Documents_Dropdown_1_select_m();
 
@@ -108,14 +113,20 @@ public class Templete_BulkRequest_E2E_OnCase extends TestBase {
 		ObjDocumentsPage_ContractPage.Step2Page_BasicinputCase_m();
 
 		Thread.sleep(3000);
-
-		driver.navigate().refresh();
+		
+		ObjDocumentsPage.ContractStatus_Check2();
 
 		ObjDocumentsPage.Documents_Dropdown_1_select_m();
 
 		ObjDocumentsPage.Contract_DonePage_Password_input("12341234");
 
 		ObjDocumentsPage.Contract_DonePage_Password_Done_btn();
+		
+		Thread.sleep(3000);
+		
+		ObjDocumentsPage.ContractStatus_Check2();
+
+
 
 	}
 

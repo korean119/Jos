@@ -77,6 +77,9 @@ public class NormalSign_Off_Case extends TestBase {
 
 		ObjDocumentsPage_ContractPage.NormalSign_Off_Case("텍스트 입력 필드");
 
-		Thread.sleep(2000);
+		Thread.sleep(3000);
+		
+		ObjDocumentsPage.ContractStatus_Check2();
+
 	}
 }

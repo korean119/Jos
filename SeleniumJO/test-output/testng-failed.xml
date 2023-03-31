@@ -13,6 +13,15 @@
     <parameter name="signature_requester_email" value="joshinauto1@getnada.com"/>
     <parameter name="Signatory_1_name" value="조니오토 2번"/>
     <classes>
+      <class name="Test_Contract.NormalSign_On_Case">
+        <methods>
+          <include name="NormalSign_On_Case_Singatory_1_" invocation-numbers="0"/>
+          <include name="NormalSign_On_Case_Singatory_2_" invocation-numbers="0"/>
+          <include name="NormalSign_On_Case" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="initializeWebDriver"/>
+        </methods>
+      </class> <!-- Test_Contract.NormalSign_On_Case -->
       <class name="Test_BulkRequest.Templete_BulkRequest_TestSend">
         <methods>
           <include name="Templete_BulkRequest_TestSend" invocation-numbers="0"/>

@@ -11,7 +11,7 @@ import Test.TestBase;
 import Testrail_client.Testrails.TestRails;
 import junit.framework.Assert;
 
-@Ignore
+//@Ignore
 public class NormalSign_On_Case extends TestBase {
 
 	@TestRails(id = "16289")
@@ -51,14 +51,14 @@ public class NormalSign_On_Case extends TestBase {
 		ObjLoginPage.Login_m(Signatory_1_email, "tlswnsdh2@@");
 		
 		Thread.sleep(2000);
-		
+
 		ObjDocumentsPage.ContractStatus_Check();
 
 		ObjDocumentsPage.Documents_Dropdown_1_select_m();
 
 		ObjDocumentsPage_ContractPage.NormalSign_On_Case("1234", "텍스트필드 입력");
 
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 
 	}
 
@@ -78,7 +78,22 @@ public class NormalSign_On_Case extends TestBase {
 		ObjDocumentsPage.Documents_Dropdown_1_select_m();
 
 		ObjDocumentsPage_ContractPage.NormalSign_On_Case("1234", "텍스트필드 입력");
-
+		
 		Thread.sleep(2000);
+
+		ObjDocumentsPage.ContractStatus_Check2();
+
+		ObjDocumentsPage.Documents_Dropdown_1_select_m();
+
+		ObjDocumentsPage.Contract_DonePage_Password_input("12341234");
+
+		ObjDocumentsPage.Contract_DonePage_Password_Done_btn();
+		
+		Thread.sleep(3000);
+		
+		ObjDocumentsPage.ContractStatus_Check2();
+
+
+
 	}
 }
